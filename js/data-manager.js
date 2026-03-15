@@ -136,6 +136,13 @@ class DataManager {
   async initialize(forceRefresh = false) {
     try {
       this.data = await storage.loadAllData(forceRefresh);
+
+      // Load profit margins from metadata (syncs across devices)
+      if (this.data.metadata && this.data.metadata.config) {
+        CONFIG.updateProfitMargins(this.data.metadata.config);
+        console.log('Loaded profit margins from metadata:', CONFIG.profitMargins);
+      }
+
       return this.data;
     } catch (error) {
       console.error('Failed to initialize data:', error);
@@ -363,8 +370,23 @@ class DataManager {
         bestMonth: { month: 'N/A', revenue: 0 },
         worstMonth: { month: 'N/A', revenue: 0 },
         thisMonth: 0,
+        storeSalesAmount: 0,
         storeSalesPercentage: 0,
+        gcashRevenue: 0,
+        gcashProfit: 0,
+        gcashRevenuePercentage: 0,
+        gcashProfitPercentage: 0,
+        sariSariRevenue: 0,
+        sariSariProfit: 0,
+        sariSariRevenuePercentage: 0,
+        sariSariProfitPercentage: 0,
+        ordersRevenue: 0,
+        ordersProfit: 0,
+        ordersRevenuePercentage: 0,
+        ordersProfitPercentage: 0,
+        pisoWifiAmount: 0,
         pisoWifiPercentage: 0,
+        printerAmount: 0,
         printerPercentage: 0
       };
     }
@@ -374,6 +396,16 @@ class DataManager {
     const totalRevenue = sales.reduce((sum, s) =>
       sum + s.gcashTotal + s.sariSariStore + s.orders, 0
     );
+
+    // Calculate separate revenue and profit streams
+    const gcashRevenue = sales.reduce((sum, s) => sum + s.gcashTotal, 0);
+    const gcashProfit = sales.reduce((sum, s) => sum + (s.gcashProfit || 0), 0);
+
+    const sariSariRevenue = sales.reduce((sum, s) => sum + s.sariSariStore, 0);
+    const sariSariProfit = sales.reduce((sum, s) => sum + (s.sariSariStoreProfit || 0), 0);
+
+    const ordersRevenue = sales.reduce((sum, s) => sum + s.orders, 0);
+    const ordersProfit = sales.reduce((sum, s) => sum + (s.ordersProfit || 0), 0);
 
     // Group by month
     const byMonth = Utils.groupBy(sales, (s) => {
@@ -444,6 +476,22 @@ class DataManager {
       thisMonth: thisMonth,
       storeSalesAmount: totalProfit,
       storeSalesPercentage: Utils.calculatePercentage(totalProfit, grandTotal),
+      // Gcash - both revenue and profit
+      gcashRevenue: gcashRevenue,
+      gcashProfit: gcashProfit,
+      gcashRevenuePercentage: Utils.calculatePercentage(gcashRevenue, totalRevenue),
+      gcashProfitPercentage: Utils.calculatePercentage(gcashProfit, totalProfit),
+      // Sari Sari Store - both revenue and profit
+      sariSariRevenue: sariSariRevenue,
+      sariSariProfit: sariSariProfit,
+      sariSariRevenuePercentage: Utils.calculatePercentage(sariSariRevenue, totalRevenue),
+      sariSariProfitPercentage: Utils.calculatePercentage(sariSariProfit, totalProfit),
+      // Orders - both revenue and profit
+      ordersRevenue: ordersRevenue,
+      ordersProfit: ordersProfit,
+      ordersRevenuePercentage: Utils.calculatePercentage(ordersRevenue, totalRevenue),
+      ordersProfitPercentage: Utils.calculatePercentage(ordersProfit, totalProfit),
+      // Piso WiFi and Printer
       pisoWifiAmount: pisoWifiTotal,
       pisoWifiPercentage: Utils.calculatePercentage(pisoWifiTotal, grandTotal),
       printerAmount: printerTotal,

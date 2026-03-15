@@ -234,16 +234,40 @@
   gap: var(--spacing-xs);
 }
 
-/* Success States */
-.form-success {
+/* Notification States (Status Messages) */
+.form-success,
+.form-error,
+.form-info {
   padding: var(--spacing-md);
-  background-color: var(--success-color);
-  color: white;
   border-radius: var(--border-radius);
   margin-bottom: var(--spacing-lg);
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.form-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.form-error {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.form-info {
+  background-color: var(--info-color);
+  color: white;
+}
+
+/* Ensure text is always readable in both light and dark modes */
+body.dark-mode .form-success,
+body.dark-mode .form-error,
+body.dark-mode .form-info {
+  color: white;
+  font-weight: 600;
 }
 
 /* Currency Input Styling */

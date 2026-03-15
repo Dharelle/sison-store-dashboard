@@ -32,11 +32,20 @@ const CONFIG = {
     metadata: 'metadata.json'
   },
 
-  // Business logic configuration (loaded from localStorage if available)
+  // Business logic configuration (loaded from metadata.json - syncs across devices)
   profitMargins: {
-    gcash: parseFloat(localStorage.getItem('profit_margin_gcash') || '2.2') / 100,
-    sariSariStore: parseFloat(localStorage.getItem('profit_margin_sariSari') || '10') / 100,
-    orders: parseFloat(localStorage.getItem('profit_margin_orders') || '10') / 100
+    gcash: 0.022,      // 2.2% default
+    sariSariStore: 0.1, // 10% default
+    orders: 0.1        // 10% default
+  },
+
+  // Function to update profit margins (call this after loading metadata)
+  updateProfitMargins(margins) {
+    if (margins && margins.profitMargins) {
+      this.profitMargins.gcash = margins.profitMargins.gcash || this.profitMargins.gcash;
+      this.profitMargins.sariSariStore = margins.profitMargins.sariSariStore || this.profitMargins.sariSariStore;
+      this.profitMargins.orders = margins.profitMargins.orders || this.profitMargins.orders;
+    }
   },
 
   // UI configuration

@@ -148,14 +148,64 @@ class Dashboard {
       currentMonthSubtitle.textContent = 'Month to date';
     }
 
-    // Store Sales Amount & Percentage
-    const storeSalesAmountEl = document.getElementById('store-sales-amount');
-    if (storeSalesAmountEl) {
-      storeSalesAmountEl.textContent = Utils.formatCurrency(this.kpis.storeSalesAmount);
+    // Gcash Revenue & Percentage
+    const gcashRevenueEl = document.getElementById('gcash-revenue');
+    if (gcashRevenueEl) {
+      gcashRevenueEl.textContent = Utils.formatCurrency(this.kpis.gcashRevenue);
     }
-    const storeSalesPercentEl = document.getElementById('store-sales-percent');
-    if (storeSalesPercentEl) {
-      storeSalesPercentEl.textContent = `${this.kpis.storeSalesPercentage.toFixed(1)}%`;
+    const gcashRevenuePercentEl = document.getElementById('gcash-revenue-percent');
+    if (gcashRevenuePercentEl) {
+      gcashRevenuePercentEl.textContent = `${this.kpis.gcashRevenuePercentage.toFixed(1)}%`;
+    }
+
+    // Gcash Profit & Percentage
+    const gcashProfitEl = document.getElementById('gcash-profit');
+    if (gcashProfitEl) {
+      gcashProfitEl.textContent = Utils.formatCurrency(this.kpis.gcashProfit);
+    }
+    const gcashProfitPercentEl = document.getElementById('gcash-profit-percent');
+    if (gcashProfitPercentEl) {
+      gcashProfitPercentEl.textContent = `${this.kpis.gcashProfitPercentage.toFixed(1)}%`;
+    }
+
+    // Sari Sari Revenue & Percentage
+    const sariSariRevenueEl = document.getElementById('sari-sari-revenue');
+    if (sariSariRevenueEl) {
+      sariSariRevenueEl.textContent = Utils.formatCurrency(this.kpis.sariSariRevenue);
+    }
+    const sariSariRevenuePercentEl = document.getElementById('sari-sari-revenue-percent');
+    if (sariSariRevenuePercentEl) {
+      sariSariRevenuePercentEl.textContent = `${this.kpis.sariSariRevenuePercentage.toFixed(1)}%`;
+    }
+
+    // Sari Sari Profit & Percentage
+    const sariSariProfitEl = document.getElementById('sari-sari-profit');
+    if (sariSariProfitEl) {
+      sariSariProfitEl.textContent = Utils.formatCurrency(this.kpis.sariSariProfit);
+    }
+    const sariSariProfitPercentEl = document.getElementById('sari-sari-profit-percent');
+    if (sariSariProfitPercentEl) {
+      sariSariProfitPercentEl.textContent = `${this.kpis.sariSariProfitPercentage.toFixed(1)}%`;
+    }
+
+    // Orders Revenue & Percentage
+    const ordersRevenueEl = document.getElementById('orders-revenue');
+    if (ordersRevenueEl) {
+      ordersRevenueEl.textContent = Utils.formatCurrency(this.kpis.ordersRevenue);
+    }
+    const ordersRevenuePercentEl = document.getElementById('orders-revenue-percent');
+    if (ordersRevenuePercentEl) {
+      ordersRevenuePercentEl.textContent = `${this.kpis.ordersRevenuePercentage.toFixed(1)}%`;
+    }
+
+    // Orders Profit & Percentage
+    const ordersProfitEl = document.getElementById('orders-profit');
+    if (ordersProfitEl) {
+      ordersProfitEl.textContent = Utils.formatCurrency(this.kpis.ordersProfit);
+    }
+    const ordersProfitPercentEl = document.getElementById('orders-profit-percent');
+    if (ordersProfitPercentEl) {
+      ordersProfitPercentEl.textContent = `${this.kpis.ordersProfitPercentage.toFixed(1)}%`;
     }
 
     // Piso WiFi Amount & Percentage
