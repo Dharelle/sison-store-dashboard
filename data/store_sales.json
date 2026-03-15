@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-15T15:41:43.964687Z",
+  "lastUpdated": "2026-03-15T15:52:09.102657Z",
   "records": [
     {
       "id": "ss_20250102_001",
@@ -10,10 +10,10 @@
       "gcashTotal": 7085.0,
       "sariSariStore": 1967.0,
       "orders": 0.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 196.7,
+      "gcashProfit": 141.7,
+      "sariSariStoreProfit": 295.05,
       "ordersProfit": 0.0,
-      "totalProfit": 351.7,
+      "totalProfit": 436.75,
       "createdAt": "2026-03-15T15:41:43.908111Z"
     },
     {
@@ -24,10 +24,10 @@
       "gcashTotal": 23284.0,
       "sariSariStore": 1973.0,
       "orders": 0.0,
-      "gcashProfit": 505.0,
-      "sariSariStoreProfit": 197.3,
+      "gcashProfit": 465.68,
+      "sariSariStoreProfit": 295.95,
       "ordersProfit": 0.0,
-      "totalProfit": 702.3,
+      "totalProfit": 761.63,
       "createdAt": "2026-03-15T15:41:43.908231Z"
     },
     {
@@ -38,10 +38,10 @@
       "gcashTotal": 12735.0,
       "sariSariStore": 6594.0,
       "orders": 0.0,
-      "gcashProfit": 275.0,
-      "sariSariStoreProfit": 659.4,
+      "gcashProfit": 254.7,
+      "sariSariStoreProfit": 989.1,
       "ordersProfit": 0.0,
-      "totalProfit": 934.4,
+      "totalProfit": 1243.8,
       "createdAt": "2026-03-15T15:41:43.908294Z"
     },
     {
@@ -52,10 +52,10 @@
       "gcashTotal": 1675.0,
       "sariSariStore": 1985.0,
       "orders": 8819.0,
-      "gcashProfit": 40.0,
-      "sariSariStoreProfit": 198.5,
+      "gcashProfit": 33.5,
+      "sariSariStoreProfit": 297.75,
       "ordersProfit": 1322.85,
-      "totalProfit": 1561.35,
+      "totalProfit": 1654.1,
       "createdAt": "2026-03-15T15:41:43.908346Z"
     },
     {
@@ -66,10 +66,10 @@
       "gcashTotal": 23942.0,
       "sariSariStore": 7360.0,
       "orders": 9969.0,
-      "gcashProfit": 525.0,
-      "sariSariStoreProfit": 736.0,
+      "gcashProfit": 478.84,
+      "sariSariStoreProfit": 1104.0,
       "ordersProfit": 1495.35,
-      "totalProfit": 2756.35,
+      "totalProfit": 3078.19,
       "createdAt": "2026-03-15T15:41:43.908396Z"
     },
     {
@@ -80,10 +80,10 @@
       "gcashTotal": 16790.0,
       "sariSariStore": 4575.0,
       "orders": 6589.0,
-      "gcashProfit": 385.0,
-      "sariSariStoreProfit": 457.5,
+      "gcashProfit": 335.8,
+      "sariSariStoreProfit": 686.25,
       "ordersProfit": 988.35,
-      "totalProfit": 1830.85,
+      "totalProfit": 2010.4,
       "createdAt": "2026-03-15T15:41:43.908445Z"
     },
     {
@@ -94,10 +94,10 @@
       "gcashTotal": 9885.0,
       "sariSariStore": 5000.0,
       "orders": 5533.0,
-      "gcashProfit": 225.0,
-      "sariSariStoreProfit": 500.0,
+      "gcashProfit": 197.7,
+      "sariSariStoreProfit": 750.0,
       "ordersProfit": 829.95,
-      "totalProfit": 1554.95,
+      "totalProfit": 1777.65,
       "createdAt": "2026-03-15T15:41:43.908491Z"
     },
     {
@@ -108,10 +108,10 @@
       "gcashTotal": 13085.0,
       "sariSariStore": 6211.0,
       "orders": 6414.0,
-      "gcashProfit": 255.0,
-      "sariSariStoreProfit": 621.1,
+      "gcashProfit": 261.7,
+      "sariSariStoreProfit": 931.65,
       "ordersProfit": 962.1,
-      "totalProfit": 1838.2,
+      "totalProfit": 2155.45,
       "createdAt": "2026-03-15T15:41:43.908538Z"
     },
     {
@@ -122,10 +122,10 @@
       "gcashTotal": 17997.0,
       "sariSariStore": 7420.0,
       "orders": 2067.0,
-      "gcashProfit": 390.0,
-      "sariSariStoreProfit": 742.0,
+      "gcashProfit": 359.94,
+      "sariSariStoreProfit": 1113.0,
       "ordersProfit": 310.05,
-      "totalProfit": 1442.05,
+      "totalProfit": 1782.99,
       "createdAt": "2026-03-15T15:41:43.908584Z"
     },
     {
@@ -136,10 +136,10 @@
       "gcashTotal": 9960.0,
       "sariSariStore": 2333.0,
       "orders": 9889.0,
-      "gcashProfit": 235.0,
-      "sariSariStoreProfit": 233.3,
+      "gcashProfit": 199.2,
+      "sariSariStoreProfit": 349.95,
       "ordersProfit": 1483.35,
-      "totalProfit": 1951.65,
+      "totalProfit": 2032.5,
       "createdAt": "2026-03-15T15:41:43.908628Z"
     },
     {
@@ -150,10 +150,10 @@
       "gcashTotal": 7295.0,
       "sariSariStore": 4275.0,
       "orders": 0.0,
-      "gcashProfit": 150.0,
-      "sariSariStoreProfit": 427.5,
+      "gcashProfit": 145.9,
+      "sariSariStoreProfit": 641.25,
       "ordersProfit": 0.0,
-      "totalProfit": 577.5,
+      "totalProfit": 787.15,
       "createdAt": "2026-03-15T15:41:43.908673Z"
     },
     {
@@ -164,10 +164,10 @@
       "gcashTotal": 12525.0,
       "sariSariStore": 7432.0,
       "orders": 6214.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 743.2,
+      "gcashProfit": 250.5,
+      "sariSariStoreProfit": 1114.8,
       "ordersProfit": 932.1,
-      "totalProfit": 1955.3,
+      "totalProfit": 2297.4,
       "createdAt": "2026-03-15T15:41:43.908718Z"
     },
     {
@@ -178,10 +178,10 @@
       "gcashTotal": 9695.0,
       "sariSariStore": 6990.0,
       "orders": 3617.0,
-      "gcashProfit": 210.0,
-      "sariSariStoreProfit": 699.0,
+      "gcashProfit": 193.9,
+      "sariSariStoreProfit": 1048.5,
       "ordersProfit": 542.55,
-      "totalProfit": 1451.55,
+      "totalProfit": 1784.95,
       "createdAt": "2026-03-15T15:41:43.908761Z"
     },
     {
@@ -192,10 +192,10 @@
       "gcashTotal": 29910.0,
       "sariSariStore": 6273.0,
       "orders": 6216.0,
-      "gcashProfit": 640.0,
-      "sariSariStoreProfit": 627.3,
+      "gcashProfit": 598.2,
+      "sariSariStoreProfit": 940.95,
       "ordersProfit": 932.4,
-      "totalProfit": 2199.7,
+      "totalProfit": 2471.55,
       "createdAt": "2026-03-15T15:41:43.908806Z"
     },
     {
@@ -206,10 +206,10 @@
       "gcashTotal": 25125.0,
       "sariSariStore": 7799.0,
       "orders": 9697.0,
-      "gcashProfit": 540.0,
-      "sariSariStoreProfit": 779.9,
+      "gcashProfit": 502.5,
+      "sariSariStoreProfit": 1169.85,
       "ordersProfit": 1454.55,
-      "totalProfit": 2774.45,
+      "totalProfit": 3126.9,
       "createdAt": "2026-03-15T15:41:43.908848Z"
     },
     {
@@ -220,10 +220,10 @@
       "gcashTotal": 8800.0,
       "sariSariStore": 6304.0,
       "orders": 6564.0,
-      "gcashProfit": 195.0,
-      "sariSariStoreProfit": 630.4,
+      "gcashProfit": 176.0,
+      "sariSariStoreProfit": 945.6,
       "ordersProfit": 984.6,
-      "totalProfit": 1810.0,
+      "totalProfit": 2106.2,
       "createdAt": "2026-03-15T15:41:43.908891Z"
     },
     {
@@ -234,10 +234,10 @@
       "gcashTotal": 10805.0,
       "sariSariStore": 6295.0,
       "orders": 3107.0,
-      "gcashProfit": 240.0,
-      "sariSariStoreProfit": 629.5,
+      "gcashProfit": 216.1,
+      "sariSariStoreProfit": 944.25,
       "ordersProfit": 466.05,
-      "totalProfit": 1335.55,
+      "totalProfit": 1626.4,
       "createdAt": "2026-03-15T15:41:43.908934Z"
     },
     {
@@ -248,10 +248,10 @@
       "gcashTotal": 14890.0,
       "sariSariStore": 0.0,
       "orders": 0.0,
-      "gcashProfit": 310.0,
+      "gcashProfit": 297.8,
       "sariSariStoreProfit": 0.0,
       "ordersProfit": 0.0,
-      "totalProfit": 310.0,
+      "totalProfit": 297.8,
       "createdAt": "2026-03-15T15:41:43.908976Z"
     },
     {
@@ -262,10 +262,10 @@
       "gcashTotal": 16170.0,
       "sariSariStore": 11050.0,
       "orders": 6899.0,
-      "gcashProfit": 330.0,
-      "sariSariStoreProfit": 1105.0,
+      "gcashProfit": 323.4,
+      "sariSariStoreProfit": 1657.5,
       "ordersProfit": 1034.85,
-      "totalProfit": 2469.85,
+      "totalProfit": 3015.75,
       "createdAt": "2026-03-15T15:41:43.909017Z"
     },
     {
@@ -276,10 +276,10 @@
       "gcashTotal": 22420.0,
       "sariSariStore": 9233.0,
       "orders": 6026.0,
-      "gcashProfit": 490.0,
-      "sariSariStoreProfit": 923.3,
+      "gcashProfit": 448.4,
+      "sariSariStoreProfit": 1384.95,
       "ordersProfit": 903.9,
-      "totalProfit": 2317.2,
+      "totalProfit": 2737.25,
       "createdAt": "2026-03-15T15:41:43.909062Z"
     },
     {
@@ -290,10 +290,10 @@
       "gcashTotal": 15970.0,
       "sariSariStore": 7098.0,
       "orders": 6903.0,
-      "gcashProfit": 350.0,
-      "sariSariStoreProfit": 709.8,
+      "gcashProfit": 319.4,
+      "sariSariStoreProfit": 1064.7,
       "ordersProfit": 1035.45,
-      "totalProfit": 2095.25,
+      "totalProfit": 2419.55,
       "createdAt": "2026-03-15T15:41:43.909117Z"
     },
     {
@@ -304,10 +304,10 @@
       "gcashTotal": 23863.0,
       "sariSariStore": 8131.0,
       "orders": 1655.0,
-      "gcashProfit": 535.0,
-      "sariSariStoreProfit": 813.1,
+      "gcashProfit": 477.26,
+      "sariSariStoreProfit": 1219.65,
       "ordersProfit": 248.25,
-      "totalProfit": 1596.35,
+      "totalProfit": 1945.16,
       "createdAt": "2026-03-15T15:41:43.909165Z"
     },
     {
@@ -318,10 +318,10 @@
       "gcashTotal": 12080.0,
       "sariSariStore": 7824.0,
       "orders": 6991.0,
-      "gcashProfit": 290.0,
-      "sariSariStoreProfit": 782.4,
+      "gcashProfit": 241.6,
+      "sariSariStoreProfit": 1173.6,
       "ordersProfit": 1048.65,
-      "totalProfit": 2121.05,
+      "totalProfit": 2463.85,
       "createdAt": "2026-03-15T15:41:43.909210Z"
     },
     {
@@ -332,10 +332,10 @@
       "gcashTotal": 39195.0,
       "sariSariStore": 8618.0,
       "orders": 4820.0,
-      "gcashProfit": 820.0,
-      "sariSariStoreProfit": 861.8,
+      "gcashProfit": 783.9,
+      "sariSariStoreProfit": 1292.7,
       "ordersProfit": 723.0,
-      "totalProfit": 2404.8,
+      "totalProfit": 2799.6,
       "createdAt": "2026-03-15T15:41:43.909253Z"
     },
     {
@@ -346,10 +346,10 @@
       "gcashTotal": 36380.0,
       "sariSariStore": 5868.0,
       "orders": 4996.0,
-      "gcashProfit": 620.0,
-      "sariSariStoreProfit": 586.8,
+      "gcashProfit": 727.6,
+      "sariSariStoreProfit": 880.2,
       "ordersProfit": 749.4,
-      "totalProfit": 1956.2,
+      "totalProfit": 2357.2,
       "createdAt": "2026-03-15T15:41:43.909294Z"
     },
     {
@@ -360,10 +360,10 @@
       "gcashTotal": 12785.0,
       "sariSariStore": 6036.0,
       "orders": 4662.0,
-      "gcashProfit": 285.0,
-      "sariSariStoreProfit": 603.6,
+      "gcashProfit": 255.7,
+      "sariSariStoreProfit": 905.4,
       "ordersProfit": 699.3,
-      "totalProfit": 1587.9,
+      "totalProfit": 1860.4,
       "createdAt": "2026-03-15T15:41:43.909337Z"
     },
     {
@@ -374,10 +374,10 @@
       "gcashTotal": 27460.0,
       "sariSariStore": 6198.0,
       "orders": 0.0,
-      "gcashProfit": 540.0,
-      "sariSariStoreProfit": 619.8,
+      "gcashProfit": 549.2,
+      "sariSariStoreProfit": 929.7,
       "ordersProfit": 0.0,
-      "totalProfit": 1159.8,
+      "totalProfit": 1478.9,
       "createdAt": "2026-03-15T15:41:43.909379Z"
     },
     {
@@ -388,10 +388,10 @@
       "gcashTotal": 9755.0,
       "sariSariStore": 7893.0,
       "orders": 8785.0,
-      "gcashProfit": 225.0,
-      "sariSariStoreProfit": 789.3,
+      "gcashProfit": 195.1,
+      "sariSariStoreProfit": 1183.95,
       "ordersProfit": 1317.75,
-      "totalProfit": 2332.05,
+      "totalProfit": 2696.8,
       "createdAt": "2026-03-15T15:41:43.909421Z"
     },
     {
@@ -402,10 +402,10 @@
       "gcashTotal": 18528.0,
       "sariSariStore": 5524.0,
       "orders": 4781.0,
-      "gcashProfit": 405.0,
-      "sariSariStoreProfit": 552.4,
+      "gcashProfit": 370.56,
+      "sariSariStoreProfit": 828.6,
       "ordersProfit": 717.15,
-      "totalProfit": 1674.55,
+      "totalProfit": 1916.31,
       "createdAt": "2026-03-15T15:41:43.909461Z"
     },
     {
@@ -416,10 +416,10 @@
       "gcashTotal": 46585.0,
       "sariSariStore": 6902.0,
       "orders": 0.0,
-      "gcashProfit": 925.0,
-      "sariSariStoreProfit": 690.2,
+      "gcashProfit": 931.7,
+      "sariSariStoreProfit": 1035.3,
       "ordersProfit": 0.0,
-      "totalProfit": 1615.2,
+      "totalProfit": 1967.0,
       "createdAt": "2026-03-15T15:41:43.909503Z"
     },
     {
@@ -430,10 +430,10 @@
       "gcashTotal": 6380.0,
       "sariSariStore": 8095.0,
       "orders": 2734.0,
-      "gcashProfit": 145.0,
-      "sariSariStoreProfit": 809.5,
+      "gcashProfit": 127.6,
+      "sariSariStoreProfit": 1214.25,
       "ordersProfit": 410.1,
-      "totalProfit": 1364.6,
+      "totalProfit": 1751.95,
       "createdAt": "2026-03-15T15:41:43.909569Z"
     },
     {
@@ -444,10 +444,10 @@
       "gcashTotal": 11010.0,
       "sariSariStore": 5675.0,
       "orders": 4129.0,
-      "gcashProfit": 260.0,
-      "sariSariStoreProfit": 567.5,
+      "gcashProfit": 220.2,
+      "sariSariStoreProfit": 851.25,
       "ordersProfit": 619.35,
-      "totalProfit": 1446.85,
+      "totalProfit": 1690.8,
       "createdAt": "2026-03-15T15:41:43.909608Z"
     },
     {
@@ -458,10 +458,10 @@
       "gcashTotal": 14775.0,
       "sariSariStore": 6560.0,
       "orders": 6501.0,
-      "gcashProfit": 330.0,
-      "sariSariStoreProfit": 656.0,
+      "gcashProfit": 295.5,
+      "sariSariStoreProfit": 984.0,
       "ordersProfit": 975.15,
-      "totalProfit": 1961.15,
+      "totalProfit": 2254.65,
       "createdAt": "2026-03-15T15:41:43.909647Z"
     },
     {
@@ -472,10 +472,10 @@
       "gcashTotal": 23605.0,
       "sariSariStore": 7561.0,
       "orders": 5927.0,
-      "gcashProfit": 520.0,
-      "sariSariStoreProfit": 756.1,
+      "gcashProfit": 472.1,
+      "sariSariStoreProfit": 1134.15,
       "ordersProfit": 889.05,
-      "totalProfit": 2165.15,
+      "totalProfit": 2495.3,
       "createdAt": "2026-03-15T15:41:43.909688Z"
     },
     {
@@ -486,10 +486,10 @@
       "gcashTotal": 15225.0,
       "sariSariStore": 7292.0,
       "orders": 3719.0,
-      "gcashProfit": 325.0,
-      "sariSariStoreProfit": 729.2,
+      "gcashProfit": 304.5,
+      "sariSariStoreProfit": 1093.8,
       "ordersProfit": 557.85,
-      "totalProfit": 1612.05,
+      "totalProfit": 1956.15,
       "createdAt": "2026-03-15T15:41:43.909728Z"
     },
     {
@@ -500,10 +500,10 @@
       "gcashTotal": 12275.0,
       "sariSariStore": 6909.0,
       "orders": 2597.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 690.9,
+      "gcashProfit": 245.5,
+      "sariSariStoreProfit": 1036.35,
       "ordersProfit": 389.55,
-      "totalProfit": 1360.45,
+      "totalProfit": 1671.4,
       "createdAt": "2026-03-15T15:41:43.909769Z"
     },
     {
@@ -514,10 +514,10 @@
       "gcashTotal": 13800.0,
       "sariSariStore": 5924.0,
       "orders": 8455.0,
-      "gcashProfit": 315.0,
-      "sariSariStoreProfit": 592.4,
+      "gcashProfit": 276.0,
+      "sariSariStoreProfit": 888.6,
       "ordersProfit": 1268.25,
-      "totalProfit": 2175.65,
+      "totalProfit": 2432.85,
       "createdAt": "2026-03-15T15:41:43.909833Z"
     },
     {
@@ -528,10 +528,10 @@
       "gcashTotal": 24315.0,
       "sariSariStore": 5555.0,
       "orders": 6226.0,
-      "gcashProfit": 515.0,
-      "sariSariStoreProfit": 555.5,
+      "gcashProfit": 486.3,
+      "sariSariStoreProfit": 833.25,
       "ordersProfit": 933.9,
-      "totalProfit": 2004.4,
+      "totalProfit": 2253.45,
       "createdAt": "2026-03-15T15:41:43.909875Z"
     },
     {
@@ -542,10 +542,10 @@
       "gcashTotal": 8155.0,
       "sariSariStore": 7472.0,
       "orders": 7245.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 747.2,
+      "gcashProfit": 163.1,
+      "sariSariStoreProfit": 1120.8,
       "ordersProfit": 1086.75,
-      "totalProfit": 2113.95,
+      "totalProfit": 2370.65,
       "createdAt": "2026-03-15T15:41:43.909917Z"
     },
     {
@@ -556,10 +556,10 @@
       "gcashTotal": 15500.0,
       "sariSariStore": 8479.0,
       "orders": 10241.0,
-      "gcashProfit": 340.0,
-      "sariSariStoreProfit": 847.9,
+      "gcashProfit": 310.0,
+      "sariSariStoreProfit": 1271.85,
       "ordersProfit": 1536.15,
-      "totalProfit": 2724.05,
+      "totalProfit": 3118.0,
       "createdAt": "2026-03-15T15:41:43.909957Z"
     },
     {
@@ -570,10 +570,10 @@
       "gcashTotal": 25890.0,
       "sariSariStore": 5675.0,
       "orders": 8419.0,
-      "gcashProfit": 515.0,
-      "sariSariStoreProfit": 567.5,
+      "gcashProfit": 517.8,
+      "sariSariStoreProfit": 851.25,
       "ordersProfit": 1262.85,
-      "totalProfit": 2345.35,
+      "totalProfit": 2631.9,
       "createdAt": "2026-03-15T15:41:43.910064Z"
     },
     {
@@ -584,10 +584,10 @@
       "gcashTotal": 21105.0,
       "sariSariStore": 6230.0,
       "orders": 4509.0,
-      "gcashProfit": 470.0,
-      "sariSariStoreProfit": 623.0,
+      "gcashProfit": 422.1,
+      "sariSariStoreProfit": 934.5,
       "ordersProfit": 676.35,
-      "totalProfit": 1769.35,
+      "totalProfit": 2032.95,
       "createdAt": "2026-03-15T15:41:43.910107Z"
     },
     {
@@ -598,10 +598,10 @@
       "gcashTotal": 27605.0,
       "sariSariStore": 8304.0,
       "orders": 4281.0,
-      "gcashProfit": 495.0,
-      "sariSariStoreProfit": 830.4,
+      "gcashProfit": 552.1,
+      "sariSariStoreProfit": 1245.6,
       "ordersProfit": 642.15,
-      "totalProfit": 1967.55,
+      "totalProfit": 2439.85,
       "createdAt": "2026-03-15T15:41:43.910160Z"
     },
     {
@@ -612,10 +612,10 @@
       "gcashTotal": 16750.0,
       "sariSariStore": 8512.0,
       "orders": 4576.0,
-      "gcashProfit": 360.0,
-      "sariSariStoreProfit": 851.2,
+      "gcashProfit": 335.0,
+      "sariSariStoreProfit": 1276.8,
       "ordersProfit": 686.4,
-      "totalProfit": 1897.6,
+      "totalProfit": 2298.2,
       "createdAt": "2026-03-15T15:41:43.910212Z"
     },
     {
@@ -626,10 +626,10 @@
       "gcashTotal": 12260.0,
       "sariSariStore": 7048.0,
       "orders": 4578.0,
-      "gcashProfit": 285.0,
-      "sariSariStoreProfit": 704.8,
+      "gcashProfit": 245.2,
+      "sariSariStoreProfit": 1057.2,
       "ordersProfit": 686.7,
-      "totalProfit": 1676.5,
+      "totalProfit": 1989.1,
       "createdAt": "2026-03-15T15:41:43.910258Z"
     },
     {
@@ -640,10 +640,10 @@
       "gcashTotal": 16175.0,
       "sariSariStore": 7956.0,
       "orders": 5638.0,
-      "gcashProfit": 335.0,
-      "sariSariStoreProfit": 795.6,
+      "gcashProfit": 323.5,
+      "sariSariStoreProfit": 1193.4,
       "ordersProfit": 845.7,
-      "totalProfit": 1976.3,
+      "totalProfit": 2362.6,
       "createdAt": "2026-03-15T15:41:43.910302Z"
     },
     {
@@ -654,10 +654,10 @@
       "gcashTotal": 13945.0,
       "sariSariStore": 6047.0,
       "orders": 5762.0,
-      "gcashProfit": 330.0,
-      "sariSariStoreProfit": 604.7,
+      "gcashProfit": 278.9,
+      "sariSariStoreProfit": 907.05,
       "ordersProfit": 864.3,
-      "totalProfit": 1799.0,
+      "totalProfit": 2050.25,
       "createdAt": "2026-03-15T15:41:43.910345Z"
     },
     {
@@ -668,10 +668,10 @@
       "gcashTotal": 23430.0,
       "sariSariStore": 12575.0,
       "orders": 0.0,
-      "gcashProfit": 525.0,
-      "sariSariStoreProfit": 1257.5,
+      "gcashProfit": 468.6,
+      "sariSariStoreProfit": 1886.25,
       "ordersProfit": 0.0,
-      "totalProfit": 1782.5,
+      "totalProfit": 2354.85,
       "createdAt": "2026-03-15T15:41:43.910422Z"
     },
     {
@@ -682,10 +682,10 @@
       "gcashTotal": 14765.0,
       "sariSariStore": 6565.0,
       "orders": 0.0,
-      "gcashProfit": 335.0,
-      "sariSariStoreProfit": 656.5,
+      "gcashProfit": 295.3,
+      "sariSariStoreProfit": 984.75,
       "ordersProfit": 0.0,
-      "totalProfit": 991.5,
+      "totalProfit": 1280.05,
       "createdAt": "2026-03-15T15:41:43.910465Z"
     },
     {
@@ -696,10 +696,10 @@
       "gcashTotal": 22065.0,
       "sariSariStore": 8548.0,
       "orders": 7542.0,
-      "gcashProfit": 485.0,
-      "sariSariStoreProfit": 854.8,
+      "gcashProfit": 441.3,
+      "sariSariStoreProfit": 1282.2,
       "ordersProfit": 1131.3,
-      "totalProfit": 2471.1,
+      "totalProfit": 2854.8,
       "createdAt": "2026-03-15T15:41:43.910507Z"
     },
     {
@@ -710,10 +710,10 @@
       "gcashTotal": 13530.0,
       "sariSariStore": 6815.0,
       "orders": 5216.0,
-      "gcashProfit": 315.0,
-      "sariSariStoreProfit": 681.5,
+      "gcashProfit": 270.6,
+      "sariSariStoreProfit": 1022.25,
       "ordersProfit": 782.4,
-      "totalProfit": 1778.9,
+      "totalProfit": 2075.25,
       "createdAt": "2026-03-15T15:41:43.910548Z"
     },
     {
@@ -724,10 +724,10 @@
       "gcashTotal": 17019.0,
       "sariSariStore": 11069.0,
       "orders": 5180.0,
-      "gcashProfit": 400.0,
-      "sariSariStoreProfit": 1106.9,
+      "gcashProfit": 340.38,
+      "sariSariStoreProfit": 1660.35,
       "ordersProfit": 777.0,
-      "totalProfit": 2283.9,
+      "totalProfit": 2777.73,
       "createdAt": "2026-03-15T15:41:43.910590Z"
     },
     {
@@ -738,10 +738,10 @@
       "gcashTotal": 22256.0,
       "sariSariStore": 8672.0,
       "orders": 6185.0,
-      "gcashProfit": 470.0,
-      "sariSariStoreProfit": 867.2,
+      "gcashProfit": 445.12,
+      "sariSariStoreProfit": 1300.8,
       "ordersProfit": 927.75,
-      "totalProfit": 2264.95,
+      "totalProfit": 2673.67,
       "createdAt": "2026-03-15T15:41:43.910633Z"
     },
     {
@@ -752,10 +752,10 @@
       "gcashTotal": 10965.0,
       "sariSariStore": 8442.0,
       "orders": 5423.0,
-      "gcashProfit": 240.0,
-      "sariSariStoreProfit": 844.2,
+      "gcashProfit": 219.3,
+      "sariSariStoreProfit": 1266.3,
       "ordersProfit": 813.45,
-      "totalProfit": 1897.65,
+      "totalProfit": 2299.05,
       "createdAt": "2026-03-15T15:41:43.910714Z"
     },
     {
@@ -766,10 +766,10 @@
       "gcashTotal": 20860.0,
       "sariSariStore": 6075.0,
       "orders": 6000.0,
-      "gcashProfit": 620.0,
-      "sariSariStoreProfit": 607.5,
+      "gcashProfit": 417.2,
+      "sariSariStoreProfit": 911.25,
       "ordersProfit": 900.0,
-      "totalProfit": 2127.5,
+      "totalProfit": 2228.45,
       "createdAt": "2026-03-15T15:41:43.910763Z"
     },
     {
@@ -780,10 +780,10 @@
       "gcashTotal": 12805.0,
       "sariSariStore": 5451.0,
       "orders": 0.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 545.1,
+      "gcashProfit": 256.1,
+      "sariSariStoreProfit": 817.65,
       "ordersProfit": 0.0,
-      "totalProfit": 855.1,
+      "totalProfit": 1073.75,
       "createdAt": "2026-03-15T15:41:43.910812Z"
     },
     {
@@ -794,10 +794,10 @@
       "gcashTotal": 16515.0,
       "sariSariStore": 8393.0,
       "orders": 0.0,
-      "gcashProfit": 380.0,
-      "sariSariStoreProfit": 839.3,
+      "gcashProfit": 330.3,
+      "sariSariStoreProfit": 1258.95,
       "ordersProfit": 0.0,
-      "totalProfit": 1219.3,
+      "totalProfit": 1589.25,
       "createdAt": "2026-03-15T15:41:43.910858Z"
     },
     {
@@ -808,10 +808,10 @@
       "gcashTotal": 19920.0,
       "sariSariStore": 5611.0,
       "orders": 0.0,
-      "gcashProfit": 455.0,
-      "sariSariStoreProfit": 561.1,
+      "gcashProfit": 398.4,
+      "sariSariStoreProfit": 841.65,
       "ordersProfit": 0.0,
-      "totalProfit": 1016.1,
+      "totalProfit": 1240.05,
       "createdAt": "2026-03-15T15:41:43.910902Z"
     },
     {
@@ -822,10 +822,10 @@
       "gcashTotal": 25745.0,
       "sariSariStore": 7459.0,
       "orders": 0.0,
-      "gcashProfit": 555.0,
-      "sariSariStoreProfit": 745.9,
+      "gcashProfit": 514.9,
+      "sariSariStoreProfit": 1118.85,
       "ordersProfit": 0.0,
-      "totalProfit": 1300.9,
+      "totalProfit": 1633.75,
       "createdAt": "2026-03-15T15:41:43.910946Z"
     },
     {
@@ -836,10 +836,10 @@
       "gcashTotal": 5509.0,
       "sariSariStore": 3725.0,
       "orders": 0.0,
-      "gcashProfit": 135.0,
-      "sariSariStoreProfit": 372.5,
+      "gcashProfit": 110.18,
+      "sariSariStoreProfit": 558.75,
       "ordersProfit": 0.0,
-      "totalProfit": 507.5,
+      "totalProfit": 668.93,
       "createdAt": "2026-03-15T15:41:43.910989Z"
     },
     {
@@ -850,10 +850,10 @@
       "gcashTotal": 13780.0,
       "sariSariStore": 8574.0,
       "orders": 6792.0,
-      "gcashProfit": 305.0,
-      "sariSariStoreProfit": 857.4,
+      "gcashProfit": 275.6,
+      "sariSariStoreProfit": 1286.1,
       "ordersProfit": 1018.8,
-      "totalProfit": 2181.2,
+      "totalProfit": 2580.5,
       "createdAt": "2026-03-15T15:41:43.911032Z"
     },
     {
@@ -864,10 +864,10 @@
       "gcashTotal": 29235.0,
       "sariSariStore": 6570.0,
       "orders": 5838.0,
-      "gcashProfit": 650.0,
-      "sariSariStoreProfit": 657.0,
+      "gcashProfit": 584.7,
+      "sariSariStoreProfit": 985.5,
       "ordersProfit": 875.7,
-      "totalProfit": 2182.7,
+      "totalProfit": 2445.9,
       "createdAt": "2026-03-15T15:41:43.911074Z"
     },
     {
@@ -878,10 +878,10 @@
       "gcashTotal": 20705.0,
       "sariSariStore": 7736.0,
       "orders": 3270.0,
-      "gcashProfit": 445.0,
-      "sariSariStoreProfit": 773.6,
+      "gcashProfit": 414.1,
+      "sariSariStoreProfit": 1160.4,
       "ordersProfit": 490.5,
-      "totalProfit": 1709.1,
+      "totalProfit": 2065.0,
       "createdAt": "2026-03-15T15:41:43.911116Z"
     },
     {
@@ -892,10 +892,10 @@
       "gcashTotal": 10090.0,
       "sariSariStore": 8830.0,
       "orders": 10031.0,
-      "gcashProfit": 235.0,
-      "sariSariStoreProfit": 883.0,
+      "gcashProfit": 201.8,
+      "sariSariStoreProfit": 1324.5,
       "ordersProfit": 1504.65,
-      "totalProfit": 2622.65,
+      "totalProfit": 3030.95,
       "createdAt": "2026-03-15T15:41:43.911157Z"
     },
     {
@@ -906,10 +906,10 @@
       "gcashTotal": 26925.0,
       "sariSariStore": 5633.0,
       "orders": 5025.0,
-      "gcashProfit": 670.0,
-      "sariSariStoreProfit": 563.3,
+      "gcashProfit": 538.5,
+      "sariSariStoreProfit": 844.95,
       "ordersProfit": 753.75,
-      "totalProfit": 1987.05,
+      "totalProfit": 2137.2,
       "createdAt": "2026-03-15T15:41:43.911200Z"
     },
     {
@@ -920,10 +920,10 @@
       "gcashTotal": 13983.0,
       "sariSariStore": 8924.0,
       "orders": 7000.0,
-      "gcashProfit": 307.626,
-      "sariSariStoreProfit": 892.4,
+      "gcashProfit": 279.66,
+      "sariSariStoreProfit": 1338.6,
       "ordersProfit": 1050.0,
-      "totalProfit": 1942.4,
+      "totalProfit": 2668.26,
       "createdAt": "2026-03-15T15:41:43.911242Z"
     },
     {
@@ -934,10 +934,10 @@
       "gcashTotal": 12905.0,
       "sariSariStore": 7839.0,
       "orders": 4051.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 783.9,
+      "gcashProfit": 258.1,
+      "sariSariStoreProfit": 1175.85,
       "ordersProfit": 607.65,
-      "totalProfit": 1701.55,
+      "totalProfit": 2041.6,
       "createdAt": "2026-03-15T15:41:43.911311Z"
     },
     {
@@ -948,10 +948,10 @@
       "gcashTotal": 12146.0,
       "sariSariStore": 3894.0,
       "orders": 5575.0,
-      "gcashProfit": 355.0,
-      "sariSariStoreProfit": 389.4,
+      "gcashProfit": 242.92,
+      "sariSariStoreProfit": 584.1,
       "ordersProfit": 836.25,
-      "totalProfit": 1580.65,
+      "totalProfit": 1663.27,
       "createdAt": "2026-03-15T15:41:43.912086Z"
     },
     {
@@ -962,10 +962,10 @@
       "gcashTotal": 6355.0,
       "sariSariStore": 2873.0,
       "orders": 1995.0,
-      "gcashProfit": 150.0,
-      "sariSariStoreProfit": 287.3,
+      "gcashProfit": 127.1,
+      "sariSariStoreProfit": 430.95,
       "ordersProfit": 299.25,
-      "totalProfit": 736.55,
+      "totalProfit": 857.3,
       "createdAt": "2026-03-15T15:41:43.912129Z"
     },
     {
@@ -976,10 +976,10 @@
       "gcashTotal": 23330.0,
       "sariSariStore": 4783.0,
       "orders": 0.0,
-      "gcashProfit": 480.0,
-      "sariSariStoreProfit": 478.3,
+      "gcashProfit": 466.6,
+      "sariSariStoreProfit": 717.45,
       "ordersProfit": 0.0,
-      "totalProfit": 958.3,
+      "totalProfit": 1184.05,
       "createdAt": "2026-03-15T15:41:43.912187Z"
     },
     {
@@ -990,10 +990,10 @@
       "gcashTotal": 26355.0,
       "sariSariStore": 2850.0,
       "orders": 3305.0,
-      "gcashProfit": 560.0,
-      "sariSariStoreProfit": 285.0,
+      "gcashProfit": 527.1,
+      "sariSariStoreProfit": 427.5,
       "ordersProfit": 495.75,
-      "totalProfit": 1340.75,
+      "totalProfit": 1450.35,
       "createdAt": "2026-03-15T15:41:43.912232Z"
     },
     {
@@ -1004,10 +1004,10 @@
       "gcashTotal": 8975.0,
       "sariSariStore": 2880.0,
       "orders": 3885.0,
-      "gcashProfit": 145.0,
-      "sariSariStoreProfit": 288.0,
+      "gcashProfit": 179.5,
+      "sariSariStoreProfit": 432.0,
       "ordersProfit": 582.75,
-      "totalProfit": 1015.75,
+      "totalProfit": 1194.25,
       "createdAt": "2026-03-15T15:41:43.912275Z"
     },
     {
@@ -1018,10 +1018,10 @@
       "gcashTotal": 6345.0,
       "sariSariStore": 2010.0,
       "orders": 2997.0,
-      "gcashProfit": 150.0,
-      "sariSariStoreProfit": 201.0,
+      "gcashProfit": 126.9,
+      "sariSariStoreProfit": 301.5,
       "ordersProfit": 449.55,
-      "totalProfit": 800.55,
+      "totalProfit": 877.95,
       "createdAt": "2026-03-15T15:41:43.912319Z"
     },
     {
@@ -1032,10 +1032,10 @@
       "gcashTotal": 18719.0,
       "sariSariStore": 6200.0,
       "orders": 4720.0,
-      "gcashProfit": 415.0,
-      "sariSariStoreProfit": 620.0,
+      "gcashProfit": 374.38,
+      "sariSariStoreProfit": 930.0,
       "ordersProfit": 708.0,
-      "totalProfit": 1743.0,
+      "totalProfit": 2012.38,
       "createdAt": "2026-03-15T15:41:43.912402Z"
     },
     {
@@ -1046,10 +1046,10 @@
       "gcashTotal": 8970.0,
       "sariSariStore": 3330.0,
       "orders": 0.0,
-      "gcashProfit": 210.0,
-      "sariSariStoreProfit": 333.0,
+      "gcashProfit": 179.4,
+      "sariSariStoreProfit": 499.5,
       "ordersProfit": 0.0,
-      "totalProfit": 543.0,
+      "totalProfit": 678.9,
       "createdAt": "2026-03-15T15:41:43.912447Z"
     },
     {
@@ -1060,10 +1060,10 @@
       "gcashTotal": 10560.0,
       "sariSariStore": 3340.0,
       "orders": 0.0,
-      "gcashProfit": 233.0,
-      "sariSariStoreProfit": 334.0,
+      "gcashProfit": 211.2,
+      "sariSariStoreProfit": 501.0,
       "ordersProfit": 0.0,
-      "totalProfit": 567.0,
+      "totalProfit": 712.2,
       "createdAt": "2026-03-15T15:41:43.912489Z"
     },
     {
@@ -1074,10 +1074,10 @@
       "gcashTotal": 6610.0,
       "sariSariStore": 3760.0,
       "orders": 0.0,
-      "gcashProfit": 150.0,
-      "sariSariStoreProfit": 376.0,
+      "gcashProfit": 132.2,
+      "sariSariStoreProfit": 564.0,
       "ordersProfit": 0.0,
-      "totalProfit": 526.0,
+      "totalProfit": 696.2,
       "createdAt": "2026-03-15T15:41:43.912556Z"
     },
     {
@@ -1088,10 +1088,10 @@
       "gcashTotal": 2175.0,
       "sariSariStore": 3022.0,
       "orders": 0.0,
-      "gcashProfit": 55.0,
-      "sariSariStoreProfit": 302.2,
+      "gcashProfit": 43.5,
+      "sariSariStoreProfit": 453.3,
       "ordersProfit": 0.0,
-      "totalProfit": 357.2,
+      "totalProfit": 496.8,
       "createdAt": "2026-03-15T15:41:43.912604Z"
     },
     {
@@ -1102,10 +1102,10 @@
       "gcashTotal": 17480.0,
       "sariSariStore": 5960.0,
       "orders": 0.0,
-      "gcashProfit": 610.0,
-      "sariSariStoreProfit": 596.0,
+      "gcashProfit": 349.6,
+      "sariSariStoreProfit": 894.0,
       "ordersProfit": 0.0,
-      "totalProfit": 1206.0,
+      "totalProfit": 1243.6,
       "createdAt": "2026-03-15T15:41:43.912671Z"
     },
     {
@@ -1116,10 +1116,10 @@
       "gcashTotal": 16970.0,
       "sariSariStore": 4987.0,
       "orders": 3739.0,
-      "gcashProfit": 375.0,
-      "sariSariStoreProfit": 498.7,
+      "gcashProfit": 339.4,
+      "sariSariStoreProfit": 748.05,
       "ordersProfit": 560.85,
-      "totalProfit": 1434.55,
+      "totalProfit": 1648.3,
       "createdAt": "2026-03-15T15:41:43.912714Z"
     },
     {
@@ -1130,10 +1130,10 @@
       "gcashTotal": 17345.0,
       "sariSariStore": 3895.0,
       "orders": 5081.0,
-      "gcashProfit": 375.0,
-      "sariSariStoreProfit": 389.5,
+      "gcashProfit": 346.9,
+      "sariSariStoreProfit": 584.25,
       "ordersProfit": 762.15,
-      "totalProfit": 1526.65,
+      "totalProfit": 1693.3,
       "createdAt": "2026-03-15T15:41:43.912756Z"
     },
     {
@@ -1144,10 +1144,10 @@
       "gcashTotal": 10274.0,
       "sariSariStore": 5072.0,
       "orders": 2115.0,
-      "gcashProfit": 240.0,
-      "sariSariStoreProfit": 507.2,
+      "gcashProfit": 205.48,
+      "sariSariStoreProfit": 760.8,
       "ordersProfit": 317.25,
-      "totalProfit": 1064.45,
+      "totalProfit": 1283.53,
       "createdAt": "2026-03-15T15:41:43.912796Z"
     },
     {
@@ -1158,10 +1158,10 @@
       "gcashTotal": 17124.0,
       "sariSariStore": 3160.0,
       "orders": 2825.0,
-      "gcashProfit": 385.0,
-      "sariSariStoreProfit": 316.0,
+      "gcashProfit": 342.48,
+      "sariSariStoreProfit": 474.0,
       "ordersProfit": 423.75,
-      "totalProfit": 1124.75,
+      "totalProfit": 1240.23,
       "createdAt": "2026-03-15T15:41:43.912839Z"
     },
     {
@@ -1172,10 +1172,10 @@
       "gcashTotal": 19905.0,
       "sariSariStore": 4338.0,
       "orders": 6005.0,
-      "gcashProfit": 430.0,
-      "sariSariStoreProfit": 433.8,
+      "gcashProfit": 398.1,
+      "sariSariStoreProfit": 650.7,
       "ordersProfit": 900.75,
-      "totalProfit": 1764.55,
+      "totalProfit": 1949.55,
       "createdAt": "2026-03-15T15:41:43.912890Z"
     },
     {
@@ -1186,10 +1186,10 @@
       "gcashTotal": 200.0,
       "sariSariStore": 0.0,
       "orders": 0.0,
-      "gcashProfit": 4.3999999999999995,
+      "gcashProfit": 4.0,
       "sariSariStoreProfit": 0.0,
       "ordersProfit": 0.0,
-      "totalProfit": 4.3999999999999995,
+      "totalProfit": 4.0,
       "createdAt": "2026-03-15T15:41:43.912935Z"
     },
     {
@@ -1200,10 +1200,10 @@
       "gcashTotal": 8310.0,
       "sariSariStore": 6615.0,
       "orders": 3575.0,
-      "gcashProfit": 182.82,
-      "sariSariStoreProfit": 661.5,
+      "gcashProfit": 166.2,
+      "sariSariStoreProfit": 992.25,
       "ordersProfit": 536.25,
-      "totalProfit": 1197.75,
+      "totalProfit": 1694.7,
       "createdAt": "2026-03-15T15:41:43.912979Z"
     },
     {
@@ -1214,10 +1214,10 @@
       "gcashTotal": 9590.0,
       "sariSariStore": 8823.0,
       "orders": 0.0,
-      "gcashProfit": 210.98,
-      "sariSariStoreProfit": 882.3,
+      "gcashProfit": 191.8,
+      "sariSariStoreProfit": 1323.45,
       "ordersProfit": 0.0,
-      "totalProfit": 882.3,
+      "totalProfit": 1515.25,
       "createdAt": "2026-03-15T15:41:43.913060Z"
     },
     {
@@ -1228,10 +1228,10 @@
       "gcashTotal": 9290.0,
       "sariSariStore": 3272.0,
       "orders": 0.0,
-      "gcashProfit": 205.0,
-      "sariSariStoreProfit": 327.2,
+      "gcashProfit": 185.8,
+      "sariSariStoreProfit": 490.8,
       "ordersProfit": 0.0,
-      "totalProfit": 532.2,
+      "totalProfit": 676.6,
       "createdAt": "2026-03-15T15:41:43.913103Z"
     },
     {
@@ -1242,10 +1242,10 @@
       "gcashTotal": 44733.0,
       "sariSariStore": 4896.0,
       "orders": 7396.0,
-      "gcashProfit": 875.0,
-      "sariSariStoreProfit": 489.6,
+      "gcashProfit": 894.66,
+      "sariSariStoreProfit": 734.4,
       "ordersProfit": 1109.4,
-      "totalProfit": 2474.0,
+      "totalProfit": 2738.46,
       "createdAt": "2026-03-15T15:41:43.913145Z"
     },
     {
@@ -1256,10 +1256,10 @@
       "gcashTotal": 23998.0,
       "sariSariStore": 4605.0,
       "orders": 4091.0,
-      "gcashProfit": 505.0,
-      "sariSariStoreProfit": 460.5,
+      "gcashProfit": 479.96,
+      "sariSariStoreProfit": 690.75,
       "ordersProfit": 613.65,
-      "totalProfit": 1579.15,
+      "totalProfit": 1784.36,
       "createdAt": "2026-03-15T15:41:43.913188Z"
     },
     {
@@ -1270,10 +1270,10 @@
       "gcashTotal": 39630.0,
       "sariSariStore": 6630.0,
       "orders": 785.0,
-      "gcashProfit": 785.0,
-      "sariSariStoreProfit": 663.0,
+      "gcashProfit": 792.6,
+      "sariSariStoreProfit": 994.5,
       "ordersProfit": 117.75,
-      "totalProfit": 1565.75,
+      "totalProfit": 1904.85,
       "createdAt": "2026-03-15T15:41:43.913254Z"
     },
     {
@@ -1284,10 +1284,10 @@
       "gcashTotal": 20530.0,
       "sariSariStore": 5298.0,
       "orders": 1708.0,
-      "gcashProfit": 425.0,
-      "sariSariStoreProfit": 529.8,
+      "gcashProfit": 410.6,
+      "sariSariStoreProfit": 794.7,
       "ordersProfit": 256.2,
-      "totalProfit": 1211.0,
+      "totalProfit": 1461.5,
       "createdAt": "2026-03-15T15:41:43.913295Z"
     },
     {
@@ -1298,10 +1298,10 @@
       "gcashTotal": 12580.0,
       "sariSariStore": 5100.0,
       "orders": 0.0,
-      "gcashProfit": 245.0,
-      "sariSariStoreProfit": 510.0,
+      "gcashProfit": 251.6,
+      "sariSariStoreProfit": 765.0,
       "ordersProfit": 0.0,
-      "totalProfit": 755.0,
+      "totalProfit": 1016.6,
       "createdAt": "2026-03-15T15:41:43.913336Z"
     },
     {
@@ -1312,10 +1312,10 @@
       "gcashTotal": 29565.0,
       "sariSariStore": 3985.0,
       "orders": 0.0,
-      "gcashProfit": 520.0,
-      "sariSariStoreProfit": 398.5,
+      "gcashProfit": 591.3,
+      "sariSariStoreProfit": 597.75,
       "ordersProfit": 0.0,
-      "totalProfit": 918.5,
+      "totalProfit": 1189.05,
       "createdAt": "2026-03-15T15:41:43.913377Z"
     },
     {
@@ -1326,10 +1326,10 @@
       "gcashTotal": 10710.0,
       "sariSariStore": 4385.0,
       "orders": 0.0,
-      "gcashProfit": 215.0,
-      "sariSariStoreProfit": 438.5,
+      "gcashProfit": 214.2,
+      "sariSariStoreProfit": 657.75,
       "ordersProfit": 0.0,
-      "totalProfit": 653.5,
+      "totalProfit": 871.95,
       "createdAt": "2026-03-15T15:41:43.913417Z"
     },
     {
@@ -1340,10 +1340,10 @@
       "gcashTotal": 7388.0,
       "sariSariStore": 3170.0,
       "orders": 0.0,
-      "gcashProfit": 190.0,
-      "sariSariStoreProfit": 317.0,
+      "gcashProfit": 147.76,
+      "sariSariStoreProfit": 475.5,
       "ordersProfit": 0.0,
-      "totalProfit": 507.0,
+      "totalProfit": 623.26,
       "createdAt": "2026-03-15T15:41:43.913535Z"
     },
     {
@@ -1354,10 +1354,10 @@
       "gcashTotal": 19137.0,
       "sariSariStore": 2512.0,
       "orders": 0.0,
-      "gcashProfit": 365.0,
-      "sariSariStoreProfit": 251.2,
+      "gcashProfit": 382.74,
+      "sariSariStoreProfit": 376.8,
       "ordersProfit": 0.0,
-      "totalProfit": 616.2,
+      "totalProfit": 759.54,
       "createdAt": "2026-03-15T15:41:43.913575Z"
     },
     {
@@ -1368,10 +1368,10 @@
       "gcashTotal": 9445.0,
       "sariSariStore": 4335.0,
       "orders": 0.0,
-      "gcashProfit": 205.0,
-      "sariSariStoreProfit": 433.5,
+      "gcashProfit": 188.9,
+      "sariSariStoreProfit": 650.25,
       "ordersProfit": 0.0,
-      "totalProfit": 638.5,
+      "totalProfit": 839.15,
       "createdAt": "2026-03-15T15:41:43.913616Z"
     },
     {
@@ -1382,10 +1382,10 @@
       "gcashTotal": 24595.0,
       "sariSariStore": 4518.0,
       "orders": 0.0,
-      "gcashProfit": 515.0,
-      "sariSariStoreProfit": 451.8,
+      "gcashProfit": 491.9,
+      "sariSariStoreProfit": 677.7,
       "ordersProfit": 0.0,
-      "totalProfit": 966.8,
+      "totalProfit": 1169.6,
       "createdAt": "2026-03-15T15:41:43.913656Z"
     },
     {
@@ -1396,10 +1396,10 @@
       "gcashTotal": 22110.0,
       "sariSariStore": 3043.0,
       "orders": 0.0,
-      "gcashProfit": 460.0,
-      "sariSariStoreProfit": 304.3,
+      "gcashProfit": 442.2,
+      "sariSariStoreProfit": 456.45,
       "ordersProfit": 0.0,
-      "totalProfit": 764.3,
+      "totalProfit": 898.65,
       "createdAt": "2026-03-15T15:41:43.913696Z"
     },
     {
@@ -1410,10 +1410,10 @@
       "gcashTotal": 27000.0,
       "sariSariStore": 1550.0,
       "orders": 0.0,
-      "gcashProfit": 350.0,
-      "sariSariStoreProfit": 155.0,
+      "gcashProfit": 540.0,
+      "sariSariStoreProfit": 232.5,
       "ordersProfit": 0.0,
-      "totalProfit": 505.0,
+      "totalProfit": 772.5,
       "createdAt": "2026-03-15T15:41:43.913737Z"
     },
     {
@@ -1424,10 +1424,10 @@
       "gcashTotal": 9890.0,
       "sariSariStore": 5130.0,
       "orders": 5942.0,
-      "gcashProfit": 215.0,
-      "sariSariStoreProfit": 513.0,
+      "gcashProfit": 197.8,
+      "sariSariStoreProfit": 769.5,
       "ordersProfit": 891.3,
-      "totalProfit": 1619.3,
+      "totalProfit": 1858.6,
       "createdAt": "2026-03-15T15:41:43.913804Z"
     },
     {
@@ -1438,10 +1438,10 @@
       "gcashTotal": 21706.0,
       "sariSariStore": 3102.0,
       "orders": 1008.0,
-      "gcashProfit": 450.0,
-      "sariSariStoreProfit": 310.2,
+      "gcashProfit": 434.12,
+      "sariSariStoreProfit": 465.3,
       "ordersProfit": 151.2,
-      "totalProfit": 911.4,
+      "totalProfit": 1050.62,
       "createdAt": "2026-03-15T15:41:43.913845Z"
     },
     {
@@ -1452,10 +1452,10 @@
       "gcashTotal": 6350.0,
       "sariSariStore": 4520.0,
       "orders": 0.0,
-      "gcashProfit": 145.0,
-      "sariSariStoreProfit": 452.0,
+      "gcashProfit": 127.0,
+      "sariSariStoreProfit": 678.0,
       "ordersProfit": 0.0,
-      "totalProfit": 597.0,
+      "totalProfit": 805.0,
       "createdAt": "2026-03-15T15:41:43.913885Z"
     },
     {
@@ -1466,10 +1466,10 @@
       "gcashTotal": 41666.0,
       "sariSariStore": 3986.0,
       "orders": 5552.0,
-      "gcashProfit": 860.0,
-      "sariSariStoreProfit": 398.6,
+      "gcashProfit": 833.32,
+      "sariSariStoreProfit": 597.9,
       "ordersProfit": 832.8,
-      "totalProfit": 2091.4,
+      "totalProfit": 2264.02,
       "createdAt": "2026-03-15T15:41:43.913925Z"
     },
     {
@@ -1480,10 +1480,10 @@
       "gcashTotal": 13920.0,
       "sariSariStore": 3641.0,
       "orders": 0.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 364.1,
+      "gcashProfit": 278.4,
+      "sariSariStoreProfit": 546.15,
       "ordersProfit": 0.0,
-      "totalProfit": 644.1,
+      "totalProfit": 824.55,
       "createdAt": "2026-03-15T15:41:43.913965Z"
     },
     {
@@ -1494,10 +1494,10 @@
       "gcashTotal": 12430.0,
       "sariSariStore": 2908.0,
       "orders": 6480.0,
-      "gcashProfit": 260.0,
-      "sariSariStoreProfit": 290.8,
+      "gcashProfit": 248.6,
+      "sariSariStoreProfit": 436.2,
       "ordersProfit": 972.0,
-      "totalProfit": 1522.8,
+      "totalProfit": 1656.8,
       "createdAt": "2026-03-15T15:41:43.914081Z"
     },
     {
@@ -1508,10 +1508,10 @@
       "gcashTotal": 21490.0,
       "sariSariStore": 3802.0,
       "orders": 1016.0,
-      "gcashProfit": 470.0,
-      "sariSariStoreProfit": 380.2,
+      "gcashProfit": 429.8,
+      "sariSariStoreProfit": 570.3,
       "ordersProfit": 152.4,
-      "totalProfit": 1002.6,
+      "totalProfit": 1152.5,
       "createdAt": "2026-03-15T15:41:43.914122Z"
     },
     {
@@ -1522,10 +1522,10 @@
       "gcashTotal": 7280.0,
       "sariSariStore": 4780.0,
       "orders": 0.0,
-      "gcashProfit": 175.0,
-      "sariSariStoreProfit": 478.0,
+      "gcashProfit": 145.6,
+      "sariSariStoreProfit": 717.0,
       "ordersProfit": 0.0,
-      "totalProfit": 653.0,
+      "totalProfit": 862.6,
       "createdAt": "2026-03-15T15:41:43.914172Z"
     },
     {
@@ -1536,10 +1536,10 @@
       "gcashTotal": 12450.0,
       "sariSariStore": 3533.0,
       "orders": 5918.0,
-      "gcashProfit": 260.0,
-      "sariSariStoreProfit": 353.3,
+      "gcashProfit": 249.0,
+      "sariSariStoreProfit": 529.95,
       "ordersProfit": 887.7,
-      "totalProfit": 1501.0,
+      "totalProfit": 1666.65,
       "createdAt": "2026-03-15T15:41:43.914222Z"
     },
     {
@@ -1550,10 +1550,10 @@
       "gcashTotal": 31280.0,
       "sariSariStore": 4855.0,
       "orders": 0.0,
-      "gcashProfit": 605.0,
-      "sariSariStoreProfit": 485.5,
+      "gcashProfit": 625.6,
+      "sariSariStoreProfit": 728.25,
       "ordersProfit": 0.0,
-      "totalProfit": 1090.5,
+      "totalProfit": 1353.85,
       "createdAt": "2026-03-15T15:41:43.914266Z"
     },
     {
@@ -1564,10 +1564,10 @@
       "gcashTotal": 15280.0,
       "sariSariStore": 4145.0,
       "orders": 0.0,
-      "gcashProfit": 335.0,
-      "sariSariStoreProfit": 414.5,
+      "gcashProfit": 305.6,
+      "sariSariStoreProfit": 621.75,
       "ordersProfit": 0.0,
-      "totalProfit": 749.5,
+      "totalProfit": 927.35,
       "createdAt": "2026-03-15T15:41:43.914309Z"
     },
     {
@@ -1578,10 +1578,10 @@
       "gcashTotal": 14430.0,
       "sariSariStore": 6069.0,
       "orders": 2371.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 606.9,
+      "gcashProfit": 288.6,
+      "sariSariStoreProfit": 910.35,
       "ordersProfit": 355.65,
-      "totalProfit": 1272.55,
+      "totalProfit": 1554.6,
       "createdAt": "2026-03-15T15:41:43.914391Z"
     },
     {
@@ -1592,10 +1592,10 @@
       "gcashTotal": 12580.0,
       "sariSariStore": 5427.0,
       "orders": 3041.0,
-      "gcashProfit": 270.0,
-      "sariSariStoreProfit": 542.7,
+      "gcashProfit": 251.6,
+      "sariSariStoreProfit": 814.05,
       "ordersProfit": 456.15,
-      "totalProfit": 1268.85,
+      "totalProfit": 1521.8,
       "createdAt": "2026-03-15T15:41:43.914434Z"
     },
     {
@@ -1606,10 +1606,10 @@
       "gcashTotal": 8100.0,
       "sariSariStore": 4063.0,
       "orders": 1428.0,
-      "gcashProfit": 265.0,
-      "sariSariStoreProfit": 406.3,
+      "gcashProfit": 162.0,
+      "sariSariStoreProfit": 609.45,
       "ordersProfit": 214.2,
-      "totalProfit": 885.5,
+      "totalProfit": 985.65,
       "createdAt": "2026-03-15T15:41:43.914476Z"
     },
     {
@@ -1620,10 +1620,10 @@
       "gcashTotal": 15420.0,
       "sariSariStore": 6155.0,
       "orders": 8263.0,
-      "gcashProfit": 325.0,
-      "sariSariStoreProfit": 615.5,
+      "gcashProfit": 308.4,
+      "sariSariStoreProfit": 923.25,
       "ordersProfit": 1239.45,
-      "totalProfit": 2179.95,
+      "totalProfit": 2471.1,
       "createdAt": "2026-03-15T15:41:43.914518Z"
     },
     {
@@ -1635,9 +1635,9 @@
       "sariSariStore": 5932.0,
       "orders": 0.0,
       "gcashProfit": 0.0,
-      "sariSariStoreProfit": 593.2,
+      "sariSariStoreProfit": 889.8,
       "ordersProfit": 0.0,
-      "totalProfit": 593.2,
+      "totalProfit": 889.8,
       "createdAt": "2026-03-15T15:41:43.914560Z"
     },
     {
@@ -1648,10 +1648,10 @@
       "gcashTotal": 18439.0,
       "sariSariStore": 7218.0,
       "orders": 12177.0,
-      "gcashProfit": 425.0,
-      "sariSariStoreProfit": 721.8,
+      "gcashProfit": 368.78,
+      "sariSariStoreProfit": 1082.7,
       "ordersProfit": 1826.55,
-      "totalProfit": 2973.35,
+      "totalProfit": 3278.03,
       "createdAt": "2026-03-15T15:41:43.914682Z"
     },
     {
@@ -1662,10 +1662,10 @@
       "gcashTotal": 13305.0,
       "sariSariStore": 7645.0,
       "orders": 3139.0,
-      "gcashProfit": 290.0,
-      "sariSariStoreProfit": 764.5,
+      "gcashProfit": 266.1,
+      "sariSariStoreProfit": 1146.75,
       "ordersProfit": 470.85,
-      "totalProfit": 1525.35,
+      "totalProfit": 1883.7,
       "createdAt": "2026-03-15T15:41:43.914724Z"
     },
     {
@@ -1676,10 +1676,10 @@
       "gcashTotal": 24660.0,
       "sariSariStore": 3903.0,
       "orders": 982.0,
-      "gcashProfit": 525.0,
-      "sariSariStoreProfit": 390.3,
+      "gcashProfit": 493.2,
+      "sariSariStoreProfit": 585.45,
       "ordersProfit": 147.3,
-      "totalProfit": 1062.6,
+      "totalProfit": 1225.95,
       "createdAt": "2026-03-15T15:41:43.914765Z"
     },
     {
@@ -1690,10 +1690,10 @@
       "gcashTotal": 5090.0,
       "sariSariStore": 2774.0,
       "orders": 892.0,
-      "gcashProfit": 120.0,
-      "sariSariStoreProfit": 277.4,
+      "gcashProfit": 101.8,
+      "sariSariStoreProfit": 416.1,
       "ordersProfit": 133.8,
-      "totalProfit": 531.2,
+      "totalProfit": 651.7,
       "createdAt": "2026-03-15T15:41:43.914805Z"
     },
     {
@@ -1704,10 +1704,10 @@
       "gcashTotal": 5580.0,
       "sariSariStore": 3820.0,
       "orders": 5550.0,
-      "gcashProfit": 125.0,
-      "sariSariStoreProfit": 382.0,
+      "gcashProfit": 111.6,
+      "sariSariStoreProfit": 573.0,
       "ordersProfit": 832.5,
-      "totalProfit": 1339.5,
+      "totalProfit": 1517.1,
       "createdAt": "2026-03-15T15:41:43.914845Z"
     },
     {
@@ -1718,10 +1718,10 @@
       "gcashTotal": 18683.0,
       "sariSariStore": 4088.0,
       "orders": 10624.0,
-      "gcashProfit": 390.0,
-      "sariSariStoreProfit": 408.8,
+      "gcashProfit": 373.66,
+      "sariSariStoreProfit": 613.2,
       "ordersProfit": 1593.6,
-      "totalProfit": 2392.4,
+      "totalProfit": 2580.46,
       "createdAt": "2026-03-15T15:41:43.914964Z"
     },
     {
@@ -1732,10 +1732,10 @@
       "gcashTotal": 16190.0,
       "sariSariStore": 6562.0,
       "orders": 1862.0,
-      "gcashProfit": 345.0,
-      "sariSariStoreProfit": 656.2,
+      "gcashProfit": 323.8,
+      "sariSariStoreProfit": 984.3,
       "ordersProfit": 279.3,
-      "totalProfit": 1280.5,
+      "totalProfit": 1587.4,
       "createdAt": "2026-03-15T15:41:43.915005Z"
     },
     {
@@ -1746,10 +1746,10 @@
       "gcashTotal": 5160.0,
       "sariSariStore": 5740.0,
       "orders": 2821.0,
-      "gcashProfit": 120.0,
-      "sariSariStoreProfit": 574.0,
+      "gcashProfit": 103.2,
+      "sariSariStoreProfit": 861.0,
       "ordersProfit": 423.15,
-      "totalProfit": 1117.15,
+      "totalProfit": 1387.35,
       "createdAt": "2026-03-15T15:41:43.915046Z"
     },
     {
@@ -1760,10 +1760,10 @@
       "gcashTotal": 11100.0,
       "sariSariStore": 2386.0,
       "orders": 8041.0,
-      "gcashProfit": 245.0,
-      "sariSariStoreProfit": 238.6,
+      "gcashProfit": 222.0,
+      "sariSariStoreProfit": 357.9,
       "ordersProfit": 1206.15,
-      "totalProfit": 1689.75,
+      "totalProfit": 1786.05,
       "createdAt": "2026-03-15T15:41:43.915086Z"
     },
     {
@@ -1774,10 +1774,10 @@
       "gcashTotal": 17864.0,
       "sariSariStore": 6388.0,
       "orders": 6781.0,
-      "gcashProfit": 395.0,
-      "sariSariStoreProfit": 638.8,
+      "gcashProfit": 357.28,
+      "sariSariStoreProfit": 958.2,
       "ordersProfit": 1017.15,
-      "totalProfit": 2050.95,
+      "totalProfit": 2332.63,
       "createdAt": "2026-03-15T15:41:43.915244Z"
     },
     {
@@ -1788,10 +1788,10 @@
       "gcashTotal": 10972.0,
       "sariSariStore": 6293.0,
       "orders": 8222.0,
-      "gcashProfit": 250.0,
-      "sariSariStoreProfit": 629.3,
+      "gcashProfit": 219.44,
+      "sariSariStoreProfit": 943.95,
       "ordersProfit": 1233.3,
-      "totalProfit": 2112.6,
+      "totalProfit": 2396.69,
       "createdAt": "2026-03-15T15:41:43.915374Z"
     },
     {
@@ -1802,10 +1802,10 @@
       "gcashTotal": 14493.0,
       "sariSariStore": 5632.0,
       "orders": 4134.0,
-      "gcashProfit": 350.0,
-      "sariSariStoreProfit": 563.2,
+      "gcashProfit": 289.86,
+      "sariSariStoreProfit": 844.8,
       "ordersProfit": 620.1,
-      "totalProfit": 1533.3,
+      "totalProfit": 1754.76,
       "createdAt": "2026-03-15T15:41:43.915445Z"
     },
     {
@@ -1816,10 +1816,10 @@
       "gcashTotal": 15927.0,
       "sariSariStore": 5748.0,
       "orders": 7609.0,
-      "gcashProfit": 295.0,
-      "sariSariStoreProfit": 574.8,
+      "gcashProfit": 318.54,
+      "sariSariStoreProfit": 862.2,
       "ordersProfit": 1141.35,
-      "totalProfit": 2011.15,
+      "totalProfit": 2322.09,
       "createdAt": "2026-03-15T15:41:43.915503Z"
     },
     {
@@ -1830,10 +1830,10 @@
       "gcashTotal": 24885.0,
       "sariSariStore": 6179.0,
       "orders": 6151.0,
-      "gcashProfit": 540.0,
-      "sariSariStoreProfit": 617.9,
+      "gcashProfit": 497.7,
+      "sariSariStoreProfit": 926.85,
       "ordersProfit": 922.65,
-      "totalProfit": 2080.55,
+      "totalProfit": 2347.2,
       "createdAt": "2026-03-15T15:41:43.915558Z"
     },
     {
@@ -1844,10 +1844,10 @@
       "gcashTotal": 10120.0,
       "sariSariStore": 4500.0,
       "orders": 0.0,
-      "gcashProfit": 235.0,
-      "sariSariStoreProfit": 450.0,
+      "gcashProfit": 202.4,
+      "sariSariStoreProfit": 675.0,
       "ordersProfit": 0.0,
-      "totalProfit": 685.0,
+      "totalProfit": 877.4,
       "createdAt": "2026-03-15T15:41:43.915614Z"
     },
     {
@@ -1858,10 +1858,10 @@
       "gcashTotal": 15956.0,
       "sariSariStore": 6768.0,
       "orders": 7206.0,
-      "gcashProfit": 335.0,
-      "sariSariStoreProfit": 676.8,
+      "gcashProfit": 319.12,
+      "sariSariStoreProfit": 1015.2,
       "ordersProfit": 1080.9,
-      "totalProfit": 2092.7,
+      "totalProfit": 2415.22,
       "createdAt": "2026-03-15T15:41:43.915714Z"
     },
     {
@@ -1872,10 +1872,10 @@
       "gcashTotal": 22455.0,
       "sariSariStore": 4862.0,
       "orders": 5170.0,
-      "gcashProfit": 480.0,
-      "sariSariStoreProfit": 486.2,
+      "gcashProfit": 449.1,
+      "sariSariStoreProfit": 729.3,
       "ordersProfit": 775.5,
-      "totalProfit": 1741.7,
+      "totalProfit": 1953.9,
       "createdAt": "2026-03-15T15:41:43.915760Z"
     },
     {
@@ -1886,10 +1886,10 @@
       "gcashTotal": 27240.0,
       "sariSariStore": 7567.0,
       "orders": 7640.0,
-      "gcashProfit": 585.0,
-      "sariSariStoreProfit": 756.7,
+      "gcashProfit": 544.8,
+      "sariSariStoreProfit": 1135.05,
       "ordersProfit": 1146.0,
-      "totalProfit": 2487.7,
+      "totalProfit": 2825.85,
       "createdAt": "2026-03-15T15:41:43.915806Z"
     },
     {
@@ -1900,10 +1900,10 @@
       "gcashTotal": 17370.0,
       "sariSariStore": 4363.0,
       "orders": 6530.0,
-      "gcashProfit": 370.0,
-      "sariSariStoreProfit": 436.3,
+      "gcashProfit": 347.4,
+      "sariSariStoreProfit": 654.45,
       "ordersProfit": 979.5,
-      "totalProfit": 1785.8,
+      "totalProfit": 1981.35,
       "createdAt": "2026-03-15T15:41:43.915849Z"
     },
     {
@@ -1914,10 +1914,10 @@
       "gcashTotal": 55850.0,
       "sariSariStore": 5056.0,
       "orders": 5580.0,
-      "gcashProfit": 1110.0,
-      "sariSariStoreProfit": 505.6,
+      "gcashProfit": 1117.0,
+      "sariSariStoreProfit": 758.4,
       "ordersProfit": 837.0,
-      "totalProfit": 2452.6,
+      "totalProfit": 2712.4,
       "createdAt": "2026-03-15T15:41:43.915892Z"
     },
     {
@@ -1928,10 +1928,10 @@
       "gcashTotal": 20595.0,
       "sariSariStore": 4928.0,
       "orders": 6464.0,
-      "gcashProfit": 440.0,
-      "sariSariStoreProfit": 492.8,
+      "gcashProfit": 411.9,
+      "sariSariStoreProfit": 739.2,
       "ordersProfit": 969.6,
-      "totalProfit": 1902.4,
+      "totalProfit": 2120.7,
       "createdAt": "2026-03-15T15:41:43.915934Z"
     },
     {
@@ -1942,10 +1942,10 @@
       "gcashTotal": 15985.0,
       "sariSariStore": 6105.0,
       "orders": 9784.0,
-      "gcashProfit": 330.0,
-      "sariSariStoreProfit": 610.5,
+      "gcashProfit": 319.7,
+      "sariSariStoreProfit": 915.75,
       "ordersProfit": 1467.6,
-      "totalProfit": 2408.1,
+      "totalProfit": 2703.05,
       "createdAt": "2026-03-15T15:41:43.916014Z"
     },
     {
@@ -1956,10 +1956,10 @@
       "gcashTotal": 24250.0,
       "sariSariStore": 4670.0,
       "orders": 7324.0,
-      "gcashProfit": 505.0,
-      "sariSariStoreProfit": 467.0,
+      "gcashProfit": 485.0,
+      "sariSariStoreProfit": 700.5,
       "ordersProfit": 1098.6,
-      "totalProfit": 2070.6,
+      "totalProfit": 2284.1,
       "createdAt": "2026-03-15T15:41:43.916056Z"
     },
     {
@@ -1970,10 +1970,10 @@
       "gcashTotal": 25200.0,
       "sariSariStore": 6910.0,
       "orders": 3629.0,
-      "gcashProfit": 540.0,
-      "sariSariStoreProfit": 691.0,
+      "gcashProfit": 504.0,
+      "sariSariStoreProfit": 1036.5,
       "ordersProfit": 544.35,
-      "totalProfit": 1775.35,
+      "totalProfit": 2084.85,
       "createdAt": "2026-03-15T15:41:43.916099Z"
     },
     {
@@ -1984,10 +1984,10 @@
       "gcashTotal": 8580.0,
       "sariSariStore": 3430.0,
       "orders": 5959.0,
-      "gcashProfit": 215.0,
-      "sariSariStoreProfit": 343.0,
+      "gcashProfit": 171.6,
+      "sariSariStoreProfit": 514.5,
       "ordersProfit": 893.85,
-      "totalProfit": 1451.85,
+      "totalProfit": 1579.95,
       "createdAt": "2026-03-15T15:41:43.916160Z"
     },
     {
@@ -1998,10 +1998,10 @@
       "gcashTotal": 45315.0,
       "sariSariStore": 4361.0,
       "orders": 6121.0,
-      "gcashProfit": 895.0,
-      "sariSariStoreProfit": 436.1,
+      "gcashProfit": 906.3,
+      "sariSariStoreProfit": 654.15,
       "ordersProfit": 918.15,
-      "totalProfit": 2249.25,
+      "totalProfit": 2478.6,
       "createdAt": "2026-03-15T15:41:43.916213Z"
     },
     {
@@ -2012,10 +2012,10 @@
       "gcashTotal": 16326.0,
       "sariSariStore": 3185.0,
       "orders": 4614.0,
-      "gcashProfit": 355.0,
-      "sariSariStoreProfit": 318.5,
+      "gcashProfit": 326.52,
+      "sariSariStoreProfit": 477.75,
       "ordersProfit": 692.1,
-      "totalProfit": 1365.6,
+      "totalProfit": 1496.37,
       "createdAt": "2026-03-15T15:41:43.916259Z"
     },
     {
@@ -2026,10 +2026,10 @@
       "gcashTotal": 20635.0,
       "sariSariStore": 4541.0,
       "orders": 4882.0,
-      "gcashProfit": 455.0,
-      "sariSariStoreProfit": 454.1,
+      "gcashProfit": 412.7,
+      "sariSariStoreProfit": 681.15,
       "ordersProfit": 732.3,
-      "totalProfit": 1641.4,
+      "totalProfit": 1826.15,
       "createdAt": "2026-03-15T15:41:43.916329Z"
     },
     {
@@ -2040,10 +2040,10 @@
       "gcashTotal": 23055.0,
       "sariSariStore": 5982.0,
       "orders": 7526.0,
-      "gcashProfit": 485.0,
-      "sariSariStoreProfit": 598.2,
+      "gcashProfit": 461.1,
+      "sariSariStoreProfit": 897.3,
       "ordersProfit": 1128.9,
-      "totalProfit": 2212.1,
+      "totalProfit": 2487.3,
       "createdAt": "2026-03-15T15:41:43.916372Z"
     },
     {
@@ -2054,10 +2054,10 @@
       "gcashTotal": 9873.0,
       "sariSariStore": 7495.0,
       "orders": 5006.0,
-      "gcashProfit": 240.0,
-      "sariSariStoreProfit": 749.5,
+      "gcashProfit": 197.46,
+      "sariSariStoreProfit": 1124.25,
       "ordersProfit": 750.9,
-      "totalProfit": 1740.4,
+      "totalProfit": 2072.61,
       "createdAt": "2026-03-15T15:41:43.916413Z"
     },
     {
@@ -2068,10 +2068,10 @@
       "gcashTotal": 7860.0,
       "sariSariStore": 6304.0,
       "orders": 9031.0,
-      "gcashProfit": 180.0,
-      "sariSariStoreProfit": 630.4,
+      "gcashProfit": 157.2,
+      "sariSariStoreProfit": 945.6,
       "ordersProfit": 1354.65,
-      "totalProfit": 2165.05,
+      "totalProfit": 2457.45,
       "createdAt": "2026-03-15T15:41:43.916453Z"
     },
     {
@@ -2082,10 +2082,10 @@
       "gcashTotal": 14155.0,
       "sariSariStore": 4318.0,
       "orders": 0.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 431.8,
+      "gcashProfit": 283.1,
+      "sariSariStoreProfit": 647.7,
       "ordersProfit": 0.0,
-      "totalProfit": 741.8,
+      "totalProfit": 930.8,
       "createdAt": "2026-03-15T15:41:43.916495Z"
     },
     {
@@ -2096,10 +2096,10 @@
       "gcashTotal": 1060.0,
       "sariSariStore": 3512.0,
       "orders": 0.0,
-      "gcashProfit": 40.0,
-      "sariSariStoreProfit": 351.2,
+      "gcashProfit": 21.2,
+      "sariSariStoreProfit": 526.8,
       "ordersProfit": 0.0,
-      "totalProfit": 391.2,
+      "totalProfit": 548.0,
       "createdAt": "2026-03-15T15:41:43.916538Z"
     },
     {
@@ -2110,10 +2110,10 @@
       "gcashTotal": 3550.0,
       "sariSariStore": 4287.0,
       "orders": 1822.0,
-      "gcashProfit": 80.0,
-      "sariSariStoreProfit": 428.7,
+      "gcashProfit": 71.0,
+      "sariSariStoreProfit": 643.05,
       "ordersProfit": 273.3,
-      "totalProfit": 782.0,
+      "totalProfit": 987.35,
       "createdAt": "2026-03-15T15:41:43.916605Z"
     },
     {
@@ -2124,10 +2124,10 @@
       "gcashTotal": 5710.0,
       "sariSariStore": 3950.0,
       "orders": 0.0,
-      "gcashProfit": 145.0,
-      "sariSariStoreProfit": 395.0,
+      "gcashProfit": 114.2,
+      "sariSariStoreProfit": 592.5,
       "ordersProfit": 0.0,
-      "totalProfit": 540.0,
+      "totalProfit": 706.7,
       "createdAt": "2026-03-15T15:41:43.916647Z"
     },
     {
@@ -2138,10 +2138,10 @@
       "gcashTotal": 5272.0,
       "sariSariStore": 1681.0,
       "orders": 0.0,
-      "gcashProfit": 140.0,
-      "sariSariStoreProfit": 168.1,
+      "gcashProfit": 105.44,
+      "sariSariStoreProfit": 252.15,
       "ordersProfit": 0.0,
-      "totalProfit": 308.1,
+      "totalProfit": 357.59,
       "createdAt": "2026-03-15T15:41:43.916689Z"
     },
     {
@@ -2152,10 +2152,10 @@
       "gcashTotal": 5515.0,
       "sariSariStore": 3077.0,
       "orders": 0.0,
-      "gcashProfit": 115.0,
-      "sariSariStoreProfit": 307.7,
+      "gcashProfit": 110.3,
+      "sariSariStoreProfit": 461.55,
       "ordersProfit": 0.0,
-      "totalProfit": 422.7,
+      "totalProfit": 571.85,
       "createdAt": "2026-03-15T15:41:43.916730Z"
     },
     {
@@ -2166,10 +2166,10 @@
       "gcashTotal": 2713.0,
       "sariSariStore": 0.0,
       "orders": 0.0,
-      "gcashProfit": 271.3,
+      "gcashProfit": 54.26,
       "sariSariStoreProfit": 0.0,
-      "ordersProfit": 271.3,
-      "totalProfit": 271.3,
+      "ordersProfit": 0.0,
+      "totalProfit": 54.26,
       "createdAt": "2026-03-15T15:41:43.916779Z"
     },
     {
@@ -2180,10 +2180,10 @@
       "gcashTotal": 15140.0,
       "sariSariStore": 2259.0,
       "orders": 0.0,
-      "gcashProfit": 325.0,
-      "sariSariStoreProfit": 225.9,
+      "gcashProfit": 302.8,
+      "sariSariStoreProfit": 338.85,
       "ordersProfit": 0.0,
-      "totalProfit": 550.9,
+      "totalProfit": 641.65,
       "createdAt": "2026-03-15T15:41:43.916822Z"
     },
     {
@@ -2194,10 +2194,10 @@
       "gcashTotal": 12435.0,
       "sariSariStore": 4384.0,
       "orders": 0.0,
-      "gcashProfit": 275.0,
-      "sariSariStoreProfit": 438.4,
+      "gcashProfit": 248.7,
+      "sariSariStoreProfit": 657.6,
       "ordersProfit": 0.0,
-      "totalProfit": 713.4,
+      "totalProfit": 906.3,
       "createdAt": "2026-03-15T15:41:43.916889Z"
     },
     {
@@ -2208,10 +2208,10 @@
       "gcashTotal": 11720.0,
       "sariSariStore": 5112.0,
       "orders": 8273.0,
-      "gcashProfit": 250.0,
-      "sariSariStoreProfit": 511.2,
+      "gcashProfit": 234.4,
+      "sariSariStoreProfit": 766.8,
       "ordersProfit": 1240.95,
-      "totalProfit": 2002.15,
+      "totalProfit": 2242.15,
       "createdAt": "2026-03-15T15:41:43.916931Z"
     },
     {
@@ -2222,10 +2222,10 @@
       "gcashTotal": 20322.0,
       "sariSariStore": 5660.0,
       "orders": 4383.0,
-      "gcashProfit": 425.0,
-      "sariSariStoreProfit": 566.0,
+      "gcashProfit": 406.44,
+      "sariSariStoreProfit": 849.0,
       "ordersProfit": 657.45,
-      "totalProfit": 1648.45,
+      "totalProfit": 1912.89,
       "createdAt": "2026-03-15T15:41:43.916973Z"
     },
     {
@@ -2236,10 +2236,10 @@
       "gcashTotal": 24371.0,
       "sariSariStore": 4325.0,
       "orders": 11477.0,
-      "gcashProfit": 500.0,
-      "sariSariStoreProfit": 432.5,
+      "gcashProfit": 487.42,
+      "sariSariStoreProfit": 648.75,
       "ordersProfit": 1721.55,
-      "totalProfit": 2654.05,
+      "totalProfit": 2857.72,
       "createdAt": "2026-03-15T15:41:43.917014Z"
     },
     {
@@ -2250,10 +2250,10 @@
       "gcashTotal": 14230.0,
       "sariSariStore": 6042.0,
       "orders": 2122.0,
-      "gcashProfit": 325.0,
-      "sariSariStoreProfit": 604.2,
+      "gcashProfit": 284.6,
+      "sariSariStoreProfit": 906.3,
       "ordersProfit": 318.3,
-      "totalProfit": 1247.5,
+      "totalProfit": 1509.2,
       "createdAt": "2026-03-15T15:41:43.917055Z"
     },
     {
@@ -2264,10 +2264,10 @@
       "gcashTotal": 11160.0,
       "sariSariStore": 3115.0,
       "orders": 0.0,
-      "gcashProfit": 235.0,
-      "sariSariStoreProfit": 311.5,
+      "gcashProfit": 223.2,
+      "sariSariStoreProfit": 467.25,
       "ordersProfit": 0.0,
-      "totalProfit": 546.5,
+      "totalProfit": 690.45,
       "createdAt": "2026-03-15T15:41:43.917095Z"
     },
     {
@@ -2278,10 +2278,10 @@
       "gcashTotal": 6935.0,
       "sariSariStore": 3493.0,
       "orders": 0.0,
-      "gcashProfit": 152.57,
-      "sariSariStoreProfit": 349.3,
+      "gcashProfit": 138.7,
+      "sariSariStoreProfit": 523.95,
       "ordersProfit": 0.0,
-      "totalProfit": 349.3,
+      "totalProfit": 662.65,
       "createdAt": "2026-03-15T15:41:43.917176Z"
     },
     {
@@ -2292,10 +2292,10 @@
       "gcashTotal": 8670.0,
       "sariSariStore": 3785.0,
       "orders": 8053.0,
-      "gcashProfit": 200.0,
-      "sariSariStoreProfit": 378.5,
+      "gcashProfit": 173.4,
+      "sariSariStoreProfit": 567.75,
       "ordersProfit": 1207.95,
-      "totalProfit": 1786.45,
+      "totalProfit": 1949.1,
       "createdAt": "2026-03-15T15:41:43.917220Z"
     },
     {
@@ -2306,10 +2306,10 @@
       "gcashTotal": 13790.0,
       "sariSariStore": 5064.0,
       "orders": 6378.0,
-      "gcashProfit": 285.0,
-      "sariSariStoreProfit": 506.4,
+      "gcashProfit": 275.8,
+      "sariSariStoreProfit": 759.6,
       "ordersProfit": 956.7,
-      "totalProfit": 1748.1,
+      "totalProfit": 1992.1,
       "createdAt": "2026-03-15T15:41:43.917262Z"
     },
     {
@@ -2320,10 +2320,10 @@
       "gcashTotal": 17290.0,
       "sariSariStore": 5275.0,
       "orders": 8757.0,
-      "gcashProfit": 375.0,
-      "sariSariStoreProfit": 527.5,
+      "gcashProfit": 345.8,
+      "sariSariStoreProfit": 791.25,
       "ordersProfit": 1313.55,
-      "totalProfit": 2216.05,
+      "totalProfit": 2450.6,
       "createdAt": "2026-03-15T15:41:43.917302Z"
     },
     {
@@ -2334,10 +2334,10 @@
       "gcashTotal": 32185.0,
       "sariSariStore": 5325.0,
       "orders": 6812.0,
-      "gcashProfit": 680.0,
-      "sariSariStoreProfit": 532.5,
+      "gcashProfit": 643.7,
+      "sariSariStoreProfit": 798.75,
       "ordersProfit": 1021.8,
-      "totalProfit": 2234.3,
+      "totalProfit": 2464.25,
       "createdAt": "2026-03-15T15:41:43.917343Z"
     },
     {
@@ -2348,10 +2348,10 @@
       "gcashTotal": 14348.0,
       "sariSariStore": 1830.0,
       "orders": 0.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 183.0,
+      "gcashProfit": 286.96,
+      "sariSariStoreProfit": 274.5,
       "ordersProfit": 0.0,
-      "totalProfit": 463.0,
+      "totalProfit": 561.46,
       "createdAt": "2026-03-15T15:41:43.917388Z"
     },
     {
@@ -2362,10 +2362,10 @@
       "gcashTotal": 25740.0,
       "sariSariStore": 8326.0,
       "orders": 12132.0,
-      "gcashProfit": 540.0,
-      "sariSariStoreProfit": 832.6,
+      "gcashProfit": 514.8,
+      "sariSariStoreProfit": 1248.9,
       "ordersProfit": 1819.8,
-      "totalProfit": 3192.4,
+      "totalProfit": 3583.5,
       "createdAt": "2026-03-15T15:41:43.917466Z"
     },
     {
@@ -2376,10 +2376,10 @@
       "gcashTotal": 36855.0,
       "sariSariStore": 5675.0,
       "orders": 6530.0,
-      "gcashProfit": 740.0,
-      "sariSariStoreProfit": 567.5,
+      "gcashProfit": 737.1,
+      "sariSariStoreProfit": 851.25,
       "ordersProfit": 979.5,
-      "totalProfit": 2287.0,
+      "totalProfit": 2567.85,
       "createdAt": "2026-03-15T15:41:43.917507Z"
     },
     {
@@ -2390,10 +2390,10 @@
       "gcashTotal": 12810.0,
       "sariSariStore": 5688.0,
       "orders": 5161.0,
-      "gcashProfit": 270.0,
-      "sariSariStoreProfit": 568.8,
+      "gcashProfit": 256.2,
+      "sariSariStoreProfit": 853.2,
       "ordersProfit": 774.15,
-      "totalProfit": 1612.95,
+      "totalProfit": 1883.55,
       "createdAt": "2026-03-15T15:41:43.917547Z"
     },
     {
@@ -2404,10 +2404,10 @@
       "gcashTotal": 18453.0,
       "sariSariStore": 3739.0,
       "orders": 7243.0,
-      "gcashProfit": 405.0,
-      "sariSariStoreProfit": 373.9,
+      "gcashProfit": 369.06,
+      "sariSariStoreProfit": 560.85,
       "ordersProfit": 1086.45,
-      "totalProfit": 1865.35,
+      "totalProfit": 2016.36,
       "createdAt": "2026-03-15T15:41:43.917587Z"
     },
     {
@@ -2418,10 +2418,10 @@
       "gcashTotal": 26828.0,
       "sariSariStore": 5967.0,
       "orders": 6895.0,
-      "gcashProfit": 465.0,
-      "sariSariStoreProfit": 596.7,
+      "gcashProfit": 536.56,
+      "sariSariStoreProfit": 895.05,
       "ordersProfit": 1034.25,
-      "totalProfit": 2095.95,
+      "totalProfit": 2465.86,
       "createdAt": "2026-03-15T15:41:43.917627Z"
     },
     {
@@ -2432,10 +2432,10 @@
       "gcashTotal": 17980.0,
       "sariSariStore": 6500.0,
       "orders": 5846.0,
-      "gcashProfit": 315.0,
-      "sariSariStoreProfit": 650.0,
+      "gcashProfit": 359.6,
+      "sariSariStoreProfit": 975.0,
       "ordersProfit": 876.9,
-      "totalProfit": 1841.9,
+      "totalProfit": 2211.5,
       "createdAt": "2026-03-15T15:41:43.917669Z"
     },
     {
@@ -2446,10 +2446,10 @@
       "gcashTotal": 12778.0,
       "sariSariStore": 6922.0,
       "orders": 7041.0,
-      "gcashProfit": 265.0,
-      "sariSariStoreProfit": 692.2,
+      "gcashProfit": 255.56,
+      "sariSariStoreProfit": 1038.3,
       "ordersProfit": 1056.15,
-      "totalProfit": 2013.35,
+      "totalProfit": 2350.01,
       "createdAt": "2026-03-15T15:41:43.917747Z"
     },
     {
@@ -2460,10 +2460,10 @@
       "gcashTotal": 12717.0,
       "sariSariStore": 5728.0,
       "orders": 5116.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 572.8,
+      "gcashProfit": 254.34,
+      "sariSariStoreProfit": 859.2,
       "ordersProfit": 767.4,
-      "totalProfit": 1620.2,
+      "totalProfit": 1880.94,
       "createdAt": "2026-03-15T15:41:43.917788Z"
     },
     {
@@ -2474,10 +2474,10 @@
       "gcashTotal": 16240.0,
       "sariSariStore": 3710.0,
       "orders": 3155.0,
-      "gcashProfit": 295.0,
-      "sariSariStoreProfit": 371.0,
+      "gcashProfit": 324.8,
+      "sariSariStoreProfit": 556.5,
       "ordersProfit": 473.25,
-      "totalProfit": 1139.25,
+      "totalProfit": 1354.55,
       "createdAt": "2026-03-15T15:41:43.917829Z"
     },
     {
@@ -2488,10 +2488,10 @@
       "gcashTotal": 6752.0,
       "sariSariStore": 3663.0,
       "orders": 0.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 366.3,
+      "gcashProfit": 135.04,
+      "sariSariStoreProfit": 549.45,
       "ordersProfit": 0.0,
-      "totalProfit": 521.3,
+      "totalProfit": 684.49,
       "createdAt": "2026-03-15T15:41:43.917871Z"
     },
     {
@@ -2502,10 +2502,10 @@
       "gcashTotal": 8840.0,
       "sariSariStore": 6500.0,
       "orders": 0.0,
-      "gcashProfit": 205.0,
-      "sariSariStoreProfit": 650.0,
+      "gcashProfit": 176.8,
+      "sariSariStoreProfit": 975.0,
       "ordersProfit": 0.0,
-      "totalProfit": 855.0,
+      "totalProfit": 1151.8,
       "createdAt": "2026-03-15T15:41:43.917911Z"
     },
     {
@@ -2516,10 +2516,10 @@
       "gcashTotal": 15120.0,
       "sariSariStore": 2529.0,
       "orders": 6661.0,
-      "gcashProfit": 320.0,
-      "sariSariStoreProfit": 252.9,
+      "gcashProfit": 302.4,
+      "sariSariStoreProfit": 379.35,
       "ordersProfit": 999.15,
-      "totalProfit": 1572.05,
+      "totalProfit": 1680.9,
       "createdAt": "2026-03-15T15:41:43.917952Z"
     },
     {
@@ -2530,10 +2530,10 @@
       "gcashTotal": 5530.0,
       "sariSariStore": 2119.0,
       "orders": 0.0,
-      "gcashProfit": 125.0,
-      "sariSariStoreProfit": 211.9,
+      "gcashProfit": 110.6,
+      "sariSariStoreProfit": 317.85,
       "ordersProfit": 0.0,
-      "totalProfit": 336.9,
+      "totalProfit": 428.45,
       "createdAt": "2026-03-15T15:41:43.918030Z"
     },
     {
@@ -2544,10 +2544,10 @@
       "gcashTotal": 24325.0,
       "sariSariStore": 3121.0,
       "orders": 0.0,
-      "gcashProfit": 540.0,
-      "sariSariStoreProfit": 312.1,
+      "gcashProfit": 486.5,
+      "sariSariStoreProfit": 468.15,
       "ordersProfit": 0.0,
-      "totalProfit": 852.1,
+      "totalProfit": 954.65,
       "createdAt": "2026-03-15T15:41:43.918071Z"
     },
     {
@@ -2558,10 +2558,10 @@
       "gcashTotal": 25668.0,
       "sariSariStore": 5800.0,
       "orders": 7697.0,
-      "gcashProfit": 564.6959999999999,
-      "sariSariStoreProfit": 580.0,
+      "gcashProfit": 513.36,
+      "sariSariStoreProfit": 870.0,
       "ordersProfit": 1154.55,
-      "totalProfit": 1734.55,
+      "totalProfit": 2537.91,
       "createdAt": "2026-03-15T15:41:43.918112Z"
     },
     {
@@ -2572,10 +2572,10 @@
       "gcashTotal": 15255.0,
       "sariSariStore": 5888.0,
       "orders": 11264.0,
-      "gcashProfit": 345.0,
-      "sariSariStoreProfit": 588.8,
+      "gcashProfit": 305.1,
+      "sariSariStoreProfit": 883.2,
       "ordersProfit": 1689.6,
-      "totalProfit": 2623.4,
+      "totalProfit": 2877.9,
       "createdAt": "2026-03-15T15:41:43.918159Z"
     },
     {
@@ -2586,10 +2586,10 @@
       "gcashTotal": 12550.0,
       "sariSariStore": 5327.0,
       "orders": 6824.0,
-      "gcashProfit": 315.0,
-      "sariSariStoreProfit": 532.7,
+      "gcashProfit": 251.0,
+      "sariSariStoreProfit": 799.05,
       "ordersProfit": 1023.6,
-      "totalProfit": 1871.3,
+      "totalProfit": 2073.65,
       "createdAt": "2026-03-15T15:41:43.918209Z"
     },
     {
@@ -2600,10 +2600,10 @@
       "gcashTotal": 8953.0,
       "sariSariStore": 3420.0,
       "orders": 5491.0,
-      "gcashProfit": 225.0,
-      "sariSariStoreProfit": 342.0,
+      "gcashProfit": 179.06,
+      "sariSariStoreProfit": 513.0,
       "ordersProfit": 823.65,
-      "totalProfit": 1390.65,
+      "totalProfit": 1515.71,
       "createdAt": "2026-03-15T15:41:43.918254Z"
     },
     {
@@ -2614,10 +2614,10 @@
       "gcashTotal": 23960.0,
       "sariSariStore": 3505.0,
       "orders": 0.0,
-      "gcashProfit": 485.0,
-      "sariSariStoreProfit": 350.5,
+      "gcashProfit": 479.2,
+      "sariSariStoreProfit": 525.75,
       "ordersProfit": 0.0,
-      "totalProfit": 835.5,
+      "totalProfit": 1004.95,
       "createdAt": "2026-03-15T15:41:43.918336Z"
     },
     {
@@ -2628,10 +2628,10 @@
       "gcashTotal": 8730.0,
       "sariSariStore": 5900.0,
       "orders": 5949.0,
-      "gcashProfit": 200.0,
-      "sariSariStoreProfit": 590.0,
+      "gcashProfit": 174.6,
+      "sariSariStoreProfit": 885.0,
       "ordersProfit": 892.35,
-      "totalProfit": 1682.35,
+      "totalProfit": 1951.95,
       "createdAt": "2026-03-15T15:41:43.918383Z"
     },
     {
@@ -2642,10 +2642,10 @@
       "gcashTotal": 8808.0,
       "sariSariStore": 6359.0,
       "orders": 9610.0,
-      "gcashProfit": 215.0,
-      "sariSariStoreProfit": 635.9,
+      "gcashProfit": 176.16,
+      "sariSariStoreProfit": 953.85,
       "ordersProfit": 1441.5,
-      "totalProfit": 2292.4,
+      "totalProfit": 2571.51,
       "createdAt": "2026-03-15T15:41:43.918425Z"
     },
     {
@@ -2656,10 +2656,10 @@
       "gcashTotal": 12475.0,
       "sariSariStore": 7787.0,
       "orders": 8232.0,
-      "gcashProfit": 280.0,
-      "sariSariStoreProfit": 778.7,
+      "gcashProfit": 249.5,
+      "sariSariStoreProfit": 1168.05,
       "ordersProfit": 1234.8,
-      "totalProfit": 2293.5,
+      "totalProfit": 2652.35,
       "createdAt": "2026-03-15T15:41:43.918467Z"
     },
     {
@@ -2670,10 +2670,10 @@
       "gcashTotal": 11480.0,
       "sariSariStore": 5018.0,
       "orders": 8235.0,
-      "gcashProfit": 255.0,
-      "sariSariStoreProfit": 501.8,
+      "gcashProfit": 229.6,
+      "sariSariStoreProfit": 752.7,
       "ordersProfit": 1235.25,
-      "totalProfit": 1992.05,
+      "totalProfit": 2217.55,
       "createdAt": "2026-03-15T15:41:43.918508Z"
     },
     {
@@ -2684,10 +2684,10 @@
       "gcashTotal": 38765.0,
       "sariSariStore": 5712.0,
       "orders": 7752.0,
-      "gcashProfit": 720.0,
-      "sariSariStoreProfit": 571.2,
+      "gcashProfit": 775.3,
+      "sariSariStoreProfit": 856.8,
       "ordersProfit": 1162.8,
-      "totalProfit": 2454.0,
+      "totalProfit": 2794.9,
       "createdAt": "2026-03-15T15:41:43.918549Z"
     },
     {
@@ -2698,10 +2698,10 @@
       "gcashTotal": 20257.0,
       "sariSariStore": 5100.0,
       "orders": 7293.0,
-      "gcashProfit": 430.0,
-      "sariSariStoreProfit": 510.0,
+      "gcashProfit": 405.14,
+      "sariSariStoreProfit": 765.0,
       "ordersProfit": 1093.95,
-      "totalProfit": 2033.95,
+      "totalProfit": 2264.09,
       "createdAt": "2026-03-15T15:41:43.918630Z"
     },
     {
@@ -2712,10 +2712,10 @@
       "gcashTotal": 25970.0,
       "sariSariStore": 6670.0,
       "orders": 7728.0,
-      "gcashProfit": 530.0,
-      "sariSariStoreProfit": 667.0,
+      "gcashProfit": 519.4,
+      "sariSariStoreProfit": 1000.5,
       "ordersProfit": 1159.2,
-      "totalProfit": 2356.2,
+      "totalProfit": 2679.1,
       "createdAt": "2026-03-15T15:41:43.918671Z"
     },
     {
@@ -2726,10 +2726,10 @@
       "gcashTotal": 20215.0,
       "sariSariStore": 4744.0,
       "orders": 6190.0,
-      "gcashProfit": 405.0,
-      "sariSariStoreProfit": 474.4,
+      "gcashProfit": 404.3,
+      "sariSariStoreProfit": 711.6,
       "ordersProfit": 928.5,
-      "totalProfit": 1807.9,
+      "totalProfit": 2044.4,
       "createdAt": "2026-03-15T15:41:43.918713Z"
     },
     {
@@ -2740,10 +2740,10 @@
       "gcashTotal": 11166.0,
       "sariSariStore": 5290.0,
       "orders": 4720.0,
-      "gcashProfit": 260.0,
-      "sariSariStoreProfit": 529.0,
+      "gcashProfit": 223.32,
+      "sariSariStoreProfit": 793.5,
       "ordersProfit": 708.0,
-      "totalProfit": 1497.0,
+      "totalProfit": 1724.82,
       "createdAt": "2026-03-15T15:41:43.918754Z"
     },
     {
@@ -2754,10 +2754,10 @@
       "gcashTotal": 18215.0,
       "sariSariStore": 4321.0,
       "orders": 11650.0,
-      "gcashProfit": 420.0,
-      "sariSariStoreProfit": 432.1,
+      "gcashProfit": 364.3,
+      "sariSariStoreProfit": 648.15,
       "ordersProfit": 1747.5,
-      "totalProfit": 2599.6,
+      "totalProfit": 2759.95,
       "createdAt": "2026-03-15T15:41:43.918795Z"
     },
     {
@@ -2768,10 +2768,10 @@
       "gcashTotal": 2410.0,
       "sariSariStore": 3700.0,
       "orders": 5021.0,
-      "gcashProfit": 45.0,
-      "sariSariStoreProfit": 370.0,
+      "gcashProfit": 48.2,
+      "sariSariStoreProfit": 555.0,
       "ordersProfit": 753.15,
-      "totalProfit": 1168.15,
+      "totalProfit": 1356.35,
       "createdAt": "2026-03-15T15:41:43.918838Z"
     },
     {
@@ -2782,10 +2782,10 @@
       "gcashTotal": 15475.0,
       "sariSariStore": 9310.0,
       "orders": 12567.0,
-      "gcashProfit": 340.45,
-      "sariSariStoreProfit": 931.0,
+      "gcashProfit": 309.5,
+      "sariSariStoreProfit": 1396.5,
       "ordersProfit": 1885.05,
-      "totalProfit": 2816.05,
+      "totalProfit": 3591.05,
       "createdAt": "2026-03-15T15:41:43.918904Z"
     },
     {
@@ -2798,7 +2798,7 @@
       "orders": 0.0,
       "gcashProfit": 0.0,
       "sariSariStoreProfit": 1078.65,
-      "ordersProfit": 1078.65,
+      "ordersProfit": 0.0,
       "totalProfit": 1078.65,
       "createdAt": "2026-03-15T15:41:43.918947Z"
     },
@@ -2810,10 +2810,10 @@
       "gcashTotal": 7520.0,
       "sariSariStore": 1446.0,
       "orders": 8196.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 144.6,
+      "gcashProfit": 150.4,
+      "sariSariStoreProfit": 216.9,
       "ordersProfit": 1229.4,
-      "totalProfit": 1529.0,
+      "totalProfit": 1596.7,
       "createdAt": "2026-03-15T15:41:43.919034Z"
     },
     {
@@ -2824,10 +2824,10 @@
       "gcashTotal": 7465.0,
       "sariSariStore": 3114.0,
       "orders": 7881.0,
-      "gcashProfit": 195.0,
-      "sariSariStoreProfit": 311.4,
+      "gcashProfit": 149.3,
+      "sariSariStoreProfit": 467.1,
       "ordersProfit": 1182.15,
-      "totalProfit": 1688.55,
+      "totalProfit": 1798.55,
       "createdAt": "2026-03-15T15:41:43.919077Z"
     },
     {
@@ -2838,10 +2838,10 @@
       "gcashTotal": 6705.0,
       "sariSariStore": 4392.0,
       "orders": 0.0,
-      "gcashProfit": 125.0,
-      "sariSariStoreProfit": 439.2,
+      "gcashProfit": 134.1,
+      "sariSariStoreProfit": 658.8,
       "ordersProfit": 0.0,
-      "totalProfit": 564.2,
+      "totalProfit": 792.9,
       "createdAt": "2026-03-15T15:41:43.919200Z"
     },
     {
@@ -2852,10 +2852,10 @@
       "gcashTotal": 5855.0,
       "sariSariStore": 3900.0,
       "orders": 0.0,
-      "gcashProfit": 135.0,
-      "sariSariStoreProfit": 390.0,
+      "gcashProfit": 117.1,
+      "sariSariStoreProfit": 585.0,
       "ordersProfit": 0.0,
-      "totalProfit": 525.0,
+      "totalProfit": 702.1,
       "createdAt": "2026-03-15T15:41:43.919241Z"
     },
     {
@@ -2866,10 +2866,10 @@
       "gcashTotal": 16673.0,
       "sariSariStore": 5385.0,
       "orders": 0.0,
-      "gcashProfit": 340.0,
-      "sariSariStoreProfit": 538.5,
+      "gcashProfit": 333.46,
+      "sariSariStoreProfit": 807.75,
       "ordersProfit": 0.0,
-      "totalProfit": 878.5,
+      "totalProfit": 1141.21,
       "createdAt": "2026-03-15T15:41:43.919282Z"
     },
     {
@@ -2880,10 +2880,10 @@
       "gcashTotal": 8358.0,
       "sariSariStore": 2169.0,
       "orders": 0.0,
-      "gcashProfit": 185.0,
-      "sariSariStoreProfit": 216.9,
+      "gcashProfit": 167.16,
+      "sariSariStoreProfit": 325.35,
       "ordersProfit": 0.0,
-      "totalProfit": 401.9,
+      "totalProfit": 492.51,
       "createdAt": "2026-03-15T15:41:43.919322Z"
     },
     {
@@ -2894,10 +2894,10 @@
       "gcashTotal": 16065.0,
       "sariSariStore": 4434.0,
       "orders": 11165.0,
-      "gcashProfit": 360.0,
-      "sariSariStoreProfit": 443.4,
+      "gcashProfit": 321.3,
+      "sariSariStoreProfit": 665.1,
       "ordersProfit": 1674.75,
-      "totalProfit": 2478.15,
+      "totalProfit": 2661.15,
       "createdAt": "2026-03-15T15:41:43.919548Z"
     },
     {
@@ -2908,10 +2908,10 @@
       "gcashTotal": 11873.0,
       "sariSariStore": 3238.0,
       "orders": 3774.0,
-      "gcashProfit": 275.0,
-      "sariSariStoreProfit": 323.8,
+      "gcashProfit": 237.46,
+      "sariSariStoreProfit": 485.7,
       "ordersProfit": 566.1,
-      "totalProfit": 1164.9,
+      "totalProfit": 1289.26,
       "createdAt": "2026-03-15T15:41:43.919592Z"
     },
     {
@@ -2922,10 +2922,10 @@
       "gcashTotal": 9120.0,
       "sariSariStore": 2539.0,
       "orders": 7849.0,
-      "gcashProfit": 200.0,
-      "sariSariStoreProfit": 253.9,
+      "gcashProfit": 182.4,
+      "sariSariStoreProfit": 380.85,
       "ordersProfit": 1177.35,
-      "totalProfit": 1631.25,
+      "totalProfit": 1740.6,
       "createdAt": "2026-03-15T15:41:43.919634Z"
     },
     {
@@ -2936,10 +2936,10 @@
       "gcashTotal": 16052.0,
       "sariSariStore": 2809.0,
       "orders": 4774.0,
-      "gcashProfit": 350.0,
-      "sariSariStoreProfit": 280.9,
+      "gcashProfit": 321.04,
+      "sariSariStoreProfit": 421.35,
       "ordersProfit": 716.1,
-      "totalProfit": 1347.0,
+      "totalProfit": 1458.49,
       "createdAt": "2026-03-15T15:41:43.919675Z"
     },
     {
@@ -2950,10 +2950,10 @@
       "gcashTotal": 7060.0,
       "sariSariStore": 5168.0,
       "orders": 7550.0,
-      "gcashProfit": 170.0,
-      "sariSariStoreProfit": 516.8,
+      "gcashProfit": 141.2,
+      "sariSariStoreProfit": 775.2,
       "ordersProfit": 1132.5,
-      "totalProfit": 1819.3,
+      "totalProfit": 2048.9,
       "createdAt": "2026-03-15T15:41:43.919753Z"
     },
     {
@@ -2964,10 +2964,10 @@
       "gcashTotal": 12800.0,
       "sariSariStore": 5931.0,
       "orders": 9903.0,
-      "gcashProfit": 275.0,
-      "sariSariStoreProfit": 593.1,
+      "gcashProfit": 256.0,
+      "sariSariStoreProfit": 889.65,
       "ordersProfit": 1485.45,
-      "totalProfit": 2353.55,
+      "totalProfit": 2631.1,
       "createdAt": "2026-03-15T15:41:43.919793Z"
     },
     {
@@ -2978,10 +2978,10 @@
       "gcashTotal": 10950.0,
       "sariSariStore": 5840.0,
       "orders": 8860.0,
-      "gcashProfit": 260.0,
-      "sariSariStoreProfit": 584.0,
+      "gcashProfit": 219.0,
+      "sariSariStoreProfit": 876.0,
       "ordersProfit": 1329.0,
-      "totalProfit": 2173.0,
+      "totalProfit": 2424.0,
       "createdAt": "2026-03-15T15:41:43.919833Z"
     },
     {
@@ -2992,10 +2992,10 @@
       "gcashTotal": 6605.0,
       "sariSariStore": 3886.0,
       "orders": 7338.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 388.6,
+      "gcashProfit": 132.1,
+      "sariSariStoreProfit": 582.9,
       "ordersProfit": 1100.7,
-      "totalProfit": 1644.3,
+      "totalProfit": 1815.7,
       "createdAt": "2026-03-15T15:41:43.919872Z"
     },
     {
@@ -3006,10 +3006,10 @@
       "gcashTotal": 17270.0,
       "sariSariStore": 2130.0,
       "orders": 2975.0,
-      "gcashProfit": 356.0,
-      "sariSariStoreProfit": 213.0,
+      "gcashProfit": 345.4,
+      "sariSariStoreProfit": 319.5,
       "ordersProfit": 446.25,
-      "totalProfit": 1015.25,
+      "totalProfit": 1111.15,
       "createdAt": "2026-03-15T15:41:43.919911Z"
     },
     {
@@ -3020,10 +3020,10 @@
       "gcashTotal": 16235.0,
       "sariSariStore": 5096.0,
       "orders": 8260.0,
-      "gcashProfit": 335.0,
-      "sariSariStoreProfit": 509.6,
+      "gcashProfit": 324.7,
+      "sariSariStoreProfit": 764.4,
       "ordersProfit": 1239.0,
-      "totalProfit": 2083.6,
+      "totalProfit": 2328.1,
       "createdAt": "2026-03-15T15:41:43.920027Z"
     },
     {
@@ -3034,10 +3034,10 @@
       "gcashTotal": 8970.0,
       "sariSariStore": 2509.0,
       "orders": 0.0,
-      "gcashProfit": 130.0,
-      "sariSariStoreProfit": 250.9,
+      "gcashProfit": 179.4,
+      "sariSariStoreProfit": 376.35,
       "ordersProfit": 0.0,
-      "totalProfit": 380.9,
+      "totalProfit": 555.75,
       "createdAt": "2026-03-15T15:41:43.920069Z"
     },
     {
@@ -3048,10 +3048,10 @@
       "gcashTotal": 10171.0,
       "sariSariStore": 3748.0,
       "orders": 0.0,
-      "gcashProfit": 215.0,
-      "sariSariStoreProfit": 374.8,
+      "gcashProfit": 203.42,
+      "sariSariStoreProfit": 562.2,
       "ordersProfit": 0.0,
-      "totalProfit": 589.8,
+      "totalProfit": 765.62,
       "createdAt": "2026-03-15T15:41:43.920113Z"
     },
     {
@@ -3062,10 +3062,10 @@
       "gcashTotal": 6895.0,
       "sariSariStore": 2938.0,
       "orders": 0.0,
-      "gcashProfit": 170.0,
-      "sariSariStoreProfit": 293.8,
+      "gcashProfit": 137.9,
+      "sariSariStoreProfit": 440.7,
       "ordersProfit": 0.0,
-      "totalProfit": 463.8,
+      "totalProfit": 578.6,
       "createdAt": "2026-03-15T15:41:43.920162Z"
     },
     {
@@ -3076,10 +3076,10 @@
       "gcashTotal": 8920.0,
       "sariSariStore": 3339.0,
       "orders": 0.0,
-      "gcashProfit": 200.0,
-      "sariSariStoreProfit": 333.9,
+      "gcashProfit": 178.4,
+      "sariSariStoreProfit": 500.85,
       "ordersProfit": 0.0,
-      "totalProfit": 533.9,
+      "totalProfit": 679.25,
       "createdAt": "2026-03-15T15:41:43.920213Z"
     },
     {
@@ -3090,10 +3090,10 @@
       "gcashTotal": 2725.0,
       "sariSariStore": 3900.0,
       "orders": 0.0,
-      "gcashProfit": 65.0,
-      "sariSariStoreProfit": 390.0,
+      "gcashProfit": 54.5,
+      "sariSariStoreProfit": 585.0,
       "ordersProfit": 0.0,
-      "totalProfit": 455.0,
+      "totalProfit": 639.5,
       "createdAt": "2026-03-15T15:41:43.920257Z"
     },
     {
@@ -3104,10 +3104,10 @@
       "gcashTotal": 8200.0,
       "sariSariStore": 3203.0,
       "orders": 0.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 320.3,
+      "gcashProfit": 164.0,
+      "sariSariStoreProfit": 480.45,
       "ordersProfit": 0.0,
-      "totalProfit": 475.3,
+      "totalProfit": 644.45,
       "createdAt": "2026-03-15T15:41:43.920340Z"
     },
     {
@@ -3118,10 +3118,10 @@
       "gcashTotal": 7180.0,
       "sariSariStore": 2651.0,
       "orders": 0.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 265.1,
+      "gcashProfit": 143.6,
+      "sariSariStoreProfit": 397.65,
       "ordersProfit": 0.0,
-      "totalProfit": 420.1,
+      "totalProfit": 541.25,
       "createdAt": "2026-03-15T15:41:43.920383Z"
     },
     {
@@ -3132,10 +3132,10 @@
       "gcashTotal": 14780.0,
       "sariSariStore": 4118.0,
       "orders": 0.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 411.8,
+      "gcashProfit": 295.6,
+      "sariSariStoreProfit": 617.7,
       "ordersProfit": 0.0,
-      "totalProfit": 721.8,
+      "totalProfit": 913.3,
       "createdAt": "2026-03-15T15:41:43.920425Z"
     },
     {
@@ -3146,10 +3146,10 @@
       "gcashTotal": 1445.0,
       "sariSariStore": 1942.0,
       "orders": 0.0,
-      "gcashProfit": 50.0,
-      "sariSariStoreProfit": 194.2,
+      "gcashProfit": 28.9,
+      "sariSariStoreProfit": 291.3,
       "ordersProfit": 0.0,
-      "totalProfit": 244.2,
+      "totalProfit": 320.2,
       "createdAt": "2026-03-15T15:41:43.920466Z"
     },
     {
@@ -3160,10 +3160,10 @@
       "gcashTotal": 11875.0,
       "sariSariStore": 2588.0,
       "orders": 0.0,
-      "gcashProfit": 265.0,
-      "sariSariStoreProfit": 258.8,
+      "gcashProfit": 237.5,
+      "sariSariStoreProfit": 388.2,
       "ordersProfit": 0.0,
-      "totalProfit": 523.8,
+      "totalProfit": 625.7,
       "createdAt": "2026-03-15T15:41:43.920510Z"
     },
     {
@@ -3174,10 +3174,10 @@
       "gcashTotal": 2000.0,
       "sariSariStore": 4279.0,
       "orders": 0.0,
-      "gcashProfit": 45.0,
-      "sariSariStoreProfit": 427.9,
+      "gcashProfit": 40.0,
+      "sariSariStoreProfit": 641.85,
       "ordersProfit": 0.0,
-      "totalProfit": 472.9,
+      "totalProfit": 681.85,
       "createdAt": "2026-03-15T15:41:43.920631Z"
     },
     {
@@ -3188,10 +3188,10 @@
       "gcashTotal": 14760.0,
       "sariSariStore": 2950.0,
       "orders": 0.0,
-      "gcashProfit": 305.0,
-      "sariSariStoreProfit": 295.0,
+      "gcashProfit": 295.2,
+      "sariSariStoreProfit": 442.5,
       "ordersProfit": 0.0,
-      "totalProfit": 600.0,
+      "totalProfit": 737.7,
       "createdAt": "2026-03-15T15:41:43.920675Z"
     },
     {
@@ -3202,10 +3202,10 @@
       "gcashTotal": 11410.0,
       "sariSariStore": 2370.0,
       "orders": 0.0,
-      "gcashProfit": 265.0,
-      "sariSariStoreProfit": 237.0,
+      "gcashProfit": 228.2,
+      "sariSariStoreProfit": 355.5,
       "ordersProfit": 0.0,
-      "totalProfit": 502.0,
+      "totalProfit": 583.7,
       "createdAt": "2026-03-15T15:41:43.920715Z"
     },
     {
@@ -3216,10 +3216,10 @@
       "gcashTotal": 5515.0,
       "sariSariStore": 3000.0,
       "orders": 0.0,
-      "gcashProfit": 145.0,
-      "sariSariStoreProfit": 300.0,
+      "gcashProfit": 110.3,
+      "sariSariStoreProfit": 450.0,
       "ordersProfit": 0.0,
-      "totalProfit": 445.0,
+      "totalProfit": 560.3,
       "createdAt": "2026-03-15T15:41:43.920755Z"
     },
     {
@@ -3230,10 +3230,10 @@
       "gcashTotal": 12646.0,
       "sariSariStore": 5651.0,
       "orders": 10048.0,
-      "gcashProfit": 285.0,
-      "sariSariStoreProfit": 565.1,
+      "gcashProfit": 252.92,
+      "sariSariStoreProfit": 847.65,
       "ordersProfit": 1507.2,
-      "totalProfit": 2357.3,
+      "totalProfit": 2607.77,
       "createdAt": "2026-03-15T15:41:43.920910Z"
     },
     {
@@ -3244,10 +3244,10 @@
       "gcashTotal": 11450.0,
       "sariSariStore": 3870.0,
       "orders": 5493.0,
-      "gcashProfit": 250.0,
-      "sariSariStoreProfit": 387.0,
+      "gcashProfit": 229.0,
+      "sariSariStoreProfit": 580.5,
       "ordersProfit": 823.95,
-      "totalProfit": 1460.95,
+      "totalProfit": 1633.45,
       "createdAt": "2026-03-15T15:41:43.920952Z"
     },
     {
@@ -3258,10 +3258,10 @@
       "gcashTotal": 17590.0,
       "sariSariStore": 4842.0,
       "orders": 7056.0,
-      "gcashProfit": 380.0,
-      "sariSariStoreProfit": 484.2,
+      "gcashProfit": 351.8,
+      "sariSariStoreProfit": 726.3,
       "ordersProfit": 1058.4,
-      "totalProfit": 1922.6,
+      "totalProfit": 2136.5,
       "createdAt": "2026-03-15T15:41:43.920993Z"
     },
     {
@@ -3272,10 +3272,10 @@
       "gcashTotal": 22338.0,
       "sariSariStore": 4882.0,
       "orders": 8974.0,
-      "gcashProfit": 460.0,
-      "sariSariStoreProfit": 488.2,
+      "gcashProfit": 446.76,
+      "sariSariStoreProfit": 732.3,
       "ordersProfit": 1346.1,
-      "totalProfit": 2294.3,
+      "totalProfit": 2525.16,
       "createdAt": "2026-03-15T15:41:43.921036Z"
     },
     {
@@ -3286,10 +3286,10 @@
       "gcashTotal": 19467.0,
       "sariSariStore": 4228.0,
       "orders": 7422.0,
-      "gcashProfit": 375.0,
-      "sariSariStoreProfit": 422.8,
+      "gcashProfit": 389.34,
+      "sariSariStoreProfit": 634.2,
       "ordersProfit": 1113.3,
-      "totalProfit": 1911.1,
+      "totalProfit": 2136.84,
       "createdAt": "2026-03-15T15:41:43.921076Z"
     },
     {
@@ -3300,10 +3300,10 @@
       "gcashTotal": 6233.0,
       "sariSariStore": 2985.0,
       "orders": 0.0,
-      "gcashProfit": 160.0,
-      "sariSariStoreProfit": 298.5,
+      "gcashProfit": 124.66,
+      "sariSariStoreProfit": 447.75,
       "ordersProfit": 0.0,
-      "totalProfit": 458.5,
+      "totalProfit": 572.41,
       "createdAt": "2026-03-15T15:41:43.921116Z"
     },
     {
@@ -3314,10 +3314,10 @@
       "gcashTotal": 8263.0,
       "sariSariStore": 2694.0,
       "orders": 0.0,
-      "gcashProfit": 180.0,
-      "sariSariStoreProfit": 269.4,
+      "gcashProfit": 165.26,
+      "sariSariStoreProfit": 404.1,
       "ordersProfit": 0.0,
-      "totalProfit": 449.4,
+      "totalProfit": 569.36,
       "createdAt": "2026-03-15T15:41:43.921194Z"
     },
     {
@@ -3328,10 +3328,10 @@
       "gcashTotal": 20189.0,
       "sariSariStore": 3220.0,
       "orders": 0.0,
-      "gcashProfit": 205.0,
-      "sariSariStoreProfit": 322.0,
+      "gcashProfit": 403.78,
+      "sariSariStoreProfit": 483.0,
       "ordersProfit": 0.0,
-      "totalProfit": 527.0,
+      "totalProfit": 886.78,
       "createdAt": "2026-03-15T15:41:43.921239Z"
     },
     {
@@ -3342,10 +3342,10 @@
       "gcashTotal": 23923.0,
       "sariSariStore": 4714.0,
       "orders": 10135.0,
-      "gcashProfit": 520.0,
-      "sariSariStoreProfit": 471.4,
+      "gcashProfit": 478.46,
+      "sariSariStoreProfit": 707.1,
       "ordersProfit": 1520.25,
-      "totalProfit": 2511.65,
+      "totalProfit": 2705.81,
       "createdAt": "2026-03-15T15:41:43.921280Z"
     },
     {
@@ -3356,10 +3356,10 @@
       "gcashTotal": 13864.0,
       "sariSariStore": 3746.0,
       "orders": 0.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 374.6,
+      "gcashProfit": 277.28,
+      "sariSariStoreProfit": 561.9,
       "ordersProfit": 0.0,
-      "totalProfit": 684.6,
+      "totalProfit": 839.18,
       "createdAt": "2026-03-15T15:41:43.921320Z"
     },
     {
@@ -3370,10 +3370,10 @@
       "gcashTotal": 8100.0,
       "sariSariStore": 3149.0,
       "orders": 10076.0,
-      "gcashProfit": 190.0,
-      "sariSariStoreProfit": 314.9,
+      "gcashProfit": 162.0,
+      "sariSariStoreProfit": 472.35,
       "ordersProfit": 1511.4,
-      "totalProfit": 2016.3,
+      "totalProfit": 2145.75,
       "createdAt": "2026-03-15T15:41:43.921360Z"
     },
     {
@@ -3384,10 +3384,10 @@
       "gcashTotal": 23330.0,
       "sariSariStore": 3130.0,
       "orders": 0.0,
-      "gcashProfit": 465.0,
-      "sariSariStoreProfit": 313.0,
+      "gcashProfit": 466.6,
+      "sariSariStoreProfit": 469.5,
       "ordersProfit": 0.0,
-      "totalProfit": 778.0,
+      "totalProfit": 936.1,
       "createdAt": "2026-03-15T15:41:43.921400Z"
     },
     {
@@ -3398,10 +3398,10 @@
       "gcashTotal": 16250.0,
       "sariSariStore": 5620.0,
       "orders": 8704.0,
-      "gcashProfit": 405.0,
-      "sariSariStoreProfit": 562.0,
+      "gcashProfit": 325.0,
+      "sariSariStoreProfit": 843.0,
       "ordersProfit": 1305.6,
-      "totalProfit": 2272.6,
+      "totalProfit": 2473.6,
       "createdAt": "2026-03-15T15:41:43.921478Z"
     },
     {
@@ -3412,10 +3412,10 @@
       "gcashTotal": 14120.0,
       "sariSariStore": 5182.0,
       "orders": 9190.0,
-      "gcashProfit": 300.0,
-      "sariSariStoreProfit": 518.2,
+      "gcashProfit": 282.4,
+      "sariSariStoreProfit": 777.3,
       "ordersProfit": 1378.5,
-      "totalProfit": 2196.7,
+      "totalProfit": 2438.2,
       "createdAt": "2026-03-15T15:41:43.921519Z"
     },
     {
@@ -3426,10 +3426,10 @@
       "gcashTotal": 31117.0,
       "sariSariStore": 3966.0,
       "orders": 8856.0,
-      "gcashProfit": 645.0,
-      "sariSariStoreProfit": 396.6,
+      "gcashProfit": 622.34,
+      "sariSariStoreProfit": 594.9,
       "ordersProfit": 1328.4,
-      "totalProfit": 2370.0,
+      "totalProfit": 2545.64,
       "createdAt": "2026-03-15T15:41:43.921560Z"
     },
     {
@@ -3440,10 +3440,10 @@
       "gcashTotal": 25345.0,
       "sariSariStore": 4897.0,
       "orders": 3030.0,
-      "gcashProfit": 530.0,
-      "sariSariStoreProfit": 489.7,
+      "gcashProfit": 506.9,
+      "sariSariStoreProfit": 734.55,
       "ordersProfit": 454.5,
-      "totalProfit": 1474.2,
+      "totalProfit": 1695.95,
       "createdAt": "2026-03-15T15:41:43.921601Z"
     },
     {
@@ -3454,10 +3454,10 @@
       "gcashTotal": 6756.0,
       "sariSariStore": 4810.0,
       "orders": 10729.0,
-      "gcashProfit": 140.0,
-      "sariSariStoreProfit": 481.0,
+      "gcashProfit": 135.12,
+      "sariSariStoreProfit": 721.5,
       "ordersProfit": 1609.35,
-      "totalProfit": 2230.35,
+      "totalProfit": 2465.97,
       "createdAt": "2026-03-15T15:41:43.921641Z"
     },
     {
@@ -3468,10 +3468,10 @@
       "gcashTotal": 21885.0,
       "sariSariStore": 6985.0,
       "orders": 12696.0,
-      "gcashProfit": 440.0,
-      "sariSariStoreProfit": 698.5,
+      "gcashProfit": 437.7,
+      "sariSariStoreProfit": 1047.75,
       "ordersProfit": 1904.4,
-      "totalProfit": 3042.9,
+      "totalProfit": 3389.85,
       "createdAt": "2026-03-15T15:41:43.921760Z"
     },
     {
@@ -3482,10 +3482,10 @@
       "gcashTotal": 12540.0,
       "sariSariStore": 7781.0,
       "orders": 6136.0,
-      "gcashProfit": 265.0,
-      "sariSariStoreProfit": 778.1,
+      "gcashProfit": 250.8,
+      "sariSariStoreProfit": 1167.15,
       "ordersProfit": 920.4,
-      "totalProfit": 1963.5,
+      "totalProfit": 2338.35,
       "createdAt": "2026-03-15T15:41:43.921801Z"
     },
     {
@@ -3496,10 +3496,10 @@
       "gcashTotal": 10345.0,
       "sariSariStore": 5000.0,
       "orders": 9551.0,
-      "gcashProfit": 240.0,
-      "sariSariStoreProfit": 500.0,
+      "gcashProfit": 206.9,
+      "sariSariStoreProfit": 750.0,
       "ordersProfit": 1432.65,
-      "totalProfit": 2172.65,
+      "totalProfit": 2389.55,
       "createdAt": "2026-03-15T15:41:43.921841Z"
     },
     {
@@ -3512,7 +3512,7 @@
       "orders": 0.0,
       "gcashProfit": 0.0,
       "sariSariStoreProfit": 1949.25,
-      "ordersProfit": 1949.25,
+      "ordersProfit": 0.0,
       "totalProfit": 1949.25,
       "createdAt": "2026-03-15T15:41:43.921884Z"
     },
@@ -3524,10 +3524,10 @@
       "gcashTotal": 6525.0,
       "sariSariStore": 3800.0,
       "orders": 0.0,
-      "gcashProfit": 165.0,
-      "sariSariStoreProfit": 380.0,
+      "gcashProfit": 130.5,
+      "sariSariStoreProfit": 570.0,
       "ordersProfit": 0.0,
-      "totalProfit": 545.0,
+      "totalProfit": 700.5,
       "createdAt": "2026-03-15T15:41:43.921938Z"
     },
     {
@@ -3538,10 +3538,10 @@
       "gcashTotal": 13980.0,
       "sariSariStore": 5566.0,
       "orders": 0.0,
-      "gcashProfit": 330.0,
-      "sariSariStoreProfit": 556.6,
+      "gcashProfit": 279.6,
+      "sariSariStoreProfit": 834.9,
       "ordersProfit": 0.0,
-      "totalProfit": 886.6,
+      "totalProfit": 1114.5,
       "createdAt": "2026-03-15T15:41:43.921989Z"
     },
     {
@@ -3552,10 +3552,10 @@
       "gcashTotal": 12558.0,
       "sariSariStore": 6651.0,
       "orders": 10418.0,
-      "gcashProfit": 270.0,
-      "sariSariStoreProfit": 665.1,
+      "gcashProfit": 251.16,
+      "sariSariStoreProfit": 997.65,
       "ordersProfit": 1562.7,
-      "totalProfit": 2497.8,
+      "totalProfit": 2811.51,
       "createdAt": "2026-03-15T15:41:43.922073Z"
     },
     {
@@ -3566,10 +3566,10 @@
       "gcashTotal": 11515.0,
       "sariSariStore": 5586.0,
       "orders": 10272.0,
-      "gcashProfit": 260.0,
-      "sariSariStoreProfit": 558.6,
+      "gcashProfit": 230.3,
+      "sariSariStoreProfit": 837.9,
       "ordersProfit": 1540.8,
-      "totalProfit": 2359.4,
+      "totalProfit": 2609.0,
       "createdAt": "2026-03-15T15:41:43.922116Z"
     },
     {
@@ -3580,10 +3580,10 @@
       "gcashTotal": 24280.0,
       "sariSariStore": 5113.0,
       "orders": 9695.0,
-      "gcashProfit": 520.0,
-      "sariSariStoreProfit": 511.3,
+      "gcashProfit": 485.6,
+      "sariSariStoreProfit": 766.95,
       "ordersProfit": 1454.25,
-      "totalProfit": 2485.55,
+      "totalProfit": 2706.8,
       "createdAt": "2026-03-15T15:41:43.922159Z"
     },
     {
@@ -3594,10 +3594,10 @@
       "gcashTotal": 12898.0,
       "sariSariStore": 6456.0,
       "orders": 8351.0,
-      "gcashProfit": 285.0,
-      "sariSariStoreProfit": 645.6,
+      "gcashProfit": 257.96,
+      "sariSariStoreProfit": 968.4,
       "ordersProfit": 1252.65,
-      "totalProfit": 2183.25,
+      "totalProfit": 2479.01,
       "createdAt": "2026-03-15T15:41:43.922201Z"
     },
     {
@@ -3608,10 +3608,10 @@
       "gcashTotal": 20630.0,
       "sariSariStore": 5961.0,
       "orders": 11221.0,
-      "gcashProfit": 480.0,
-      "sariSariStoreProfit": 596.1,
+      "gcashProfit": 412.6,
+      "sariSariStoreProfit": 894.15,
       "ordersProfit": 1683.15,
-      "totalProfit": 2759.25,
+      "totalProfit": 2989.9,
       "createdAt": "2026-03-15T15:41:43.922252Z"
     },
     {
@@ -3622,10 +3622,10 @@
       "gcashTotal": 11715.0,
       "sariSariStore": 5800.0,
       "orders": 4775.0,
-      "gcashProfit": 275.0,
-      "sariSariStoreProfit": 580.0,
+      "gcashProfit": 234.3,
+      "sariSariStoreProfit": 870.0,
       "ordersProfit": 716.25,
-      "totalProfit": 1571.25,
+      "totalProfit": 1820.55,
       "createdAt": "2026-03-15T15:41:43.922293Z"
     },
     {
@@ -3636,10 +3636,10 @@
       "gcashTotal": 13540.0,
       "sariSariStore": 4700.0,
       "orders": 6896.0,
-      "gcashProfit": 315.0,
-      "sariSariStoreProfit": 470.0,
+      "gcashProfit": 270.8,
+      "sariSariStoreProfit": 705.0,
       "ordersProfit": 1034.4,
-      "totalProfit": 1819.4,
+      "totalProfit": 2010.2,
       "createdAt": "2026-03-15T15:41:43.922382Z"
     },
     {
@@ -3650,10 +3650,10 @@
       "gcashTotal": 26575.0,
       "sariSariStore": 5442.0,
       "orders": 10806.0,
-      "gcashProfit": 550.0,
-      "sariSariStoreProfit": 544.2,
+      "gcashProfit": 531.5,
+      "sariSariStoreProfit": 816.3,
       "ordersProfit": 1620.9,
-      "totalProfit": 2715.1,
+      "totalProfit": 2968.7,
       "createdAt": "2026-03-15T15:41:43.922422Z"
     },
     {
@@ -3664,10 +3664,10 @@
       "gcashTotal": 22085.0,
       "sariSariStore": 3300.0,
       "orders": 4381.0,
-      "gcashProfit": 460.0,
-      "sariSariStoreProfit": 330.0,
+      "gcashProfit": 441.7,
+      "sariSariStoreProfit": 495.0,
       "ordersProfit": 657.15,
-      "totalProfit": 1447.15,
+      "totalProfit": 1593.85,
       "createdAt": "2026-03-15T15:41:43.922462Z"
     },
     {
@@ -3678,10 +3678,10 @@
       "gcashTotal": 11990.0,
       "sariSariStore": 3732.0,
       "orders": 9881.0,
-      "gcashProfit": 350.0,
-      "sariSariStoreProfit": 373.2,
+      "gcashProfit": 239.8,
+      "sariSariStoreProfit": 559.8,
       "ordersProfit": 1482.15,
-      "totalProfit": 2205.35,
+      "totalProfit": 2281.75,
       "createdAt": "2026-03-15T15:41:43.922502Z"
     },
     {
@@ -3692,10 +3692,10 @@
       "gcashTotal": 10736.0,
       "sariSariStore": 3000.0,
       "orders": 5866.0,
-      "gcashProfit": 225.0,
-      "sariSariStoreProfit": 300.0,
+      "gcashProfit": 214.72,
+      "sariSariStoreProfit": 450.0,
       "ordersProfit": 879.9,
-      "totalProfit": 1404.9,
+      "totalProfit": 1544.62,
       "createdAt": "2026-03-15T15:41:43.922542Z"
     },
     {
@@ -3706,10 +3706,10 @@
       "gcashTotal": 28850.0,
       "sariSariStore": 5830.0,
       "orders": 15126.0,
-      "gcashProfit": 585.0,
-      "sariSariStoreProfit": 583.0,
+      "gcashProfit": 577.0,
+      "sariSariStoreProfit": 874.5,
       "ordersProfit": 2268.9,
-      "totalProfit": 3436.9,
+      "totalProfit": 3720.4,
       "createdAt": "2026-03-15T15:41:43.922660Z"
     },
     {
@@ -3720,10 +3720,10 @@
       "gcashTotal": 17030.0,
       "sariSariStore": 4085.0,
       "orders": 0.0,
-      "gcashProfit": 345.0,
-      "sariSariStoreProfit": 408.5,
+      "gcashProfit": 340.6,
+      "sariSariStoreProfit": 612.75,
       "ordersProfit": 0.0,
-      "totalProfit": 753.5,
+      "totalProfit": 953.35,
       "createdAt": "2026-03-15T15:41:43.922701Z"
     },
     {
@@ -3734,10 +3734,10 @@
       "gcashTotal": 13554.0,
       "sariSariStore": 5778.0,
       "orders": 4070.0,
-      "gcashProfit": 300.0,
-      "sariSariStoreProfit": 577.8,
+      "gcashProfit": 271.08,
+      "sariSariStoreProfit": 866.7,
       "ordersProfit": 610.5,
-      "totalProfit": 1488.3,
+      "totalProfit": 1748.28,
       "createdAt": "2026-03-15T15:41:43.922742Z"
     },
     {
@@ -3748,10 +3748,10 @@
       "gcashTotal": 3660.0,
       "sariSariStore": 1300.0,
       "orders": 0.0,
-      "gcashProfit": 95.0,
-      "sariSariStoreProfit": 130.0,
+      "gcashProfit": 73.2,
+      "sariSariStoreProfit": 195.0,
       "ordersProfit": 0.0,
-      "totalProfit": 225.0,
+      "totalProfit": 268.2,
       "createdAt": "2026-03-15T15:41:43.922790Z"
     },
     {
@@ -3762,10 +3762,10 @@
       "gcashTotal": 2910.0,
       "sariSariStore": 1440.0,
       "orders": 0.0,
-      "gcashProfit": 70.0,
-      "sariSariStoreProfit": 144.0,
+      "gcashProfit": 58.2,
+      "sariSariStoreProfit": 216.0,
       "ordersProfit": 0.0,
-      "totalProfit": 214.0,
+      "totalProfit": 274.2,
       "createdAt": "2026-03-15T15:41:43.922830Z"
     },
     {
@@ -3776,10 +3776,10 @@
       "gcashTotal": 19165.0,
       "sariSariStore": 2420.0,
       "orders": 0.0,
-      "gcashProfit": 400.0,
-      "sariSariStoreProfit": 242.0,
+      "gcashProfit": 383.3,
+      "sariSariStoreProfit": 363.0,
       "ordersProfit": 0.0,
-      "totalProfit": 642.0,
+      "totalProfit": 746.3,
       "createdAt": "2026-03-15T15:41:43.922912Z"
     },
     {
@@ -3790,10 +3790,10 @@
       "gcashTotal": 37515.0,
       "sariSariStore": 4600.0,
       "orders": 0.0,
-      "gcashProfit": 835.0,
-      "sariSariStoreProfit": 460.0,
+      "gcashProfit": 750.3,
+      "sariSariStoreProfit": 690.0,
       "ordersProfit": 0.0,
-      "totalProfit": 1295.0,
+      "totalProfit": 1440.3,
       "createdAt": "2026-03-15T15:41:43.923248Z"
     },
     {
@@ -3804,10 +3804,10 @@
       "gcashTotal": 2388.0,
       "sariSariStore": 1715.0,
       "orders": 0.0,
-      "gcashProfit": 60.0,
-      "sariSariStoreProfit": 171.5,
+      "gcashProfit": 47.76,
+      "sariSariStoreProfit": 257.25,
       "ordersProfit": 0.0,
-      "totalProfit": 231.5,
+      "totalProfit": 305.01,
       "createdAt": "2026-03-15T15:41:43.923315Z"
     },
     {
@@ -3818,10 +3818,10 @@
       "gcashTotal": 2450.0,
       "sariSariStore": 1320.0,
       "orders": 8419.0,
-      "gcashProfit": 65.0,
-      "sariSariStoreProfit": 132.0,
+      "gcashProfit": 49.0,
+      "sariSariStoreProfit": 198.0,
       "ordersProfit": 1262.85,
-      "totalProfit": 1459.85,
+      "totalProfit": 1509.85,
       "createdAt": "2026-03-15T15:41:43.923357Z"
     },
     {
@@ -3832,10 +3832,10 @@
       "gcashTotal": 11799.0,
       "sariSariStore": 4117.0,
       "orders": 4615.0,
-      "gcashProfit": 250.0,
-      "sariSariStoreProfit": 411.7,
+      "gcashProfit": 235.98,
+      "sariSariStoreProfit": 617.55,
       "ordersProfit": 692.25,
-      "totalProfit": 1353.95,
+      "totalProfit": 1545.78,
       "createdAt": "2026-03-15T15:41:43.923437Z"
     },
     {
@@ -3846,10 +3846,10 @@
       "gcashTotal": 16475.0,
       "sariSariStore": 4805.0,
       "orders": 9836.0,
-      "gcashProfit": 365.0,
-      "sariSariStoreProfit": 480.5,
+      "gcashProfit": 329.5,
+      "sariSariStoreProfit": 720.75,
       "ordersProfit": 1475.4,
-      "totalProfit": 2320.9,
+      "totalProfit": 2525.65,
       "createdAt": "2026-03-15T15:41:43.923478Z"
     },
     {
@@ -3860,10 +3860,10 @@
       "gcashTotal": 10445.0,
       "sariSariStore": 3500.0,
       "orders": 6516.0,
-      "gcashProfit": 210.0,
-      "sariSariStoreProfit": 350.0,
+      "gcashProfit": 208.9,
+      "sariSariStoreProfit": 525.0,
       "ordersProfit": 977.4,
-      "totalProfit": 1537.4,
+      "totalProfit": 1711.3,
       "createdAt": "2026-03-15T15:41:43.923520Z"
     },
     {
@@ -3874,10 +3874,10 @@
       "gcashTotal": 15945.0,
       "sariSariStore": 3960.0,
       "orders": 8008.0,
-      "gcashProfit": 350.0,
-      "sariSariStoreProfit": 396.0,
+      "gcashProfit": 318.9,
+      "sariSariStoreProfit": 594.0,
       "ordersProfit": 1201.2,
-      "totalProfit": 1947.2,
+      "totalProfit": 2114.1,
       "createdAt": "2026-03-15T15:41:43.923559Z"
     },
     {
@@ -3888,10 +3888,10 @@
       "gcashTotal": 7030.0,
       "sariSariStore": 4403.0,
       "orders": 10653.0,
-      "gcashProfit": 175.0,
-      "sariSariStoreProfit": 440.3,
+      "gcashProfit": 140.6,
+      "sariSariStoreProfit": 660.45,
       "ordersProfit": 1597.95,
-      "totalProfit": 2213.25,
+      "totalProfit": 2399.0,
       "createdAt": "2026-03-15T15:41:43.923602Z"
     },
     {
@@ -3902,10 +3902,10 @@
       "gcashTotal": 11620.0,
       "sariSariStore": 2800.0,
       "orders": 0.0,
-      "gcashProfit": 255.0,
-      "sariSariStoreProfit": 280.0,
+      "gcashProfit": 232.4,
+      "sariSariStoreProfit": 420.0,
       "ordersProfit": 0.0,
-      "totalProfit": 535.0,
+      "totalProfit": 652.4,
       "createdAt": "2026-03-15T15:41:43.923643Z"
     },
     {
@@ -3916,10 +3916,10 @@
       "gcashTotal": 29885.0,
       "sariSariStore": 6350.0,
       "orders": 15144.0,
-      "gcashProfit": 640.0,
-      "sariSariStoreProfit": 635.0,
+      "gcashProfit": 597.7,
+      "sariSariStoreProfit": 952.5,
       "ordersProfit": 2271.6,
-      "totalProfit": 3546.6,
+      "totalProfit": 3821.8,
       "createdAt": "2026-03-15T15:41:43.923723Z"
     },
     {
@@ -3930,10 +3930,10 @@
       "gcashTotal": 11215.0,
       "sariSariStore": 5840.0,
       "orders": 4233.0,
-      "gcashProfit": 245.0,
-      "sariSariStoreProfit": 584.0,
+      "gcashProfit": 224.3,
+      "sariSariStoreProfit": 876.0,
       "ordersProfit": 634.95,
-      "totalProfit": 1463.95,
+      "totalProfit": 1735.25,
       "createdAt": "2026-03-15T15:41:43.923762Z"
     },
     {
@@ -3944,10 +3944,10 @@
       "gcashTotal": 8580.0,
       "sariSariStore": 3619.0,
       "orders": 8877.0,
-      "gcashProfit": 190.0,
-      "sariSariStoreProfit": 361.9,
+      "gcashProfit": 171.6,
+      "sariSariStoreProfit": 542.85,
       "ordersProfit": 1331.55,
-      "totalProfit": 1883.45,
+      "totalProfit": 2046.0,
       "createdAt": "2026-03-15T15:41:43.923798Z"
     },
     {
@@ -3958,10 +3958,10 @@
       "gcashTotal": 9450.0,
       "sariSariStore": 4600.0,
       "orders": 6334.0,
-      "gcashProfit": 195.0,
-      "sariSariStoreProfit": 460.0,
+      "gcashProfit": 189.0,
+      "sariSariStoreProfit": 690.0,
       "ordersProfit": 950.1,
-      "totalProfit": 1605.1,
+      "totalProfit": 1829.1,
       "createdAt": "2026-03-15T15:41:43.923833Z"
     },
     {
@@ -3972,10 +3972,10 @@
       "gcashTotal": 31815.0,
       "sariSariStore": 4664.0,
       "orders": 11701.0,
-      "gcashProfit": 665.0,
-      "sariSariStoreProfit": 466.4,
+      "gcashProfit": 636.3,
+      "sariSariStoreProfit": 699.6,
       "ordersProfit": 1755.15,
-      "totalProfit": 2886.55,
+      "totalProfit": 3091.05,
       "createdAt": "2026-03-15T15:41:43.923869Z"
     },
     {
@@ -3986,10 +3986,10 @@
       "gcashTotal": 7300.0,
       "sariSariStore": 2800.0,
       "orders": 4220.0,
-      "gcashProfit": 155.0,
-      "sariSariStoreProfit": 280.0,
+      "gcashProfit": 146.0,
+      "sariSariStoreProfit": 420.0,
       "ordersProfit": 633.0,
-      "totalProfit": 1068.0,
+      "totalProfit": 1199.0,
       "createdAt": "2026-03-15T15:41:43.924273Z"
     },
     {
@@ -4000,10 +4000,10 @@
       "gcashTotal": 8375.0,
       "sariSariStore": 3150.0,
       "orders": 9655.0,
-      "gcashProfit": 190.0,
-      "sariSariStoreProfit": 315.0,
+      "gcashProfit": 167.5,
+      "sariSariStoreProfit": 472.5,
       "ordersProfit": 1448.25,
-      "totalProfit": 1953.25,
+      "totalProfit": 2088.25,
       "createdAt": "2026-03-15T15:41:43.924605Z"
     },
     {
@@ -4014,10 +4014,10 @@
       "gcashTotal": 5460.0,
       "sariSariStore": 4850.0,
       "orders": 7690.0,
-      "gcashProfit": 145.0,
-      "sariSariStoreProfit": 485.0,
+      "gcashProfit": 109.2,
+      "sariSariStoreProfit": 727.5,
       "ordersProfit": 1153.5,
-      "totalProfit": 1783.5,
+      "totalProfit": 1990.2,
       "createdAt": "2026-03-15T15:41:43.924666Z"
     },
     {
@@ -4028,10 +4028,10 @@
       "gcashTotal": 9107.0,
       "sariSariStore": 4154.0,
       "orders": 4632.0,
-      "gcashProfit": 220.0,
-      "sariSariStoreProfit": 415.4,
+      "gcashProfit": 182.14,
+      "sariSariStoreProfit": 623.1,
       "ordersProfit": 694.8,
-      "totalProfit": 1330.2,
+      "totalProfit": 1500.04,
       "createdAt": "2026-03-15T15:41:43.924719Z"
     },
     {
@@ -4042,10 +4042,10 @@
       "gcashTotal": 10785.0,
       "sariSariStore": 4200.0,
       "orders": 11511.0,
-      "gcashProfit": 225.0,
-      "sariSariStoreProfit": 420.0,
+      "gcashProfit": 215.7,
+      "sariSariStoreProfit": 630.0,
       "ordersProfit": 1726.65,
-      "totalProfit": 2371.65,
+      "totalProfit": 2572.35,
       "createdAt": "2026-03-15T15:41:43.924761Z"
     },
     {
@@ -4056,10 +4056,10 @@
       "gcashTotal": 13130.0,
       "sariSariStore": 3827.0,
       "orders": 6035.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 382.7,
+      "gcashProfit": 262.6,
+      "sariSariStoreProfit": 574.05,
       "ordersProfit": 905.25,
-      "totalProfit": 1597.95,
+      "totalProfit": 1741.9,
       "createdAt": "2026-03-15T15:41:43.924800Z"
     },
     {
@@ -4070,10 +4070,10 @@
       "gcashTotal": 3610.0,
       "sariSariStore": 3000.0,
       "orders": 9056.0,
-      "gcashProfit": 90.0,
-      "sariSariStoreProfit": 300.0,
+      "gcashProfit": 72.2,
+      "sariSariStoreProfit": 450.0,
       "ordersProfit": 1358.4,
-      "totalProfit": 1748.4,
+      "totalProfit": 1880.6,
       "createdAt": "2026-03-15T15:41:43.924838Z"
     },
     {
@@ -4084,10 +4084,10 @@
       "gcashTotal": 22140.0,
       "sariSariStore": 4350.0,
       "orders": 7698.0,
-      "gcashProfit": 480.0,
-      "sariSariStoreProfit": 435.0,
+      "gcashProfit": 442.8,
+      "sariSariStoreProfit": 652.5,
       "ordersProfit": 1154.7,
-      "totalProfit": 2069.7,
+      "totalProfit": 2250.0,
       "createdAt": "2026-03-15T15:41:43.924911Z"
     },
     {
@@ -4098,10 +4098,10 @@
       "gcashTotal": 22060.0,
       "sariSariStore": 4070.0,
       "orders": 8755.0,
-      "gcashProfit": 430.0,
-      "sariSariStoreProfit": 407.0,
+      "gcashProfit": 441.2,
+      "sariSariStoreProfit": 610.5,
       "ordersProfit": 1313.25,
-      "totalProfit": 2150.25,
+      "totalProfit": 2364.95,
       "createdAt": "2026-03-15T15:41:43.924948Z"
     },
     {
@@ -4112,10 +4112,10 @@
       "gcashTotal": 14970.0,
       "sariSariStore": 4301.0,
       "orders": 10877.0,
-      "gcashProfit": 315.0,
-      "sariSariStoreProfit": 430.1,
+      "gcashProfit": 299.4,
+      "sariSariStoreProfit": 645.15,
       "ordersProfit": 1631.55,
-      "totalProfit": 2376.65,
+      "totalProfit": 2576.1,
       "createdAt": "2026-03-15T15:41:43.924985Z"
     },
     {
@@ -4126,10 +4126,10 @@
       "gcashTotal": 22615.0,
       "sariSariStore": 4000.0,
       "orders": 5512.0,
-      "gcashProfit": 470.0,
-      "sariSariStoreProfit": 400.0,
+      "gcashProfit": 452.3,
+      "sariSariStoreProfit": 600.0,
       "ordersProfit": 826.8,
-      "totalProfit": 1696.8,
+      "totalProfit": 1879.1,
       "createdAt": "2026-03-15T15:41:43.925020Z"
     },
     {
@@ -4140,10 +4140,10 @@
       "gcashTotal": 27860.0,
       "sariSariStore": 5000.0,
       "orders": 8355.0,
-      "gcashProfit": 525.0,
-      "sariSariStoreProfit": 500.0,
+      "gcashProfit": 557.2,
+      "sariSariStoreProfit": 750.0,
       "ordersProfit": 1253.25,
-      "totalProfit": 2278.25,
+      "totalProfit": 2560.45,
       "createdAt": "2026-03-15T15:41:43.925056Z"
     },
     {
@@ -4154,10 +4154,10 @@
       "gcashTotal": 23155.0,
       "sariSariStore": 6150.0,
       "orders": 10375.0,
-      "gcashProfit": 400.0,
-      "sariSariStoreProfit": 615.0,
+      "gcashProfit": 463.1,
+      "sariSariStoreProfit": 922.5,
       "ordersProfit": 1556.25,
-      "totalProfit": 2571.25,
+      "totalProfit": 2941.85,
       "createdAt": "2026-03-15T15:41:43.925159Z"
     },
     {
@@ -4168,10 +4168,10 @@
       "gcashTotal": 20922.0,
       "sariSariStore": 5996.0,
       "orders": 6329.0,
-      "gcashProfit": 345.0,
-      "sariSariStoreProfit": 599.6,
+      "gcashProfit": 418.44,
+      "sariSariStoreProfit": 899.4,
       "ordersProfit": 949.35,
-      "totalProfit": 1893.95,
+      "totalProfit": 2267.19,
       "createdAt": "2026-03-15T15:41:43.925197Z"
     },
     {
@@ -4182,10 +4182,10 @@
       "gcashTotal": 22620.0,
       "sariSariStore": 3990.0,
       "orders": 0.0,
-      "gcashProfit": 465.0,
-      "sariSariStoreProfit": 399.0,
+      "gcashProfit": 452.4,
+      "sariSariStoreProfit": 598.5,
       "ordersProfit": 0.0,
-      "totalProfit": 864.0,
+      "totalProfit": 1050.9,
       "createdAt": "2026-03-15T15:41:43.925233Z"
     },
     {
@@ -4196,10 +4196,10 @@
       "gcashTotal": 10270.0,
       "sariSariStore": 5840.0,
       "orders": 0.0,
-      "gcashProfit": 240.0,
-      "sariSariStoreProfit": 584.0,
+      "gcashProfit": 205.4,
+      "sariSariStoreProfit": 876.0,
       "ordersProfit": 0.0,
-      "totalProfit": 824.0,
+      "totalProfit": 1081.4,
       "createdAt": "2026-03-15T15:41:43.925269Z"
     },
     {
@@ -4210,10 +4210,10 @@
       "gcashTotal": 19145.0,
       "sariSariStore": 385.0,
       "orders": 10904.0,
-      "gcashProfit": 415.0,
-      "sariSariStoreProfit": 38.5,
+      "gcashProfit": 382.9,
+      "sariSariStoreProfit": 57.75,
       "ordersProfit": 1635.6,
-      "totalProfit": 2089.1,
+      "totalProfit": 2076.25,
       "createdAt": "2026-03-15T15:41:43.925305Z"
     },
     {
@@ -4224,10 +4224,10 @@
       "gcashTotal": 10670.0,
       "sariSariStore": 1500.0,
       "orders": 0.0,
-      "gcashProfit": 345.0,
-      "sariSariStoreProfit": 150.0,
+      "gcashProfit": 213.4,
+      "sariSariStoreProfit": 225.0,
       "ordersProfit": 0.0,
-      "totalProfit": 495.0,
+      "totalProfit": 438.4,
       "createdAt": "2026-03-15T15:41:43.925340Z"
     },
     {
@@ -4238,10 +4238,10 @@
       "gcashTotal": 15892.0,
       "sariSariStore": 4200.0,
       "orders": 9028.0,
-      "gcashProfit": 340.0,
-      "sariSariStoreProfit": 420.0,
+      "gcashProfit": 317.84,
+      "sariSariStoreProfit": 630.0,
       "ordersProfit": 1354.2,
-      "totalProfit": 2114.2,
+      "totalProfit": 2302.04,
       "createdAt": "2026-03-15T15:41:43.925409Z"
     },
     {
@@ -4252,10 +4252,10 @@
       "gcashTotal": 22320.0,
       "sariSariStore": 4290.0,
       "orders": 0.0,
-      "gcashProfit": 475.0,
-      "sariSariStoreProfit": 429.0,
+      "gcashProfit": 446.4,
+      "sariSariStoreProfit": 643.5,
       "ordersProfit": 0.0,
-      "totalProfit": 904.0,
+      "totalProfit": 1089.9,
       "createdAt": "2026-03-15T15:41:43.925445Z"
     },
     {
@@ -4266,10 +4266,10 @@
       "gcashTotal": 13635.0,
       "sariSariStore": 4836.0,
       "orders": 11871.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 483.6,
+      "gcashProfit": 272.7,
+      "sariSariStoreProfit": 725.4,
       "ordersProfit": 1780.65,
-      "totalProfit": 2574.25,
+      "totalProfit": 2778.75,
       "createdAt": "2026-03-15T15:41:43.925481Z"
     },
     {
@@ -4280,10 +4280,10 @@
       "gcashTotal": 16905.0,
       "sariSariStore": 3300.0,
       "orders": 0.0,
-      "gcashProfit": 310.0,
-      "sariSariStoreProfit": 330.0,
+      "gcashProfit": 338.1,
+      "sariSariStoreProfit": 495.0,
       "ordersProfit": 0.0,
-      "totalProfit": 640.0,
+      "totalProfit": 833.1,
       "createdAt": "2026-03-15T15:41:43.925517Z"
     },
     {
@@ -4294,10 +4294,10 @@
       "gcashTotal": 21945.0,
       "sariSariStore": 3600.0,
       "orders": 3716.0,
-      "gcashProfit": 445.0,
-      "sariSariStoreProfit": 360.0,
+      "gcashProfit": 438.9,
+      "sariSariStoreProfit": 540.0,
       "ordersProfit": 557.4,
-      "totalProfit": 1362.4,
+      "totalProfit": 1536.3,
       "createdAt": "2026-03-15T15:41:43.925553Z"
     },
     {
@@ -4308,10 +4308,10 @@
       "gcashTotal": 8653.0,
       "sariSariStore": 1450.0,
       "orders": 0.0,
-      "gcashProfit": 185.0,
-      "sariSariStoreProfit": 145.0,
+      "gcashProfit": 173.06,
+      "sariSariStoreProfit": 217.5,
       "ordersProfit": 0.0,
-      "totalProfit": 330.0,
+      "totalProfit": 390.56,
       "createdAt": "2026-03-15T15:41:43.925590Z"
     },
     {
@@ -4322,10 +4322,10 @@
       "gcashTotal": 18325.0,
       "sariSariStore": 5718.0,
       "orders": 8486.0,
-      "gcashProfit": 405.0,
-      "sariSariStoreProfit": 571.8,
+      "gcashProfit": 366.5,
+      "sariSariStoreProfit": 857.7,
       "ordersProfit": 1272.9,
-      "totalProfit": 2249.7,
+      "totalProfit": 2497.1,
       "createdAt": "2026-03-15T15:41:43.925659Z"
     },
     {
@@ -4336,10 +4336,10 @@
       "gcashTotal": 3770.0,
       "sariSariStore": 2790.0,
       "orders": 0.0,
-      "gcashProfit": 80.0,
-      "sariSariStoreProfit": 279.0,
+      "gcashProfit": 75.4,
+      "sariSariStoreProfit": 418.5,
       "ordersProfit": 0.0,
-      "totalProfit": 359.0,
+      "totalProfit": 493.9,
       "createdAt": "2026-03-15T15:41:43.925696Z"
     },
     {
@@ -4350,10 +4350,10 @@
       "gcashTotal": 17520.0,
       "sariSariStore": 3130.0,
       "orders": 12735.0,
-      "gcashProfit": 345.0,
-      "sariSariStoreProfit": 313.0,
+      "gcashProfit": 350.4,
+      "sariSariStoreProfit": 469.5,
       "ordersProfit": 1910.25,
-      "totalProfit": 2568.25,
+      "totalProfit": 2730.15,
       "createdAt": "2026-03-15T15:41:43.925733Z"
     },
     {
@@ -4364,10 +4364,10 @@
       "gcashTotal": 11510.0,
       "sariSariStore": 3500.0,
       "orders": 3432.0,
-      "gcashProfit": 245.0,
-      "sariSariStoreProfit": 350.0,
+      "gcashProfit": 230.2,
+      "sariSariStoreProfit": 525.0,
       "ordersProfit": 514.8,
-      "totalProfit": 1109.8,
+      "totalProfit": 1270.0,
       "createdAt": "2026-03-15T15:41:43.925768Z"
     },
     {
@@ -4378,10 +4378,10 @@
       "gcashTotal": 17050.0,
       "sariSariStore": 5006.0,
       "orders": 11938.0,
-      "gcashProfit": 380.0,
-      "sariSariStoreProfit": 500.6,
+      "gcashProfit": 341.0,
+      "sariSariStoreProfit": 750.9,
       "ordersProfit": 1790.7,
-      "totalProfit": 2671.3,
+      "totalProfit": 2882.6,
       "createdAt": "2026-03-15T15:41:43.925804Z"
     },
     {
@@ -4392,10 +4392,10 @@
       "gcashTotal": 8325.0,
       "sariSariStore": 2932.0,
       "orders": 0.0,
-      "gcashProfit": 180.0,
-      "sariSariStoreProfit": 293.2,
+      "gcashProfit": 166.5,
+      "sariSariStoreProfit": 439.8,
       "ordersProfit": 0.0,
-      "totalProfit": 473.2,
+      "totalProfit": 606.3,
       "createdAt": "2026-03-15T15:41:43.925841Z"
     },
     {
@@ -4406,10 +4406,10 @@
       "gcashTotal": 21555.0,
       "sariSariStore": 4867.0,
       "orders": 0.0,
-      "gcashProfit": 470.0,
-      "sariSariStoreProfit": 486.7,
+      "gcashProfit": 431.1,
+      "sariSariStoreProfit": 730.05,
       "ordersProfit": 0.0,
-      "totalProfit": 956.7,
+      "totalProfit": 1161.15,
       "createdAt": "2026-03-15T15:41:43.925911Z"
     },
     {
@@ -4420,10 +4420,10 @@
       "gcashTotal": 14421.0,
       "sariSariStore": 4500.0,
       "orders": 0.0,
-      "gcashProfit": 300.0,
-      "sariSariStoreProfit": 450.0,
+      "gcashProfit": 288.42,
+      "sariSariStoreProfit": 675.0,
       "ordersProfit": 0.0,
-      "totalProfit": 750.0,
+      "totalProfit": 963.42,
       "createdAt": "2026-03-15T15:41:43.925948Z"
     },
     {
@@ -4434,10 +4434,10 @@
       "gcashTotal": 11800.0,
       "sariSariStore": 3674.0,
       "orders": 0.0,
-      "gcashProfit": 250.0,
-      "sariSariStoreProfit": 367.4,
+      "gcashProfit": 236.0,
+      "sariSariStoreProfit": 551.1,
       "ordersProfit": 0.0,
-      "totalProfit": 617.4,
+      "totalProfit": 787.1,
       "createdAt": "2026-03-15T15:41:43.925984Z"
     },
     {
@@ -4448,10 +4448,10 @@
       "gcashTotal": 29445.0,
       "sariSariStore": 5778.0,
       "orders": 9908.0,
-      "gcashProfit": 475.0,
-      "sariSariStoreProfit": 577.8,
+      "gcashProfit": 588.9,
+      "sariSariStoreProfit": 866.7,
       "ordersProfit": 1486.2,
-      "totalProfit": 2539.0,
+      "totalProfit": 2941.8,
       "createdAt": "2026-03-15T15:41:43.926022Z"
     },
     {
@@ -4462,10 +4462,10 @@
       "gcashTotal": 11445.0,
       "sariSariStore": 6019.0,
       "orders": 0.0,
-      "gcashProfit": 234.0,
-      "sariSariStoreProfit": 601.9,
+      "gcashProfit": 228.9,
+      "sariSariStoreProfit": 902.85,
       "ordersProfit": 0.0,
-      "totalProfit": 835.9,
+      "totalProfit": 1131.75,
       "createdAt": "2026-03-15T15:41:43.926057Z"
     },
     {
@@ -4476,10 +4476,10 @@
       "gcashTotal": 10535.0,
       "sariSariStore": 4700.0,
       "orders": 0.0,
-      "gcashProfit": 220.0,
-      "sariSariStoreProfit": 470.0,
+      "gcashProfit": 210.7,
+      "sariSariStoreProfit": 705.0,
       "ordersProfit": 0.0,
-      "totalProfit": 690.0,
+      "totalProfit": 915.7,
       "createdAt": "2026-03-15T15:41:43.926093Z"
     }
   ]
