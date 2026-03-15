@@ -66,14 +66,18 @@ def migrate_store_sales():
         if not date_str:
             continue
 
+        # Don't check Total Profit yet - it might be NaN even if there's data
+        # We'll calculate it ourselves
+
         # Helper function to safely convert to float
         def safe_float(value):
             if pd.isna(value):
                 return 0.0
             if isinstance(value, str):
-                # Skip rows with text like 'restday'
-                if value.lower() in ['restday', 'rest day', 'holiday', 'closed']:
-                    return None
+                # Check for text values (rest days, etc.)
+                text_val = value.lower().strip()
+                if text_val in ['restday', 'rest day', 'holiday', 'closed', 'nw', 'n/a', 'halfday', 'no', 'new year']:
+                    return None  # Marker for invalid row
                 try:
                     return float(value)
                 except ValueError:
@@ -83,24 +87,78 @@ def migrate_store_sales():
             except (ValueError, TypeError):
                 return 0.0
 
-        # Check if this is a rest day
-        cash_in = safe_float(row.get('Cash In', 0))
-        if cash_in is None:
-            # Skip rest days
+        # Check if Cash In contains text indicating rest day
+        cash_in_val = row.get('Cash In', 0)
+        if isinstance(cash_in_val, str):
+            text_check = cash_in_val.lower().strip()
+            if text_check in ['restday', 'rest day', 'holiday', 'closed', 'nw', 'n/a', 'halfday', 'no', 'new year']:
+                continue
+
+        # Convert all fields (NOW allows blank/0 Cash In if there's profit)
+        cash_in = safe_float(cash_in_val)
+
+        # Get all values
+        cash_out = safe_float(row.get('Cash Out', 0))
+        gcash_total = safe_float(row.get('Gcash Total', 0))
+        sari_sari = safe_float(row.get('Sari Sari Store', 0))
+        orders = safe_float(row.get('Orders', 0))
+
+        # Get profit values from Excel columns (they might have manual values)
+        gcash_profit = safe_float(row.get('Gcash Profit', 0))
+        sari_profit = safe_float(row.get('Sari Sari Store Profit', 0))
+        orders_profit = safe_float(row.get('Orders Profit', 0))
+
+        # Try to get Total Profit from Excel
+        total_profit_excel = safe_float(row.get('Total Profit', 0))
+
+        # If Total Profit is 0 or NaN, calculate from individual profits or revenue
+        if total_profit_excel == 0:
+            # If individual profits exist, use MAX to avoid double-counting
+            # (Excel sometimes duplicates values across columns)
+            if gcash_profit > 0 or sari_profit > 0 or orders_profit > 0:
+                # Use the maximum value to avoid counting duplicates
+                total_profit = max(gcash_profit, sari_profit, orders_profit)
+
+                # But if they're all different, sum them
+                unique_values = set([gcash_profit, sari_profit, orders_profit]) - {0}
+                if len(unique_values) > 1:
+                    # Different values, sum them
+                    total_profit = gcash_profit + sari_profit + orders_profit
+                # Otherwise use the single unique value (max)
+            else:
+                # Calculate from revenue using standard margins
+                gcash_profit = gcash_total * 0.022
+                sari_profit = sari_sari * 0.10
+                orders_profit = orders * 0.10
+                total_profit = gcash_profit + sari_profit + orders_profit
+        else:
+            # Use Excel Total Profit
+            total_profit = total_profit_excel
+
+            # If individual profits are 0, calculate them
+            if gcash_profit == 0 and gcash_total > 0:
+                gcash_profit = gcash_total * 0.022
+            if sari_profit == 0 and sari_sari > 0:
+                sari_profit = sari_sari * 0.10
+            if orders_profit == 0 and orders > 0:
+                orders_profit = orders * 0.10
+
+        # Skip if still no profit
+        if total_profit <= 0:
             continue
 
         record = {
             "id": generate_id("ss", date_str, idx + 1),
             "date": date_str,
             "cashIn": cash_in,
-            "cashOut": safe_float(row.get('Cash Out', 0)),
-            "gcashTotal": safe_float(row.get('Gcash Total', 0)),
-            "sariSariStore": safe_float(row.get('Sari Sari Store', 0)),
-            "orders": safe_float(row.get('Orders', 0)),
-            "gcashProfit": safe_float(row.get('Gcash Profit', 0)),
-            "sariSariStoreProfit": safe_float(row.get('Sari Sari Store Profit', 0)),
-            "ordersProfit": safe_float(row.get('Orders Profit', 0)),
-            "totalProfit": safe_float(row.get('Total Profit', 0)),
+            "cashOut": cash_out,
+            "gcashTotal": gcash_total,
+            "sariSariStore": sari_sari,
+            "orders": orders,
+            "gcashProfit": gcash_profit,
+            "sariSariStoreProfit": sari_profit,
+            "ordersProfit": orders_profit,
+            "totalProfit": total_profit,
             "createdAt": datetime.now().isoformat() + 'Z'
         }
         records.append(record)
@@ -115,7 +173,7 @@ def migrate_store_sales():
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"✓ Migrated {len(records)} Store Sales records to {output_file}")
+    print(f"OK Migrated {len(records)} Store Sales records to {output_file}")
     return len(records)
 
 def migrate_piso_wifi():
@@ -156,7 +214,7 @@ def migrate_piso_wifi():
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"✓ Migrated {len(records)} Piso WiFi records to {output_file}")
+    print(f"OK Migrated {len(records)} Piso WiFi records to {output_file}")
     return len(records)
 
 def migrate_printer():
@@ -197,7 +255,7 @@ def migrate_printer():
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"✓ Migrated {len(records)} Printer records to {output_file}")
+    print(f"OK Migrated {len(records)} Printer records to {output_file}")
     return len(records)
 
 def create_metadata(store_sales_count, piso_wifi_count, printer_count):
@@ -223,7 +281,7 @@ def create_metadata(store_sales_count, piso_wifi_count, printer_count):
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, indent=2, ensure_ascii=False)
 
-    print(f"✓ Created metadata.json")
+    print(f"OK Created metadata.json")
 
 def main():
     """Main migration function"""
