@@ -307,7 +307,7 @@ class DataManager {
     const monthlyTotals = Object.entries(byMonth).map(([month, records]) => ({
       month,
       revenue: records.reduce((sum, r) => sum + r.totalProfit, 0)
-    }));
+    })).filter(m => m.revenue > 0); // Only count months with actual revenue
 
     // Find best and worst months
     let bestMonth = { month: 'N/A', revenue: 0 };
