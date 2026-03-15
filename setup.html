@@ -114,6 +114,39 @@
           </div>
         </form>
 
+        <!-- Profit Margins Configuration -->
+        <div style="margin-top: var(--spacing-2xl); padding-top: var(--spacing-lg); border-top: 2px solid var(--border-color-main);">
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--gray-900);">Profit Margin Settings</h3>
+          <p style="color: var(--gray-600); margin-bottom: var(--spacing-lg); font-size: 0.875rem;">
+            Configure profit margins for Store Sales calculations. Changes apply to new entries only.
+          </p>
+
+          <form id="margins-form">
+            <div class="form-group">
+              <label for="gcashMargin" class="form-label">Gcash Profit Margin (%)</label>
+              <input type="number" id="gcashMargin" class="form-input" step="0.01" min="0" max="100" value="2.2" required>
+              <p class="form-help">Current: 2.2% (multiply Gcash Total by this percentage)</p>
+            </div>
+
+            <div class="form-group">
+              <label for="sariSariMargin" class="form-label">Sari Sari Store Profit Margin (%)</label>
+              <input type="number" id="sariSariMargin" class="form-input" step="0.01" min="0" max="100" value="10" required>
+              <p class="form-help">Current: 10% (multiply Sari Sari Store by this percentage)</p>
+            </div>
+
+            <div class="form-group">
+              <label for="ordersMargin" class="form-label">Orders Profit Margin (%)</label>
+              <input type="number" id="ordersMargin" class="form-input" step="0.01" min="0" max="100" value="10" required>
+              <p class="form-help">Current: 10% (multiply Orders by this percentage)</p>
+            </div>
+
+            <div id="margins-status" style="display: none; margin-bottom: var(--spacing-md);"></div>
+
+            <button type="button" id="save-margins-btn" class="btn btn-primary">Save Profit Margins</button>
+            <button type="button" id="reset-margins-btn" class="btn btn-secondary">Reset to Default</button>
+          </form>
+        </div>
+
         <!-- Current Configuration -->
         <div id="current-config" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--border-color);">
           <h3 style="font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--gray-700);">Current Configuration</h3>
@@ -141,8 +174,8 @@
   </main>
 
   <!-- Scripts -->
-  <script src="js/config.js"></script>
-  <script src="js/utils.js"></script>
+  <script src="js/config.js?v=7"></script>
+  <script src="js/utils.js?v=7"></script>
   <script>
     // Setup form handling
     document.addEventListener('DOMContentLoaded', () => {
@@ -286,6 +319,84 @@
           document.body.classList.toggle('dark-mode');
           localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
         });
+      }
+
+      // Profit Margins Configuration
+      loadProfitMargins();
+
+      document.getElementById('save-margins-btn').addEventListener('click', saveProfitMargins);
+      document.getElementById('reset-margins-btn').addEventListener('click', resetProfitMargins);
+
+      function loadProfitMargins() {
+        // Load from localStorage or use defaults
+        const gcash = localStorage.getItem('profit_margin_gcash') || '2.2';
+        const sariSari = localStorage.getItem('profit_margin_sariSari') || '10';
+        const orders = localStorage.getItem('profit_margin_orders') || '10';
+
+        document.getElementById('gcashMargin').value = gcash;
+        document.getElementById('sariSariMargin').value = sariSari;
+        document.getElementById('ordersMargin').value = orders;
+
+        // Update help text
+        document.querySelectorAll('#margins-form .form-help')[0].textContent =
+          `Current: ${gcash}% (multiply Gcash Total by this percentage)`;
+        document.querySelectorAll('#margins-form .form-help')[1].textContent =
+          `Current: ${sariSari}% (multiply Sari Sari Store by this percentage)`;
+        document.querySelectorAll('#margins-form .form-help')[2].textContent =
+          `Current: ${orders}% (multiply Orders by this percentage)`;
+      }
+
+      function saveProfitMargins() {
+        const gcash = document.getElementById('gcashMargin').value;
+        const sariSari = document.getElementById('sariSariMargin').value;
+        const orders = document.getElementById('ordersMargin').value;
+
+        // Validate
+        if (!gcash || !sariSari || !orders) {
+          showMarginsStatus('Please fill in all margin values', 'error');
+          return;
+        }
+
+        // Save to localStorage
+        localStorage.setItem('profit_margin_gcash', gcash);
+        localStorage.setItem('profit_margin_sariSari', sariSari);
+        localStorage.setItem('profit_margin_orders', orders);
+
+        // Update CONFIG object
+        CONFIG.profitMargins.gcash = parseFloat(gcash) / 100;
+        CONFIG.profitMargins.sariSariStore = parseFloat(sariSari) / 100;
+        CONFIG.profitMargins.orders = parseFloat(orders) / 100;
+
+        showMarginsStatus('Profit margins saved! Changes apply to new entries.', 'success');
+        loadProfitMargins(); // Refresh display
+      }
+
+      function resetProfitMargins() {
+        document.getElementById('gcashMargin').value = '2.2';
+        document.getElementById('sariSariMargin').value = '10';
+        document.getElementById('ordersMargin').value = '10';
+
+        localStorage.removeItem('profit_margin_gcash');
+        localStorage.removeItem('profit_margin_sariSari');
+        localStorage.removeItem('profit_margin_orders');
+
+        CONFIG.profitMargins.gcash = 0.022;
+        CONFIG.profitMargins.sariSariStore = 0.10;
+        CONFIG.profitMargins.orders = 0.10;
+
+        showMarginsStatus('Reset to default margins (2.2%, 10%, 10%)', 'success');
+        loadProfitMargins();
+      }
+
+      function showMarginsStatus(message, type) {
+        const statusDiv = document.getElementById('margins-status');
+        statusDiv.textContent = message;
+        statusDiv.className = `form-${type}`;
+        statusDiv.style.display = 'block';
+
+        setTimeout(() => {
+          statusDiv.style.display = 'none';
+        }, 5000);
       }
     });
   </script>
