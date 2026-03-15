@@ -23,13 +23,17 @@ def excel_date_to_iso(excel_date):
     if pd.isna(excel_date):
         return None
     try:
-        if isinstance(excel_date, str):
+        # Check if it's already a datetime object
+        if isinstance(excel_date, pd.Timestamp) or isinstance(excel_date, datetime):
+            return excel_date.strftime('%Y-%m-%d')
+        elif isinstance(excel_date, str):
             # Already a string, try to parse it
             dt = pd.to_datetime(excel_date)
+            return dt.strftime('%Y-%m-%d')
         else:
-            # Excel serial date
+            # Try to convert as Excel serial date (numeric)
             dt = pd.to_datetime(excel_date, unit='D', origin='1899-12-30')
-        return dt.strftime('%Y-%m-%d')
+            return dt.strftime('%Y-%m-%d')
     except Exception as e:
         print(f"Warning: Could not convert date {excel_date}: {e}")
         return None
@@ -50,8 +54,8 @@ def migrate_store_sales():
     df = pd.read_excel(EXCEL_FILE, sheet_name='Store_Sales')
 
     # Replace NaN with 0 for numeric columns
-    numeric_columns = ['Cash in', 'Cash out', 'Gcash total', 'Sari sari store', 'Orders',
-                      'Gcash profit', 'Sari sari store profit', 'Orders profit', 'Total profit']
+    numeric_columns = ['Cash In', 'Cash Out', 'Gcash Total', 'Sari Sari Store', 'Orders',
+                      'Gcash Profit', 'Sari Sari Store Profit', 'Orders Profit', 'Total Profit']
     for col in numeric_columns:
         if col in df.columns:
             df[col] = df[col].fillna(0)
@@ -62,18 +66,41 @@ def migrate_store_sales():
         if not date_str:
             continue
 
+        # Helper function to safely convert to float
+        def safe_float(value):
+            if pd.isna(value):
+                return 0.0
+            if isinstance(value, str):
+                # Skip rows with text like 'restday'
+                if value.lower() in ['restday', 'rest day', 'holiday', 'closed']:
+                    return None
+                try:
+                    return float(value)
+                except ValueError:
+                    return 0.0
+            try:
+                return float(value)
+            except (ValueError, TypeError):
+                return 0.0
+
+        # Check if this is a rest day
+        cash_in = safe_float(row.get('Cash In', 0))
+        if cash_in is None:
+            # Skip rest days
+            continue
+
         record = {
             "id": generate_id("ss", date_str, idx + 1),
             "date": date_str,
-            "cashIn": float(row.get('Cash in', 0)),
-            "cashOut": float(row.get('Cash out', 0)),
-            "gcashTotal": float(row.get('Gcash total', 0)),
-            "sariSariStore": float(row.get('Sari sari store', 0)),
-            "orders": float(row.get('Orders', 0)),
-            "gcashProfit": float(row.get('Gcash profit', 0)),
-            "sariSariStoreProfit": float(row.get('Sari sari store profit', 0)),
-            "ordersProfit": float(row.get('Orders profit', 0)),
-            "totalProfit": float(row.get('Total profit', 0)),
+            "cashIn": cash_in,
+            "cashOut": safe_float(row.get('Cash Out', 0)),
+            "gcashTotal": safe_float(row.get('Gcash Total', 0)),
+            "sariSariStore": safe_float(row.get('Sari Sari Store', 0)),
+            "orders": safe_float(row.get('Orders', 0)),
+            "gcashProfit": safe_float(row.get('Gcash Profit', 0)),
+            "sariSariStoreProfit": safe_float(row.get('Sari Sari Store Profit', 0)),
+            "ordersProfit": safe_float(row.get('Orders Profit', 0)),
+            "totalProfit": safe_float(row.get('Total Profit', 0)),
             "createdAt": datetime.now().isoformat() + 'Z'
         }
         records.append(record)
@@ -99,13 +126,13 @@ def migrate_piso_wifi():
     df = pd.read_excel(EXCEL_FILE, sheet_name='Piso_Wifi')
 
     # Replace NaN with 0
-    df['Piso_Wifi'] = df['Piso_Wifi'].fillna(0)
+    df['Revenue'] = df['Revenue'].fillna(0)
 
     records = []
     for idx, row in df.iterrows():
         month = row.get('Month')
         year = row.get('Year')
-        revenue = row.get('Piso_Wifi', 0)
+        revenue = row.get('Revenue', 0)
 
         if pd.isna(month) or pd.isna(year):
             continue
@@ -137,16 +164,16 @@ def migrate_printer():
     print("Migrating Printer sheet...")
 
     # Read the Excel sheet
-    df = pd.read_excel(EXCEL_FILE, sheet_name='Printer')
+    df = pd.read_excel(EXCEL_FILE, sheet_name='PRINTER')
 
     # Replace NaN with 0
-    df['Printer'] = df['Printer'].fillna(0)
+    df['Income'] = df['Income'].fillna(0)
 
     records = []
     for idx, row in df.iterrows():
         month = row.get('Month')
         year = row.get('Year')
-        income = row.get('Printer', 0)
+        income = row.get('Income', 0)
 
         if pd.isna(month) or pd.isna(year):
             continue

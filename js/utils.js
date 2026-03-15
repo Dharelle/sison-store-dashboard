@@ -189,11 +189,12 @@ const Utils = {
   },
 
   /**
-   * Group array by key
+   * Group array by key or function
    */
-  groupBy(array, key) {
+  groupBy(array, keyOrFn) {
     return array.reduce((result, item) => {
-      const groupKey = item[key];
+      // Support both string key and function
+      const groupKey = typeof keyOrFn === 'function' ? keyOrFn(item) : item[keyOrFn];
       if (!result[groupKey]) {
         result[groupKey] = [];
       }
