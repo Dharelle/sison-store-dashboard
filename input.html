@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Data - Sison Store Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Sison Store Dashboard</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="input.html" class="active">Add Data</a></li>
+          <li><a href="setup.html">Setup</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="forms-container">
+      <!-- Header -->
+      <div class="forms-header">
+        <h1>Add New Data</h1>
+        <p>Enter new transactions and revenue data. Data will be automatically saved to GitHub.</p>
+      </div>
+
+      <!-- Forms Grid -->
+      <div class="forms-grid">
+        <!-- Store Sales Form -->
+        <div class="form-card">
+          <div class="form-card-header">
+            <h2>Store Sales Transaction</h2>
+            <p>Add daily store sales transaction</p>
+          </div>
+
+          <form id="store-sales-form">
+            <!-- Date -->
+            <div class="form-group">
+              <label for="date" class="form-label required">Date</label>
+              <input type="date" id="date" name="date" class="form-input" required>
+              <p class="form-help">Transaction date</p>
+            </div>
+
+            <!-- Revenue Fields -->
+            <div class="form-group">
+              <label for="cashIn" class="form-label required">Cash In</label>
+              <input type="number" id="cashIn" name="cashIn" class="form-input" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cashOut" class="form-label required">Cash Out</label>
+              <input type="number" id="cashOut" name="cashOut" class="form-input" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+              <label for="gcashTotal" class="form-label required">Gcash Total</label>
+              <input type="number" id="gcashTotal" name="gcashTotal" class="form-input" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sariSariStore" class="form-label required">Sari Sari Store</label>
+              <input type="number" id="sariSariStore" name="sariSariStore" class="form-input" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+              <label for="orders" class="form-label required">Orders</label>
+              <input type="number" id="orders" name="orders" class="form-input" step="0.01" min="0" required>
+            </div>
+
+            <!-- Calculated Profits -->
+            <div class="calculated-section">
+              <h3>Calculated Profits</h3>
+
+              <div class="calculated-field">
+                <label for="gcashProfit" class="form-label">Gcash Profit (2.2%)</label>
+                <input type="number" id="gcashProfit" name="gcashProfit" class="form-input" step="0.01" readonly>
+              </div>
+
+              <div class="calculated-field">
+                <label for="sariSariStoreProfit" class="form-label">Sari Sari Store Profit (10%)</label>
+                <input type="number" id="sariSariStoreProfit" name="sariSariStoreProfit" class="form-input" step="0.01" readonly>
+              </div>
+
+              <div class="calculated-field">
+                <label for="ordersProfit" class="form-label">Orders Profit (10%)</label>
+                <input type="number" id="ordersProfit" name="ordersProfit" class="form-input" step="0.01" readonly>
+              </div>
+
+              <div class="calculated-field">
+                <label for="totalProfit" class="form-label">Total Profit</label>
+                <input type="number" id="totalProfit" name="totalProfit" class="form-input" step="0.01" readonly>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Add Transaction</button>
+              <button type="reset" class="btn btn-secondary">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Piso WiFi Form -->
+        <div class="form-card">
+          <div class="form-card-header">
+            <h2>Piso WiFi Revenue</h2>
+            <p>Add monthly Piso WiFi revenue</p>
+          </div>
+
+          <form id="piso-wifi-form">
+            <!-- Month/Year -->
+            <div class="date-inputs">
+              <div class="form-group">
+                <label for="pisoWifiMonth" class="form-label required">Month</label>
+                <select id="pisoWifiMonth" name="month" class="form-select" required>
+                  <option value="">Select Month</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="pisoWifiYear" class="form-label required">Year</label>
+                <select id="pisoWifiYear" name="year" class="form-select" required>
+                  <option value="">Year</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Revenue -->
+            <div class="form-group">
+              <label for="pisoWifiRevenue" class="form-label required">Revenue</label>
+              <input type="number" id="pisoWifiRevenue" name="revenue" class="form-input" step="0.01" min="0" required>
+              <p class="form-help">Monthly revenue from Piso WiFi</p>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Add Revenue</button>
+              <button type="reset" class="btn btn-secondary">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Printer Form -->
+        <div class="form-card">
+          <div class="form-card-header">
+            <h2>Printer Income</h2>
+            <p>Add monthly printer income</p>
+          </div>
+
+          <form id="printer-form">
+            <!-- Month/Year -->
+            <div class="date-inputs">
+              <div class="form-group">
+                <label for="printerMonth" class="form-label required">Month</label>
+                <select id="printerMonth" name="month" class="form-select" required>
+                  <option value="">Select Month</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="printerYear" class="form-label required">Year</label>
+                <select id="printerYear" name="year" class="form-select" required>
+                  <option value="">Year</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Income -->
+            <div class="form-group">
+              <label for="printerIncome" class="form-label required">Income</label>
+              <input type="number" id="printerIncome" name="income" class="form-input" step="0.01" min="0" required>
+              <p class="form-help">Monthly income from printer services</p>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Add Income</button>
+              <button type="reset" class="btn btn-secondary">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data-manager.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

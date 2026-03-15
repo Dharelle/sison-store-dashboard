@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sison Store Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Sison Store Dashboard</a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Dashboard</a></li>
+          <li><a href="input.html">Add Data</a></li>
+          <li><a href="setup.html">Setup</a></li>
+          <li id="sync-status" class="sync-status">
+            <span class="sync-indicator"></span>
+            Loading...
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+      <h1>Business Overview</h1>
+      <div class="dashboard-actions">
+        <button id="refresh-btn" class="btn btn-secondary btn-sm">Refresh</button>
+        <button id="export-btn" class="btn btn-secondary btn-sm">Export Data</button>
+      </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+      <!-- Total Revenue -->
+      <div class="kpi-card highlight">
+        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-value" id="total-revenue">₱0.00</div>
+        <div class="kpi-subtitle">All time</div>
+      </div>
+
+      <!-- Average Monthly -->
+      <div class="kpi-card">
+        <div class="kpi-label">Average Monthly</div>
+        <div class="kpi-value" id="avg-monthly">₱0.00</div>
+        <div class="kpi-subtitle">Per month</div>
+      </div>
+
+      <!-- Best Month -->
+      <div class="kpi-card">
+        <div class="kpi-label">Best Month</div>
+        <div class="kpi-value" id="best-month-amount">₱0.00</div>
+        <div class="kpi-subtitle" id="best-month">N/A</div>
+      </div>
+
+      <!-- Worst Month -->
+      <div class="kpi-card">
+        <div class="kpi-label">Worst Month</div>
+        <div class="kpi-value" id="worst-month-amount">₱0.00</div>
+        <div class="kpi-subtitle" id="worst-month">N/A</div>
+      </div>
+
+      <!-- This Month -->
+      <div class="kpi-card">
+        <div class="kpi-label">This Month</div>
+        <div class="kpi-value" id="this-month">₱0.00</div>
+        <div class="kpi-subtitle">Current month revenue</div>
+      </div>
+
+      <!-- Store Sales % -->
+      <div class="kpi-card">
+        <div class="kpi-label">Store Sales</div>
+        <div class="kpi-value" id="store-sales-percent">0%</div>
+        <div class="kpi-subtitle">Of total revenue</div>
+      </div>
+
+      <!-- Piso WiFi % -->
+      <div class="kpi-card">
+        <div class="kpi-label">Piso WiFi</div>
+        <div class="kpi-value" id="piso-wifi-percent">0%</div>
+        <div class="kpi-subtitle">Of total revenue</div>
+      </div>
+
+      <!-- Printer % -->
+      <div class="kpi-card">
+        <div class="kpi-label">Printer</div>
+        <div class="kpi-value" id="printer-percent">0%</div>
+        <div class="kpi-subtitle">Of total revenue</div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <div class="charts-grid">
+        <!-- Revenue Trends -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="revenue-trend-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Monthly Performance -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="monthly-performance-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Revenue Breakdown -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="revenue-breakdown-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Yearly Summary -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="yearly-summary-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Transactions -->
+    <section class="transactions-section">
+      <div class="table-container">
+        <div class="table-header">
+          <h2>Recent Transactions</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Gcash Total</th>
+              <th>Sari Sari Store</th>
+              <th>Orders</th>
+              <th>Total Profit</th>
+            </tr>
+          </thead>
+          <tbody id="recent-transactions">
+            <tr>
+              <td colspan="5" class="text-center">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data-manager.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

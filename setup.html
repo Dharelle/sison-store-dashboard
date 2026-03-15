@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup - Sison Store Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Sison Store Dashboard</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="input.html">Add Data</a></li>
+          <li><a href="setup.html" class="active">Setup</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="setup-form">
+      <!-- Header -->
+      <div class="forms-header">
+        <h1>GitHub Setup</h1>
+        <p>Configure your GitHub connection to enable automatic data saving and backup.</p>
+      </div>
+
+      <!-- Instructions -->
+      <div class="setup-instructions">
+        <h3>How to Get Your GitHub Personal Access Token</h3>
+        <ol>
+          <li>Go to <a href="https://github.com/settings/tokens" target="_blank" style="color: white; text-decoration: underline;">GitHub Settings → Personal access tokens</a></li>
+          <li>Click "Generate new token (classic)"</li>
+          <li>Name: <code>Sison Store Dashboard</code></li>
+          <li>Expiration: No expiration (or 1 year)</li>
+          <li>Select scope: <code>repo</code> (Full control of private repositories)</li>
+          <li>Click "Generate token" and copy it</li>
+          <li>Paste the token below (you won't see it again!)</li>
+        </ol>
+      </div>
+
+      <!-- Setup Form -->
+      <div class="form-card">
+        <div class="form-card-header">
+          <h2>GitHub Configuration</h2>
+          <p>Enter your GitHub credentials</p>
+        </div>
+
+        <form id="setup-form">
+          <!-- GitHub Username -->
+          <div class="form-group">
+            <label for="githubUsername" class="form-label required">GitHub Username</label>
+            <input
+              type="text"
+              id="githubUsername"
+              name="username"
+              class="form-input"
+              placeholder="yourusername"
+              required
+            >
+            <p class="form-help">Your GitHub username (not email)</p>
+          </div>
+
+          <!-- Repository Name -->
+          <div class="form-group">
+            <label for="githubRepo" class="form-label required">Repository Name</label>
+            <input
+              type="text"
+              id="githubRepo"
+              name="repo"
+              class="form-input"
+              placeholder="sison-store-dashboard"
+              value="sison-store-dashboard"
+              required
+            >
+            <p class="form-help">The name of your GitHub repository</p>
+          </div>
+
+          <!-- Personal Access Token -->
+          <div class="form-group">
+            <label for="githubToken" class="form-label required">Personal Access Token</label>
+            <input
+              type="password"
+              id="githubToken"
+              name="token"
+              class="form-input token-input"
+              placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              required
+            >
+            <p class="form-help">Your GitHub Personal Access Token with <strong>repo</strong> scope</p>
+          </div>
+
+          <!-- Status Message -->
+          <div id="setup-status" style="display: none;"></div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Configuration</button>
+            <button type="button" id="test-connection-btn" class="btn btn-secondary">Test Connection</button>
+          </div>
+        </form>
+
+        <!-- Current Configuration -->
+        <div id="current-config" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--border-color);">
+          <h3 style="font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--gray-700);">Current Configuration</h3>
+          <div id="config-display" style="color: var(--gray-600); font-size: 0.875rem;">
+            <p>No configuration saved yet.</p>
+          </div>
+          <button type="button" id="clear-config-btn" class="btn btn-danger btn-sm" style="margin-top: var(--spacing-md); display: none;">
+            Clear Configuration
+          </button>
+        </div>
+      </div>
+
+      <!-- Security Notice -->
+      <div class="card" style="margin-top: var(--spacing-xl); background-color: var(--warning-color); color: white; border: none;">
+        <h3 style="margin-bottom: var(--spacing-sm);">⚠️ Security Notice</h3>
+        <p style="margin-bottom: var(--spacing-sm);">Your GitHub token will be stored in your browser's localStorage. This means:</p>
+        <ul style="margin-left: var(--spacing-lg);">
+          <li>Anyone with access to this browser can access your GitHub repository</li>
+          <li>Use a token with limited scope (only <code>repo</code>)</li>
+          <li>Consider creating a dedicated repository just for this dashboard</li>
+          <li>Clear your configuration if using a shared computer</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script>
+    // Setup form handling
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('setup-form');
+      const testBtn = document.getElementById('test-connection-btn');
+      const clearBtn = document.getElementById('clear-config-btn');
+      const statusDiv = document.getElementById('setup-status');
+      const configDisplay = document.getElementById('config-display');
+
+      // Load current configuration
+      loadCurrentConfig();
+
+      // Handle form submission
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        await saveConfiguration();
+      });
+
+      // Handle test connection
+      testBtn.addEventListener('click', async () => {
+        await testConnection();
+      });
+
+      // Handle clear configuration
+      clearBtn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to clear your GitHub configuration?')) {
+          clearConfiguration();
+        }
+      });
+
+      function loadCurrentConfig() {
+        const username = localStorage.getItem(CONFIG.storage.githubUsername);
+        const repo = localStorage.getItem(CONFIG.storage.githubRepo);
+        const token = localStorage.getItem(CONFIG.storage.githubToken);
+
+        if (username && repo && token) {
+          document.getElementById('githubUsername').value = username;
+          document.getElementById('githubRepo').value = repo;
+          document.getElementById('githubToken').value = token;
+
+          configDisplay.innerHTML = `
+            <p><strong>Username:</strong> ${username}</p>
+            <p><strong>Repository:</strong> ${repo}</p>
+            <p><strong>Token:</strong> ${token.substring(0, 10)}${'*'.repeat(30)}</p>
+          `;
+          clearBtn.style.display = 'inline-block';
+        }
+      }
+
+      async function saveConfiguration() {
+        const formData = new FormData(form);
+        const username = formData.get('username');
+        const repo = formData.get('repo');
+        const token = formData.get('token');
+
+        // Save to localStorage
+        localStorage.setItem(CONFIG.storage.githubUsername, username);
+        localStorage.setItem(CONFIG.storage.githubRepo, repo);
+        localStorage.setItem(CONFIG.storage.githubToken, token);
+
+        showStatus('Configuration saved successfully!', 'success');
+
+        // Test connection
+        await testConnection();
+
+        // Reload config display
+        loadCurrentConfig();
+      }
+
+      async function testConnection() {
+        showStatus('Testing connection...', 'info');
+
+        try {
+          // Create temporary GitHub API instance
+          const username = localStorage.getItem(CONFIG.storage.githubUsername);
+          const repo = localStorage.getItem(CONFIG.storage.githubRepo);
+          const token = localStorage.getItem(CONFIG.storage.githubToken);
+
+          if (!username || !repo || !token) {
+            throw new Error('Please fill in all fields first');
+          }
+
+          const url = `${CONFIG.github.apiBaseUrl}/repos/${username}/${repo}`;
+          const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': CONFIG.github.apiVersion
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+          }
+
+          const data = await response.json();
+          showStatus(`✓ Connection successful! Repository: ${data.full_name}`, 'success');
+
+          // Redirect to dashboard after 2 seconds
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 2000);
+
+        } catch (error) {
+          showStatus(`✗ Connection failed: ${error.message}`, 'error');
+        }
+      }
+
+      function clearConfiguration() {
+        localStorage.removeItem(CONFIG.storage.githubUsername);
+        localStorage.removeItem(CONFIG.storage.githubRepo);
+        localStorage.removeItem(CONFIG.storage.githubToken);
+
+        form.reset();
+        configDisplay.innerHTML = '<p>No configuration saved yet.</p>';
+        clearBtn.style.display = 'none';
+
+        showStatus('Configuration cleared', 'info');
+      }
+
+      function showStatus(message, type) {
+        statusDiv.textContent = message;
+        statusDiv.className = `form-${type}`;
+        statusDiv.style.display = 'block';
+
+        setTimeout(() => {
+          statusDiv.style.display = 'none';
+        }, 5000);
+      }
+    });
+  </script>
+</body>
+</html>

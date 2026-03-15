@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-15T00:00:00Z",
+  "records": [
+    {
+      "id": "ss_20250120_001",
+      "date": "2025-01-20",
+      "cashIn": 3085,
+      "cashOut": 4000,
+      "gcashTotal": 7085,
+      "sariSariStore": 1967,
+      "orders": 0,
+      "gcashProfit": 155.87,
+      "sariSariStoreProfit": 196.7,
+      "ordersProfit": 0,
+      "totalProfit": 352.57,
+      "createdAt": "2026-03-15T00:00:00Z"
+    },
+    {
+      "id": "ss_20250121_002",
+      "date": "2025-01-21",
+      "cashIn": 2500,
+      "cashOut": 3500,
+      "gcashTotal": 6000,
+      "sariSariStore": 1800,
+      "orders": 500,
+      "gcashProfit": 132,
+      "sariSariStoreProfit": 180,
+      "ordersProfit": 50,
+      "totalProfit": 362,
+      "createdAt": "2026-03-15T00:00:00Z"
+    },
+    {
+      "id": "ss_20250122_003",
+      "date": "2025-01-22",
+      "cashIn": 2800,
+      "cashOut": 3800,
+      "gcashTotal": 6600,
+      "sariSariStore": 2100,
+      "orders": 300,
+      "gcashProfit": 145.2,
+      "sariSariStoreProfit": 210,
+      "ordersProfit": 30,
+      "totalProfit": 385.2,
+      "createdAt": "2026-03-15T00:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-15T00:00:00Z",
+  "records": [
+    {
+      "id": "pw_202501_001",
+      "month": "January",
+      "year": 2025,
+      "revenue": 1500,
+      "createdAt": "2026-03-15T00:00:00Z"
+    },
+    {
+      "id": "pw_202502_002",
+      "month": "February",
+      "year": 2025,
+      "revenue": 1600,
+      "createdAt": "2026-03-15T00:00:00Z"
+    },
+    {
+      "id": "pw_202503_003",
+      "month": "March",
+      "year": 2025,
+      "revenue": 1450,
+      "createdAt": "2026-03-15T00:00:00Z"
+    }
+  ]
+}
