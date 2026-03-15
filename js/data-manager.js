@@ -399,10 +399,27 @@ class DataManager {
       }
     });
 
-    // This month's revenue
+    // This month's revenue (ALL revenue streams)
     const now = new Date();
     const thisMonthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-    const thisMonth = byMonth[thisMonthKey]?.reduce((sum, r) => sum + r.totalProfit, 0) || 0;
+    const currentMonthName = Utils.getMonthName(now.getMonth() + 1);
+    const currentYear = now.getFullYear();
+
+    // Store Sales for this month
+    const thisMonthStoreSales = byMonth[thisMonthKey]?.reduce((sum, r) => sum + r.totalProfit, 0) || 0;
+
+    // Piso WiFi for this month
+    const thisMonthPisoWifi = this.data.pisoWifi.find(
+      p => p.month.toLowerCase() === currentMonthName.toLowerCase() && p.year === currentYear
+    )?.revenue || 0;
+
+    // Printer for this month
+    const thisMonthPrinter = this.data.printer.find(
+      p => p.month.toLowerCase() === currentMonthName.toLowerCase() && p.year === currentYear
+    )?.income || 0;
+
+    // Total for this month (all streams)
+    const thisMonth = thisMonthStoreSales + thisMonthPisoWifi + thisMonthPrinter;
 
     // Calculate revenue percentages (apply filter to Piso WiFi and Printer)
     const filteredPisoWifi = this.filterMonthlyData(this.data.pisoWifi);
