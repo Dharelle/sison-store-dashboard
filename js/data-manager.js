@@ -412,7 +412,12 @@ class DataManager {
    * Get recent transactions
    */
   getRecentTransactions(limit = 10) {
-    return this.data.storeSales.slice(0, limit);
+    // Filter out zero-profit entries (rest days) and sort by date descending (newest first)
+    const validTransactions = this.data.storeSales
+      .filter(s => s.totalProfit > 0)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    return validTransactions.slice(0, limit);
   }
 }
 
