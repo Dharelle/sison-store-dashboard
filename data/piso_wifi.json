@@ -1,27 +1,90 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-15T00:00:00Z",
+  "lastUpdated": "2026-03-15T12:37:22.144871Z",
   "records": [
     {
-      "id": "pw_202501_001",
+      "id": "pw_202502_002",
       "month": "January",
       "year": 2025,
-      "revenue": 1500,
-      "createdAt": "2026-03-15T00:00:00Z"
-    },
-    {
-      "id": "pw_202502_002",
-      "month": "February",
-      "year": 2025,
-      "revenue": 1600,
-      "createdAt": "2026-03-15T00:00:00Z"
+      "revenue": 0.0,
+      "createdAt": "2026-03-15T12:37:22.144479Z"
     },
     {
       "id": "pw_202503_003",
+      "month": "February",
+      "year": 2025,
+      "revenue": 0.0,
+      "createdAt": "2026-03-15T12:37:22.144535Z"
+    },
+    {
+      "id": "pw_202504_004",
       "month": "March",
       "year": 2025,
-      "revenue": 1450,
-      "createdAt": "2026-03-15T00:00:00Z"
+      "revenue": 255.0,
+      "createdAt": "2026-03-15T12:37:22.144576Z"
+    },
+    {
+      "id": "pw_202505_005",
+      "month": "April",
+      "year": 2025,
+      "revenue": 2707.0,
+      "createdAt": "2026-03-15T12:37:22.144615Z"
+    },
+    {
+      "id": "pw_202506_006",
+      "month": "May",
+      "year": 2025,
+      "revenue": 3851.0,
+      "createdAt": "2026-03-15T12:37:22.144648Z"
+    },
+    {
+      "id": "pw_202507_007",
+      "month": "June",
+      "year": 2025,
+      "revenue": 2722.0,
+      "createdAt": "2026-03-15T12:37:22.144680Z"
+    },
+    {
+      "id": "pw_202508_008",
+      "month": "July",
+      "year": 2025,
+      "revenue": 3467.0,
+      "createdAt": "2026-03-15T12:37:22.144711Z"
+    },
+    {
+      "id": "pw_202509_009",
+      "month": "August",
+      "year": 2025,
+      "revenue": 3340.0,
+      "createdAt": "2026-03-15T12:37:22.144742Z"
+    },
+    {
+      "id": "pw_202510_010",
+      "month": "September",
+      "year": 2025,
+      "revenue": 3575.0,
+      "createdAt": "2026-03-15T12:37:22.144773Z"
+    },
+    {
+      "id": "pw_202511_011",
+      "month": "October",
+      "year": 2025,
+      "revenue": 3990.0,
+      "createdAt": "2026-03-15T12:37:22.144804Z"
+    },
+    {
+      "id": "pw_202512_012",
+      "month": "November",
+      "year": 2025,
+      "revenue": 2730.0,
+      "createdAt": "2026-03-15T12:37:22.144835Z"
+    },
+    {
+      "id": "pw_202513_013",
+      "month": "December",
+      "year": 2025,
+      "revenue": 0.0,
+      "createdAt": "2026-03-15T12:37:22.144865Z"
     }
   ]
 }
