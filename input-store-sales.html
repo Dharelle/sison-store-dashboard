@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Sales - Sison Store Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Sison Store Dashboard</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="#" class="active">Add Data</a></li>
+          <li><a href="setup.html">Setup</a></li>
+          <li>
+            <button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle Dark Mode">
+              <span class="icon-light">☀️</span>
+              <span class="icon-dark">🌙</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="forms-container">
+      <!-- Header -->
+      <div class="forms-header">
+        <h1>Store Sales Transactions</h1>
+        <p>Add new daily store sales transactions</p>
+
+        <!-- Form Type Selector -->
+        <div class="form-type-selector" style="margin-top: var(--spacing-lg);">
+          <a href="input-store-sales.html" class="type-btn active">Store Sales</a>
+          <a href="input-piso-wifi.html" class="type-btn">Piso WiFi</a>
+          <a href="input-printer.html" class="type-btn">Printer</a>
+        </div>
+      </div>
+
+      <!-- Store Sales Form -->
+      <div class="form-card">
+        <div class="form-card-header">
+          <h2>Add New Transaction</h2>
+          <p>Enter daily store sales data</p>
+        </div>
+
+        <form id="store-sales-form">
+          <!-- Date -->
+          <div class="form-group">
+            <label for="date" class="form-label required">Date</label>
+            <input type="date" id="date" name="date" class="form-input" required>
+          </div>
+
+          <!-- Revenue Fields -->
+          <div class="form-group">
+            <label for="cashIn" class="form-label required">Cash In</label>
+            <input type="number" id="cashIn" name="cashIn" class="form-input" step="0.01" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cashOut" class="form-label required">Cash Out</label>
+            <input type="number" id="cashOut" name="cashOut" class="form-input" step="0.01" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label for="gcashTotal" class="form-label required">Gcash Total</label>
+            <input type="number" id="gcashTotal" name="gcashTotal" class="form-input" step="0.01" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label for="sariSariStore" class="form-label required">Sari Sari Store</label>
+            <input type="number" id="sariSariStore" name="sariSariStore" class="form-input" step="0.01" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label for="orders" class="form-label required">Orders</label>
+            <input type="number" id="orders" name="orders" class="form-input" step="0.01" min="0" required>
+          </div>
+
+          <!-- Calculated Profits -->
+          <div class="calculated-section">
+            <h3>Calculated Profits</h3>
+
+            <div class="calculated-field">
+              <label for="gcashProfit" class="form-label">Gcash Profit (2.2%)</label>
+              <input type="number" id="gcashProfit" name="gcashProfit" class="form-input" step="0.01" readonly>
+            </div>
+
+            <div class="calculated-field">
+              <label for="sariSariStoreProfit" class="form-label">Sari Sari Store Profit (10%)</label>
+              <input type="number" id="sariSariStoreProfit" name="sariSariStoreProfit" class="form-input" step="0.01" readonly>
+            </div>
+
+            <div class="calculated-field">
+              <label for="ordersProfit" class="form-label">Orders Profit (10%)</label>
+              <input type="number" id="ordersProfit" name="ordersProfit" class="form-input" step="0.01" readonly>
+            </div>
+
+            <div class="calculated-field">
+              <label for="totalProfit" class="form-label">Total Profit</label>
+              <input type="number" id="totalProfit" name="totalProfit" class="form-input" step="0.01" readonly>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Add Transaction</button>
+            <button type="reset" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- All Transactions Table -->
+      <section class="transactions-section" style="margin-top: var(--spacing-2xl);">
+        <div class="table-container">
+          <div class="table-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>All Store Sales Transactions</h2>
+            <div style="display: flex; gap: var(--spacing-md); align-items: center;">
+              <input type="text" id="search-input" placeholder="Search..." class="form-input" style="width: 200px;">
+              <select id="filter-select" class="form-select" style="width: 150px;">
+                <option value="all">All Time</option>
+                <option value="month">This Month</option>
+                <option value="quarter">Quarter</option>
+                <option value="year">This Year</option>
+              </select>
+            </div>
+          </div>
+          <div style="overflow-x: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Cash In</th>
+                  <th>Cash Out</th>
+                  <th>Gcash Total</th>
+                  <th>Sari Sari</th>
+                  <th>Orders</th>
+                  <th>Total Profit</th>
+                </tr>
+              </thead>
+              <tbody id="all-transactions">
+                <tr>
+                  <td colspan="7" class="text-center">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="pagination" style="padding: var(--spacing-md); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color-main);">
+            <div id="page-info"></div>
+            <div style="display: flex; gap: var(--spacing-sm);">
+              <button id="prev-page" class="btn btn-secondary btn-sm">Previous</button>
+              <button id="next-page" class="btn btn-secondary btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data-manager.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    // Dark mode toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const darkMode = localStorage.getItem('darkMode') === 'true';
+      if (darkMode) {
+        document.body.classList.add('dark-mode');
+      }
+
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        });
+      }
+
+      // Load and display all transactions
+      loadAllTransactions();
+
+      // Search and filter
+      document.getElementById('search-input').addEventListener('input', filterTransactions);
+      document.getElementById('filter-select').addEventListener('change', filterTransactions);
+
+      // Pagination
+      document.getElementById('prev-page').addEventListener('click', () => changePage(-1));
+      document.getElementById('next-page').addEventListener('click', () => changePage(1));
+    });
+
+    let allData = [];
+    let filteredData = [];
+    let currentPage = 1;
+    const itemsPerPage = 20;
+
+    async function loadAllTransactions() {
+      try {
+        await dataManager.initialize();
+        allData = dataManager.data.storeSales
+          .filter(s => s.totalProfit > 0)
+          .sort((a, b) => new Date(b.date) - new Date(a.date));
+        filteredData = [...allData];
+        displayTransactions();
+      } catch (error) {
+        console.error('Failed to load transactions:', error);
+      }
+    }
+
+    function filterTransactions() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const filter = document.getElementById('filter-select').value;
+
+      filteredData = allData.filter(t => {
+        // Search filter
+        const matchesSearch = !searchTerm ||
+          t.date.includes(searchTerm) ||
+          t.totalProfit.toString().includes(searchTerm);
+
+        // Date filter
+        let matchesDate = true;
+        if (filter !== 'all') {
+          const now = new Date();
+          const itemDate = new Date(t.date);
+
+          if (filter === 'month') {
+            matchesDate = itemDate.getMonth() === now.getMonth() &&
+                         itemDate.getFullYear() === now.getFullYear();
+          } else if (filter === 'quarter') {
+            const threeMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
+            matchesDate = itemDate >= threeMonthsAgo;
+          } else if (filter === 'year') {
+            matchesDate = itemDate.getFullYear() === now.getFullYear();
+          }
+        }
+
+        return matchesSearch && matchesDate;
+      });
+
+      currentPage = 1;
+      displayTransactions();
+    }
+
+    function displayTransactions() {
+      const tbody = document.getElementById('all-transactions');
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageData = filteredData.slice(start, end);
+
+      if (pageData.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" class="text-center">No transactions found</td></tr>';
+      } else {
+        tbody.innerHTML = pageData.map(t => `
+          <tr>
+            <td>${Utils.formatDate(t.date)}</td>
+            <td>${Utils.formatCurrency(t.cashIn)}</td>
+            <td>${Utils.formatCurrency(t.cashOut)}</td>
+            <td>${Utils.formatCurrency(t.gcashTotal)}</td>
+            <td>${Utils.formatCurrency(t.sariSariStore)}</td>
+            <td>${Utils.formatCurrency(t.orders)}</td>
+            <td class="font-semibold">${Utils.formatCurrency(t.totalProfit)}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Update pagination
+      const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+      document.getElementById('page-info').textContent =
+        `Showing ${start + 1}-${Math.min(end, filteredData.length)} of ${filteredData.length} transactions`;
+      document.getElementById('prev-page').disabled = currentPage === 1;
+      document.getElementById('next-page').disabled = currentPage >= totalPages;
+    }
+
+    function changePage(direction) {
+      currentPage += direction;
+      displayTransactions();
+    }
+  </script>
+</body>
+</html>

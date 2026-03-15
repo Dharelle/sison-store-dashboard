@@ -6,8 +6,17 @@
   <title>Add Data - Sison Store Dashboard</title>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/forms.css?v=4">
+  <link rel="stylesheet" href="css/dashboard.css?v=4">
+  <style>
+    .tab-section {
+      display: none;
+    }
+    .tab-section.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -36,12 +45,19 @@
       <!-- Header -->
       <div class="forms-header">
         <h1>Add New Data</h1>
-        <p>Enter new transactions and revenue data. Data will be automatically saved to GitHub.</p>
+        <p>Select a revenue stream to add data and view all records</p>
+
+        <!-- Tab Menu -->
+        <div class="form-type-selector" style="margin-top: var(--spacing-xl);">
+          <button class="type-btn active" data-tab="store-sales">Store Sales</button>
+          <button class="type-btn" data-tab="piso-wifi">Piso WiFi</button>
+          <button class="type-btn" data-tab="printer">Printer</button>
+        </div>
       </div>
 
-      <!-- Forms Grid -->
-      <div class="forms-grid">
-        <!-- Store Sales Form -->
+      <!-- Store Sales Section -->
+      <div id="store-sales-section" class="tab-section active">
+        <!-- Form -->
         <div class="form-card">
           <div class="form-card-header">
             <h2>Store Sales Transaction</h2>
@@ -115,7 +131,56 @@
           </form>
         </div>
 
-        <!-- Piso WiFi Form -->
+        <!-- All Store Sales Table -->
+        <section style="margin-top: var(--spacing-2xl);">
+          <div class="table-container">
+            <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-md);">
+              <h2>All Store Sales Transactions</h2>
+              <div style="display: flex; gap: var(--spacing-md); align-items: center; flex-wrap: wrap;">
+                <input type="text" id="ss-search" placeholder="Search..." class="form-input" style="width: 200px;">
+                <select id="ss-filter" class="form-select" style="width: 150px;">
+                  <option value="all">All Time</option>
+                  <option value="month">This Month</option>
+                  <option value="quarter">Quarter</option>
+                  <option value="year">This Year</option>
+                </select>
+              </div>
+            </div>
+            <div style="overflow-x: auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Cash In</th>
+                    <th>Cash Out</th>
+                    <th>Gcash Total</th>
+                    <th>Sari Sari</th>
+                    <th>Orders</th>
+                    <th>Total Profit</th>
+                    <th style="width: 150px;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="ss-tbody">
+                  <tr>
+                    <td colspan="8" class="text-center">Loading...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="padding: var(--spacing-md); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color-main); flex-wrap: wrap; gap: var(--spacing-md);">
+              <div id="ss-page-info"></div>
+              <div style="display: flex; gap: var(--spacing-sm);">
+                <button id="ss-prev" class="btn btn-secondary btn-sm">Previous</button>
+                <button id="ss-next" class="btn btn-secondary btn-sm">Next</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Piso WiFi Section -->
+      <div id="piso-wifi-section" class="tab-section">
+        <!-- Form -->
         <div class="form-card">
           <div class="form-card-header">
             <h2>Piso WiFi Revenue</h2>
@@ -172,7 +237,49 @@
           </form>
         </div>
 
-        <!-- Printer Form -->
+        <!-- All Piso WiFi Table -->
+        <section style="margin-top: var(--spacing-2xl);">
+          <div class="table-container">
+            <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-md);">
+              <h2>All Piso WiFi Revenue</h2>
+              <div style="display: flex; gap: var(--spacing-md); align-items: center;">
+                <input type="text" id="pw-search" placeholder="Search..." class="form-input" style="width: 200px;">
+                <select id="pw-filter" class="form-select" style="width: 150px;">
+                  <option value="all">All Time</option>
+                  <option value="year">This Year</option>
+                  <option value="lastyear">Last Year</option>
+                </select>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Year</th>
+                  <th>Revenue</th>
+                  <th style="width: 150px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="pw-tbody">
+                <tr>
+                  <td colspan="4" class="text-center">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="padding: var(--spacing-md); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color-main); flex-wrap: wrap; gap: var(--spacing-md);">
+              <div id="pw-page-info"></div>
+              <div style="display: flex; gap: var(--spacing-sm);">
+                <button id="pw-prev" class="btn btn-secondary btn-sm">Previous</button>
+                <button id="pw-next" class="btn btn-secondary btn-sm">Next</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Printer Section -->
+      <div id="printer-section" class="tab-section">
+        <!-- Form -->
         <div class="form-card">
           <div class="form-card-header">
             <h2>Printer Income</h2>
@@ -228,33 +335,56 @@
             </div>
           </form>
         </div>
+
+        <!-- All Printer Table -->
+        <section style="margin-top: var(--spacing-2xl);">
+          <div class="table-container">
+            <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-md);">
+              <h2>All Printer Income</h2>
+              <div style="display: flex; gap: var(--spacing-md); align-items: center;">
+                <input type="text" id="pr-search" placeholder="Search..." class="form-input" style="width: 200px;">
+                <select id="pr-filter" class="form-select" style="width: 150px;">
+                  <option value="all">All Time</option>
+                  <option value="year">This Year</option>
+                  <option value="lastyear">Last Year</option>
+                </select>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Year</th>
+                  <th>Income</th>
+                  <th style="width: 150px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="pr-tbody">
+                <tr>
+                  <td colspan="4" class="text-center">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="padding: var(--spacing-md); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color-main); flex-wrap: wrap; gap: var(--spacing-md);">
+              <div id="pr-page-info"></div>
+              <div style="display: flex; gap: var(--spacing-sm);">
+                <button id="pr-prev" class="btn btn-secondary btn-sm">Previous</button>
+                <button id="pr-next" class="btn btn-secondary btn-sm">Next</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </main>
 
   <!-- Scripts -->
-  <script src="js/config.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/github-api.js"></script>
-  <script src="js/storage.js"></script>
-  <script src="js/data-manager.js"></script>
-  <script src="js/forms.js"></script>
-  <script>
-    // Dark mode toggle for input page
-    document.addEventListener('DOMContentLoaded', () => {
-      const darkMode = localStorage.getItem('darkMode') === 'true';
-      if (darkMode) {
-        document.body.classList.add('dark-mode');
-      }
-
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
-      if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-          document.body.classList.toggle('dark-mode');
-          localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-        });
-      }
-    });
-  </script>
+  <script src="js/config.js?v=4"></script>
+  <script src="js/utils.js?v=4"></script>
+  <script src="js/github-api.js?v=4"></script>
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/data-manager.js?v=4"></script>
+  <script src="js/forms.js?v=4"></script>
+  <script src="js/input-tables.js?v=4"></script>
 </body>
 </html>

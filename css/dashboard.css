@@ -33,9 +33,9 @@
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 2px solid var(--gray-300);
-  background-color: white;
-  color: var(--gray-700);
+  border: 2px solid var(--border-color-main);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.2s;
@@ -196,6 +196,18 @@ th {
   color: var(--gray-700);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+th[style*="cursor: pointer"]:hover {
+  color: var(--primary-color);
+  background-color: var(--gray-100);
+}
+
+th[style*="cursor: pointer"]::after {
+  content: " ⇅";
+  opacity: 0.3;
+  font-size: 0.75rem;
 }
 
 td {
@@ -206,6 +218,40 @@ td {
 
 tbody tr:hover {
   background-color: var(--gray-50);
+}
+
+/* Action Buttons in Tables */
+td .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.edit-btn {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0891B2;
+}
+
+.delete-btn {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #DC2626;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
 }
 
 /* Empty State */
@@ -254,12 +300,37 @@ tbody tr:hover {
 }
 
 /* Responsive Design */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop/Laptop (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet (768px - 1023px) */
 @media (max-width: 1024px) {
   .charts-grid {
     grid-template-columns: 1fr;
   }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Mobile (up to 767px) */
 @media (max-width: 768px) {
   .dashboard-header {
     flex-direction: column;
@@ -269,6 +340,26 @@ tbody tr:hover {
 
   .dashboard-header h1 {
     font-size: 1.5rem;
+  }
+
+  .dashboard-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .dashboard-actions .btn {
+    flex: 1;
+  }
+
+  .time-filter {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-btn {
+    flex: 1;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.75rem;
   }
 
   .kpi-grid {
@@ -285,10 +376,12 @@ tbody tr:hover {
 
   .table-container {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   table {
-    min-width: 600px;
+    min-width: 700px;
+    font-size: 0.8125rem;
   }
 
   th, td {
@@ -296,8 +389,24 @@ tbody tr:hover {
     font-size: 0.8125rem;
   }
 
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: var(--spacing-sm);
+  }
+
+  .table-header > div {
+    width: 100%;
+  }
+
   .stats-summary {
     grid-template-columns: 1fr;
+  }
+
+  /* Action buttons on mobile */
+  td .btn {
+    padding: 0.25rem 0.375rem;
+    font-size: 0.625rem;
   }
 }
 

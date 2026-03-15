@@ -9,12 +9,31 @@ class ChartsManager {
   }
 
   /**
+   * Get chart title suffix based on current filter
+   */
+  getFilterLabel() {
+    const filter = dataManager.currentFilter;
+    const labels = {
+      'month': '(This Month)',
+      'lastmonth': '(Last Month)',
+      'quarter': '(Last 3 Months)',
+      '6months': '(Last 6 Months)',
+      'year': '(Last 12 Months)',
+      'all': '(All Time)'
+    };
+    return labels[filter] || '(All Time)';
+  }
+
+  /**
    * Initialize all charts
    */
   initialize() {
     const chartData = dataManager.getChartData();
 
-    this.createRevenueTrendChart(chartData.monthly);
+    this.createStoreSalesTrendChart(chartData.monthly);
+    this.createPisoWifiTrendChart(chartData.monthly);
+    this.createPrinterTrendChart(chartData.monthly);
+    this.createStoreComponentsChart(chartData.monthly);
     this.createMonthlyPerformanceChart(chartData.monthly);
     this.createRevenueBreakdownChart(chartData.breakdown);
     this.createYearlySummaryChart(chartData.yearly);
@@ -31,41 +50,33 @@ class ChartsManager {
   }
 
   /**
-   * Create Revenue Trends line chart
+   * Create Store Sales Trend chart
    */
-  createRevenueTrendChart(monthlyData) {
-    const ctx = document.getElementById('revenue-trend-chart');
+  createStoreSalesTrendChart(monthlyData) {
+    const ctx = document.getElementById('store-sales-trend-chart');
     if (!ctx) return;
 
-    if (this.charts.revenueTrend) {
-      this.charts.revenueTrend.destroy();
+    if (this.charts.storeSalesTrend) {
+      this.charts.storeSalesTrend.destroy();
     }
 
-    this.charts.revenueTrend = new Chart(ctx, {
-      type: 'line',
+    // Use bar chart if only 1 month, line chart otherwise
+    const chartType = monthlyData.length === 1 ? 'bar' : 'line';
+
+    this.charts.storeSalesTrend = new Chart(ctx, {
+      type: chartType,
       data: {
         labels: monthlyData.map(d => `${d.month} ${d.year}`),
         datasets: [
           {
-            label: 'Store Sales',
+            label: 'Store Sales Profit',
             data: monthlyData.map(d => d.storeSales),
             borderColor: CONFIG.ui.chartColors[0],
-            backgroundColor: CONFIG.ui.chartColors[0] + '20',
-            tension: 0.4
-          },
-          {
-            label: 'Piso WiFi',
-            data: monthlyData.map(d => d.pisoWifi),
-            borderColor: CONFIG.ui.chartColors[1],
-            backgroundColor: CONFIG.ui.chartColors[1] + '20',
-            tension: 0.4
-          },
-          {
-            label: 'Printer',
-            data: monthlyData.map(d => d.printer),
-            borderColor: CONFIG.ui.chartColors[2],
-            backgroundColor: CONFIG.ui.chartColors[2] + '20',
-            tension: 0.4
+            backgroundColor: CONFIG.ui.chartColors[0],
+            tension: 0.4,
+            fill: chartType === 'line',
+            pointRadius: 6,
+            pointHoverRadius: 8
           }
         ]
       },
@@ -74,21 +85,20 @@ class ChartsManager {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top',
+            display: false
           },
           title: {
             display: true,
-            text: 'Revenue Trends (Last 12 Months)',
+            text: `Store Sales Trend ${this.getFilterLabel()}`,
             font: {
-              size: 16
+              size: 16,
+              weight: '600'
             }
           },
           tooltip: {
-            mode: 'index',
-            intersect: false,
             callbacks: {
               label: function(context) {
-                return context.dataset.label + ': ' + Utils.formatCurrency(context.parsed.y);
+                return 'Profit: ' + Utils.formatCurrency(context.parsed.y);
               }
             }
           }
@@ -102,11 +112,224 @@ class ChartsManager {
               }
             }
           }
+        }
+      }
+    });
+  }
+
+  /**
+   * Create Piso WiFi Trend chart
+   */
+  createPisoWifiTrendChart(monthlyData) {
+    const ctx = document.getElementById('piso-wifi-trend-chart');
+    if (!ctx) return;
+
+    if (this.charts.pisoWifiTrend) {
+      this.charts.pisoWifiTrend.destroy();
+    }
+
+    // Use bar chart if only 1 month, line chart otherwise
+    const chartType = monthlyData.length === 1 ? 'bar' : 'line';
+
+    this.charts.pisoWifiTrend = new Chart(ctx, {
+      type: chartType,
+      data: {
+        labels: monthlyData.map(d => `${d.month} ${d.year}`),
+        datasets: [
+          {
+            label: 'Piso WiFi Revenue',
+            data: monthlyData.map(d => d.pisoWifi),
+            borderColor: CONFIG.ui.chartColors[1],
+            backgroundColor: CONFIG.ui.chartColors[1],
+            tension: 0.4,
+            fill: chartType === 'line',
+            pointRadius: 6,
+            pointHoverRadius: 8
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text: `Piso WiFi Trend ${this.getFilterLabel()}`,
+            font: {
+              size: 16,
+              weight: '600'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return 'Revenue: ' + Utils.formatCurrency(context.parsed.y);
+              }
+            }
+          }
         },
-        interaction: {
-          mode: 'nearest',
-          axis: 'x',
-          intersect: false
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return CONFIG.ui.currencySymbol + value.toLocaleString();
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  /**
+   * Create Printer Trend chart
+   */
+  createPrinterTrendChart(monthlyData) {
+    const ctx = document.getElementById('printer-trend-chart');
+    if (!ctx) return;
+
+    if (this.charts.printerTrend) {
+      this.charts.printerTrend.destroy();
+    }
+
+    // Use bar chart if only 1 month, line chart otherwise
+    const chartType = monthlyData.length === 1 ? 'bar' : 'line';
+
+    this.charts.printerTrend = new Chart(ctx, {
+      type: chartType,
+      data: {
+        labels: monthlyData.map(d => `${d.month} ${d.year}`),
+        datasets: [
+          {
+            label: 'Printer Income',
+            data: monthlyData.map(d => d.printer),
+            borderColor: CONFIG.ui.chartColors[2],
+            backgroundColor: CONFIG.ui.chartColors[2],
+            tension: 0.4,
+            fill: chartType === 'line',
+            pointRadius: 6,
+            pointHoverRadius: 8
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text: `Printer Trend ${this.getFilterLabel()}`,
+            font: {
+              size: 16,
+              weight: '600'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return 'Income: ' + Utils.formatCurrency(context.parsed.y);
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return CONFIG.ui.currencySymbol + value.toLocaleString();
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  /**
+   * Create Store Components chart (Gcash, Sari Sari, Orders)
+   */
+  createStoreComponentsChart(monthlyData) {
+    const ctx = document.getElementById('store-components-chart');
+    if (!ctx) return;
+
+    if (this.charts.storeComponents) {
+      this.charts.storeComponents.destroy();
+    }
+
+    this.charts.storeComponents = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: monthlyData.map(d => `${d.month} ${d.year}`),
+        datasets: [
+          {
+            label: 'Gcash Total',
+            data: monthlyData.map(d => d.gcashTotal),
+            backgroundColor: CONFIG.ui.chartColors[3]
+          },
+          {
+            label: 'Sari Sari Store',
+            data: monthlyData.map(d => d.sariSariStore),
+            backgroundColor: CONFIG.ui.chartColors[4]
+          },
+          {
+            label: 'Orders',
+            data: monthlyData.map(d => d.orders),
+            backgroundColor: CONFIG.ui.chartColors[5]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top'
+          },
+          title: {
+            display: true,
+            text: `Store Sales Components ${this.getFilterLabel()}`,
+            font: {
+              size: 16,
+              weight: '600'
+            }
+          },
+          tooltip: {
+            mode: 'index',
+            callbacks: {
+              label: function(context) {
+                return context.dataset.label + ': ' + Utils.formatCurrency(context.parsed.y);
+              },
+              footer: function(tooltipItems) {
+                let total = 0;
+                tooltipItems.forEach(item => {
+                  total += item.parsed.y;
+                });
+                return 'Total: ' + Utils.formatCurrency(total);
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            stacked: true
+          },
+          y: {
+            stacked: true,
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return CONFIG.ui.currencySymbol + value.toLocaleString();
+              }
+            }
+          }
         }
       }
     });
@@ -154,7 +377,7 @@ class ChartsManager {
           },
           title: {
             display: true,
-            text: 'Monthly Performance (Stacked)',
+            text: `Monthly Performance ${this.getFilterLabel()}`,
             font: {
               size: 16
             }
@@ -228,7 +451,7 @@ class ChartsManager {
           },
           title: {
             display: true,
-            text: 'Revenue Breakdown',
+            text: `Revenue Breakdown ${this.getFilterLabel()}`,
             font: {
               size: 16
             }
@@ -291,7 +514,7 @@ class ChartsManager {
           },
           title: {
             display: true,
-            text: 'Yearly Summary',
+            text: `Yearly Summary ${this.getFilterLabel()}`,
             font: {
               size: 16
             }

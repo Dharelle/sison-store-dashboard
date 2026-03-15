@@ -55,15 +55,17 @@ const Utils = {
   },
 
   /**
-   * Get month number from name
+   * Get month number from name (case-insensitive)
    */
   getMonthNumber(monthName) {
+    if (!monthName) return 0;
+
     const months = {
-      'January': 1, 'February': 2, 'March': 3, 'April': 4,
-      'May': 5, 'June': 6, 'July': 7, 'August': 8,
-      'September': 9, 'October': 10, 'November': 11, 'December': 12
+      'january': 1, 'february': 2, 'march': 3, 'april': 4,
+      'may': 5, 'june': 6, 'july': 7, 'august': 8,
+      'september': 9, 'october': 10, 'november': 11, 'december': 12
     };
-    return months[monthName] || 0;
+    return months[monthName.toLowerCase()] || 0;
   },
 
   /**

@@ -124,10 +124,16 @@ class FormsManager {
       form.querySelector('[name="date"]').value = Utils.formatDateForInput();
       this.calculateStoreSalesProfits(form);
 
-      // Redirect to dashboard after 1 second
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1000);
+      // Reload table if on input page
+      if (typeof loadStoreSalesTable === 'function') {
+        await dataManager.initialize(true);
+        loadStoreSalesTable();
+      } else {
+        // Redirect to dashboard after 1 second if not on input page
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      }
 
     } catch (error) {
       Utils.showNotification(error.message, 'error');
@@ -204,10 +210,16 @@ class FormsManager {
       // Reset form
       form.reset();
 
-      // Redirect to dashboard
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1000);
+      // Reload table if on input page
+      if (typeof loadPisoWifiTable === 'function') {
+        await dataManager.initialize(true);
+        loadPisoWifiTable();
+      } else {
+        // Redirect to dashboard
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      }
 
     } catch (error) {
       Utils.showNotification(error.message, 'error');
@@ -285,10 +297,16 @@ class FormsManager {
       // Reset form
       form.reset();
 
-      // Redirect to dashboard
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1000);
+      // Reload table if on input page
+      if (typeof loadPrinterTable === 'function') {
+        await dataManager.initialize(true);
+        loadPrinterTable();
+      } else {
+        // Redirect to dashboard
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      }
 
     } catch (error) {
       Utils.showNotification(error.message, 'error');

@@ -6,8 +6,8 @@
   <title>Sison Store Dashboard</title>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/dashboard.css?v=4">
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -46,6 +46,7 @@
         <!-- Time Filter -->
         <div class="time-filter">
           <button class="filter-btn" data-filter="month">This Month</button>
+          <button class="filter-btn" data-filter="lastmonth">Last Month</button>
           <button class="filter-btn" data-filter="quarter">Quarter</button>
           <button class="filter-btn" data-filter="6months">6 Months</button>
           <button class="filter-btn" data-filter="year">1 Year</button>
@@ -135,10 +136,31 @@
     <!-- Charts Section -->
     <section class="charts-section">
       <div class="charts-grid">
-        <!-- Revenue Trends -->
+        <!-- Store Sales Trend -->
         <div class="chart-container">
           <div class="chart-wrapper">
-            <canvas id="revenue-trend-chart"></canvas>
+            <canvas id="store-sales-trend-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Piso WiFi Trend -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="piso-wifi-trend-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Printer Trend -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="printer-trend-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Store Components Breakdown -->
+        <div class="chart-container">
+          <div class="chart-wrapper">
+            <canvas id="store-components-chart"></canvas>
           </div>
         </div>
 
@@ -167,9 +189,10 @@
 
     <!-- Recent Transactions -->
     <section class="transactions-section">
+      <!-- Store Sales Table -->
       <div class="table-container">
         <div class="table-header">
-          <h2>Recent Transactions</h2>
+          <h2>Recent Store Sales</h2>
         </div>
         <table>
           <thead>
@@ -188,16 +211,58 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Piso WiFi Table -->
+      <div class="table-container" style="margin-top: var(--spacing-xl);">
+        <div class="table-header">
+          <h2>Recent Piso WiFi Revenue</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Year</th>
+              <th>Revenue</th>
+            </tr>
+          </thead>
+          <tbody id="recent-piso-wifi">
+            <tr>
+              <td colspan="3" class="text-center">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Printer Table -->
+      <div class="table-container" style="margin-top: var(--spacing-xl);">
+        <div class="table-header">
+          <h2>Recent Printer Income</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Year</th>
+              <th>Income</th>
+            </tr>
+          </thead>
+          <tbody id="recent-printer">
+            <tr>
+              <td colspan="3" class="text-center">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
   <!-- Scripts -->
-  <script src="js/config.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/github-api.js"></script>
-  <script src="js/storage.js"></script>
-  <script src="js/data-manager.js"></script>
-  <script src="js/charts.js"></script>
-  <script src="js/dashboard.js"></script>
+  <script src="js/config.js?v=4"></script>
+  <script src="js/utils.js?v=4"></script>
+  <script src="js/github-api.js?v=4"></script>
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/data-manager.js?v=4"></script>
+  <script src="js/charts.js?v=4"></script>
+  <script src="js/dashboard.js?v=4"></script>
 </body>
 </html>

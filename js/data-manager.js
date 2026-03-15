@@ -33,6 +33,10 @@ class DataManager {
         // This month
         startDate = new Date(now.getFullYear(), now.getMonth(), 1);
         break;
+      case 'lastmonth':
+        // Last month (previous month only)
+        startDate = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+        break;
       case 'quarter':
         // Last 3 months
         startDate = new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
@@ -55,6 +59,17 @@ class DataManager {
   }
 
   /**
+   * Get end date for "lastmonth" filter (to exclude current month)
+   */
+  getEndDate(filter) {
+    if (filter === 'lastmonth') {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth(), 1); // First day of current month
+    }
+    return null;
+  }
+
+  /**
    * Filter data by date range
    */
   filterByDateRange(data, dateField = 'date') {
@@ -63,9 +78,55 @@ class DataManager {
       return data; // Return all data
     }
 
+    const endDate = this.getEndDate(this.currentFilter);
+
     return data.filter(item => {
       const itemDate = new Date(item[dateField]);
+      if (endDate) {
+        return itemDate >= startDate && itemDate < endDate;
+      }
       return itemDate >= startDate;
+    });
+  }
+
+  /**
+   * Filter monthly data (pisoWifi, printer) by month/year
+   */
+  filterMonthlyData(data) {
+    const startDate = this.getDateRange(this.currentFilter);
+    if (!startDate) {
+      return data; // Return all data
+    }
+
+    const endDate = this.getEndDate(this.currentFilter);
+
+    // Get the start month and year from startDate
+    const startYear = startDate.getFullYear();
+    const startMonth = startDate.getMonth() + 1; // 1-12
+
+    let endYear = null;
+    let endMonth = null;
+    if (endDate) {
+      endYear = endDate.getFullYear();
+      endMonth = endDate.getMonth() + 1; // 1-12
+    }
+
+    return data.filter(item => {
+      // Convert month name to month number (case-insensitive)
+      const monthNum = Utils.getMonthNumber(item.month);
+      const itemYear = item.year;
+
+      // Check start range
+      if (itemYear < startYear) return false;
+      if (itemYear === startYear && monthNum < startMonth) return false;
+
+      // Check end range (if exists)
+      if (endYear) {
+        if (itemYear > endYear) return false;
+        if (itemYear === endYear && monthNum >= endMonth) return false;
+      }
+
+      return true;
     });
   }
 
@@ -162,15 +223,23 @@ class DataManager {
     };
 
     // Check for duplicate month/year
-    const duplicate = this.data.pisoWifi.find(
-      p => p.month === record.month && p.year === record.year
+    const existingIndex = this.data.pisoWifi.findIndex(
+      p => p.month.toLowerCase() === record.month.toLowerCase() && p.year === record.year
     );
-    if (duplicate) {
-      throw new Error(`${record.month} ${record.year} already exists`);
-    }
 
-    // Add to data
-    this.data.pisoWifi.push(record);
+    if (existingIndex !== -1) {
+      // If existing record has zero revenue, update it; otherwise throw error
+      if (this.data.pisoWifi[existingIndex].revenue === 0) {
+        // Update the existing record
+        this.data.pisoWifi[existingIndex] = record;
+        console.log(`Updated ${record.month} ${record.year} (was ₱0)`);
+      } else {
+        throw new Error(`${record.month} ${record.year} already exists with ₱${this.data.pisoWifi[existingIndex].revenue}`);
+      }
+    } else {
+      // Add new record
+      this.data.pisoWifi.push(record);
+    }
 
     // Sort by year and month
     this.data.pisoWifi.sort((a, b) => {
@@ -213,15 +282,23 @@ class DataManager {
     };
 
     // Check for duplicate month/year
-    const duplicate = this.data.printer.find(
-      p => p.month === record.month && p.year === record.year
+    const existingIndex = this.data.printer.findIndex(
+      p => p.month.toLowerCase() === record.month.toLowerCase() && p.year === record.year
     );
-    if (duplicate) {
-      throw new Error(`${record.month} ${record.year} already exists`);
-    }
 
-    // Add to data
-    this.data.printer.push(record);
+    if (existingIndex !== -1) {
+      // If existing record has zero income, update it; otherwise throw error
+      if (this.data.printer[existingIndex].income === 0) {
+        // Update the existing record
+        this.data.printer[existingIndex] = record;
+        console.log(`Updated ${record.month} ${record.year} (was ₱0)`);
+      } else {
+        throw new Error(`${record.month} ${record.year} already exists with ₱${this.data.printer[existingIndex].income}`);
+      }
+    } else {
+      // Add new record
+      this.data.printer.push(record);
+    }
 
     // Sort by year and month
     this.data.printer.sort((a, b) => {
@@ -327,9 +404,12 @@ class DataManager {
     const thisMonthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
     const thisMonth = byMonth[thisMonthKey]?.reduce((sum, r) => sum + r.totalProfit, 0) || 0;
 
-    // Calculate revenue percentages
-    const pisoWifiTotal = this.data.pisoWifi.reduce((sum, p) => sum + p.revenue, 0);
-    const printerTotal = this.data.printer.reduce((sum, p) => sum + p.income, 0);
+    // Calculate revenue percentages (apply filter to Piso WiFi and Printer)
+    const filteredPisoWifi = this.filterMonthlyData(this.data.pisoWifi);
+    const filteredPrinter = this.filterMonthlyData(this.data.printer);
+
+    const pisoWifiTotal = filteredPisoWifi.reduce((sum, p) => sum + p.revenue, 0);
+    const printerTotal = filteredPrinter.reduce((sum, p) => sum + p.income, 0);
     const grandTotal = totalProfit + pisoWifiTotal + printerTotal;
 
     return {
@@ -361,6 +441,7 @@ class DataManager {
     // Apply time filter to determine how many months to show
     let monthsToShow = 12;
     if (this.currentFilter === 'month') monthsToShow = 1;
+    else if (this.currentFilter === 'lastmonth') monthsToShow = 1;
     else if (this.currentFilter === 'quarter') monthsToShow = 3;
     else if (this.currentFilter === '6months') monthsToShow = 6;
     else if (this.currentFilter === 'year') monthsToShow = 12;
@@ -389,23 +470,50 @@ class DataManager {
     const result = [];
     const now = new Date();
 
-    for (let i = months - 1; i >= 0; i--) {
+    // Get filtered data for all streams
+    const filteredStoreSales = this.filterByDateRange(this.data.storeSales, 'date');
+    const filteredPisoWifi = this.filterMonthlyData(this.data.pisoWifi);
+    const filteredPrinter = this.filterMonthlyData(this.data.printer);
+
+    console.log('getMonthlyData - Filter:', this.currentFilter);
+    console.log('Filtered Store Sales:', filteredStoreSales.length);
+    console.log('Filtered Piso WiFi:', filteredPisoWifi.length);
+    console.log('Filtered Printer:', filteredPrinter.length);
+
+    // Calculate which months to show
+    let monthsToIterate = [];
+    if (this.currentFilter === 'lastmonth') {
+      // Show only previous month (e.g., February if current is March)
+      monthsToIterate = [1]; // Previous month only
+    } else {
+      // Show last N months including current month
+      for (let i = months - 1; i >= 0; i--) {
+        monthsToIterate.push(i);
+      }
+    }
+
+    for (const i of monthsToIterate) {
       const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      console.log(`Processing month offset ${i}: ${Utils.getMonthName(date.getMonth() + 1)} ${date.getFullYear()}`);
       const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
       const monthName = Utils.getMonthName(date.getMonth() + 1);
 
       // Store sales for this month
-      const storeSales = this.data.storeSales
-        .filter(s => s.date.startsWith(monthKey))
-        .reduce((sum, s) => sum + s.totalProfit, 0);
+      const monthStoreSales = filteredStoreSales.filter(s => s.date.startsWith(monthKey));
+      const storeSales = monthStoreSales.reduce((sum, s) => sum + s.totalProfit, 0);
 
-      // Piso WiFi for this month
-      const pisoWifi = this.data.pisoWifi
-        .find(p => p.month === monthName && p.year === date.getFullYear())?.revenue || 0;
+      // Store sales components
+      const gcashTotal = monthStoreSales.reduce((sum, s) => sum + s.gcashTotal, 0);
+      const sariSariStore = monthStoreSales.reduce((sum, s) => sum + s.sariSariStore, 0);
+      const orders = monthStoreSales.reduce((sum, s) => sum + s.orders, 0);
 
-      // Printer for this month
-      const printer = this.data.printer
-        .find(p => p.month === monthName && p.year === date.getFullYear())?.income || 0;
+      // Piso WiFi for this month (case-insensitive match)
+      const pisoWifi = filteredPisoWifi
+        .find(p => p.month.toLowerCase() === monthName.toLowerCase() && p.year === date.getFullYear())?.revenue || 0;
+
+      // Printer for this month (case-insensitive match)
+      const printer = filteredPrinter
+        .find(p => p.month.toLowerCase() === monthName.toLowerCase() && p.year === date.getFullYear())?.income || 0;
 
       result.push({
         month: monthName.substring(0, 3),
@@ -413,6 +521,9 @@ class DataManager {
         storeSales,
         pisoWifi,
         printer,
+        gcashTotal,
+        sariSariStore,
+        orders,
         total: storeSales + pisoWifi + printer
       });
     }
@@ -428,8 +539,8 @@ class DataManager {
 
     // Apply filter to all data sources
     const filteredStoreSales = this.filterByDateRange(this.data.storeSales, 'date');
-    const filteredPisoWifi = this.data.pisoWifi; // Keep all for now
-    const filteredPrinter = this.data.printer; // Keep all for now
+    const filteredPisoWifi = this.filterMonthlyData(this.data.pisoWifi);
+    const filteredPrinter = this.filterMonthlyData(this.data.printer);
 
     // Aggregate store sales
     filteredStoreSales.forEach(s => {
@@ -470,9 +581,12 @@ class DataManager {
    */
   getRevenueBreakdown() {
     const filteredStoreSales = this.filterByDateRange(this.data.storeSales, 'date');
+    const filteredPisoWifi = this.filterMonthlyData(this.data.pisoWifi);
+    const filteredPrinter = this.filterMonthlyData(this.data.printer);
+
     const storeSales = filteredStoreSales.reduce((sum, s) => sum + s.totalProfit, 0);
-    const pisoWifi = this.data.pisoWifi.reduce((sum, p) => sum + p.revenue, 0);
-    const printer = this.data.printer.reduce((sum, p) => sum + p.income, 0);
+    const pisoWifi = filteredPisoWifi.reduce((sum, p) => sum + p.revenue, 0);
+    const printer = filteredPrinter.reduce((sum, p) => sum + p.income, 0);
 
     return {
       storeSales,
@@ -492,6 +606,223 @@ class DataManager {
       .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return validTransactions.slice(0, limit);
+  }
+
+  /**
+   * Get recent Piso WiFi records
+   */
+  getRecentPisoWifi(limit = 10) {
+    return this.data.pisoWifi
+      .filter(p => p.revenue > 0)
+      .sort((a, b) => {
+        // Sort by year desc, then month desc
+        if (a.year !== b.year) return b.year - a.year;
+        return Utils.getMonthNumber(b.month) - Utils.getMonthNumber(a.month);
+      })
+      .slice(0, limit);
+  }
+
+  /**
+   * Get recent Printer records
+   */
+  getRecentPrinter(limit = 10) {
+    return this.data.printer
+      .filter(p => p.income > 0)
+      .sort((a, b) => {
+        // Sort by year desc, then month desc
+        if (a.year !== b.year) return b.year - a.year;
+        return Utils.getMonthNumber(b.month) - Utils.getMonthNumber(a.month);
+      })
+      .slice(0, limit);
+  }
+
+  /**
+   * Update store sales record
+   */
+  async updateStoreSale(id, formData) {
+    const index = this.data.storeSales.findIndex(s => s.id === id);
+    if (index === -1) {
+      throw new Error('Record not found');
+    }
+
+    // Calculate profits
+    const gcashProfit = formData.gcashTotal * CONFIG.profitMargins.gcash;
+    const sariSariStoreProfit = formData.sariSariStore * CONFIG.profitMargins.sariSariStore;
+    const ordersProfit = formData.orders * CONFIG.profitMargins.orders;
+    const totalProfit = gcashProfit + sariSariStoreProfit + ordersProfit;
+
+    // Update record
+    this.data.storeSales[index] = {
+      ...this.data.storeSales[index],
+      date: formData.date,
+      cashIn: parseFloat(formData.cashIn),
+      cashOut: parseFloat(formData.cashOut),
+      gcashTotal: parseFloat(formData.gcashTotal),
+      sariSariStore: parseFloat(formData.sariSariStore),
+      orders: parseFloat(formData.orders),
+      gcashProfit: gcashProfit,
+      sariSariStoreProfit: sariSariStoreProfit,
+      ordersProfit: ordersProfit,
+      totalProfit: totalProfit
+    };
+
+    // Save to storage
+    const storeSalesData = {
+      version: '1.0',
+      lastUpdated: new Date().toISOString(),
+      records: this.data.storeSales
+    };
+
+    await storage.saveData(
+      CONFIG.dataFiles.storeSales,
+      storeSalesData,
+      `chore: Update store sales record ${formData.date}`
+    );
+
+    return this.data.storeSales[index];
+  }
+
+  /**
+   * Update Piso WiFi record
+   */
+  async updatePisoWifi(id, formData) {
+    const index = this.data.pisoWifi.findIndex(p => p.id === id);
+    if (index === -1) {
+      throw new Error('Record not found');
+    }
+
+    this.data.pisoWifi[index] = {
+      ...this.data.pisoWifi[index],
+      month: formData.month,
+      year: parseInt(formData.year),
+      revenue: parseFloat(formData.revenue)
+    };
+
+    const pisoWifiData = {
+      version: '1.0',
+      lastUpdated: new Date().toISOString(),
+      records: this.data.pisoWifi
+    };
+
+    await storage.saveData(
+      CONFIG.dataFiles.pisoWifi,
+      pisoWifiData,
+      `chore: Update Piso WiFi record ${formData.month} ${formData.year}`
+    );
+
+    return this.data.pisoWifi[index];
+  }
+
+  /**
+   * Update Printer record
+   */
+  async updatePrinter(id, formData) {
+    const index = this.data.printer.findIndex(p => p.id === id);
+    if (index === -1) {
+      throw new Error('Record not found');
+    }
+
+    this.data.printer[index] = {
+      ...this.data.printer[index],
+      month: formData.month,
+      year: parseInt(formData.year),
+      income: parseFloat(formData.income)
+    };
+
+    const printerData = {
+      version: '1.0',
+      lastUpdated: new Date().toISOString(),
+      records: this.data.printer
+    };
+
+    await storage.saveData(
+      CONFIG.dataFiles.printer,
+      printerData,
+      `chore: Update Printer record ${formData.month} ${formData.year}`
+    );
+
+    return this.data.printer[index];
+  }
+
+  /**
+   * Delete store sales record
+   */
+  async deleteStoreSale(id) {
+    const index = this.data.storeSales.findIndex(s => s.id === id);
+    if (index === -1) {
+      throw new Error('Record not found');
+    }
+
+    const deletedRecord = this.data.storeSales[index];
+    this.data.storeSales.splice(index, 1);
+
+    const storeSalesData = {
+      version: '1.0',
+      lastUpdated: new Date().toISOString(),
+      records: this.data.storeSales
+    };
+
+    await storage.saveData(
+      CONFIG.dataFiles.storeSales,
+      storeSalesData,
+      `chore: Delete store sales record ${deletedRecord.date}`
+    );
+
+    return deletedRecord;
+  }
+
+  /**
+   * Delete Piso WiFi record
+   */
+  async deletePisoWifi(id) {
+    const index = this.data.pisoWifi.findIndex(p => p.id === id);
+    if (index === -1) {
+      throw new Error('Record not found');
+    }
+
+    const deletedRecord = this.data.pisoWifi[index];
+    this.data.pisoWifi.splice(index, 1);
+
+    const pisoWifiData = {
+      version: '1.0',
+      lastUpdated: new Date().toISOString(),
+      records: this.data.pisoWifi
+    };
+
+    await storage.saveData(
+      CONFIG.dataFiles.pisoWifi,
+      pisoWifiData,
+      `chore: Delete Piso WiFi record ${deletedRecord.month} ${deletedRecord.year}`
+    );
+
+    return deletedRecord;
+  }
+
+  /**
+   * Delete Printer record
+   */
+  async deletePrinter(id) {
+    const index = this.data.printer.findIndex(p => p.id === id);
+    if (index === -1) {
+      throw new Error('Record not found');
+    }
+
+    const deletedRecord = this.data.printer[index];
+    this.data.printer.splice(index, 1);
+
+    const printerData = {
+      version: '1.0',
+      lastUpdated: new Date().toISOString(),
+      records: this.data.printer
+    };
+
+    await storage.saveData(
+      CONFIG.dataFiles.printer,
+      printerData,
+      `chore: Delete Printer record ${deletedRecord.month} ${deletedRecord.year}`
+    );
+
+    return deletedRecord;
   }
 }
 

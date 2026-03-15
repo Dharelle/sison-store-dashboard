@@ -58,6 +58,8 @@ class Dashboard {
       // Update UI
       this.updateKPIs();
       this.updateRecentTransactions();
+      this.updateRecentPisoWifi();
+      this.updateRecentPrinter();
 
       // Initialize charts if on dashboard page
       if (typeof chartsManager !== 'undefined') {
@@ -168,18 +170,23 @@ class Dashboard {
   }
 
   /**
-   * Update recent transactions table
+   * Update recent transactions table (with filtering)
    */
   updateRecentTransactions() {
     const tbody = document.getElementById('recent-transactions');
     if (!tbody) return;
 
-    const transactions = dataManager.getRecentTransactions(10);
+    // Get filtered transactions
+    const filteredSales = dataManager.filterByDateRange(dataManager.data.storeSales, 'date');
+    const transactions = filteredSales
+      .filter(s => s.totalProfit > 0)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 10);
 
     if (transactions.length === 0) {
       tbody.innerHTML = `
         <tr>
-          <td colspan="6" class="text-center">No transactions yet</td>
+          <td colspan="5" class="text-center">No transactions in this period</td>
         </tr>
       `;
       return;
@@ -192,6 +199,76 @@ class Dashboard {
         <td>${Utils.formatCurrency(t.sariSariStore)}</td>
         <td>${Utils.formatCurrency(t.orders)}</td>
         <td class="font-semibold">${Utils.formatCurrency(t.totalProfit)}</td>
+      </tr>
+    `).join('');
+  }
+
+  /**
+   * Update recent Piso WiFi table (with filtering)
+   */
+  updateRecentPisoWifi() {
+    const tbody = document.getElementById('recent-piso-wifi');
+    if (!tbody) return;
+
+    // Get filtered records
+    const filteredWifi = dataManager.filterMonthlyData(dataManager.data.pisoWifi);
+    const records = filteredWifi
+      .filter(p => p.revenue > 0)
+      .sort((a, b) => {
+        if (a.year !== b.year) return b.year - a.year;
+        return Utils.getMonthNumber(b.month) - Utils.getMonthNumber(a.month);
+      })
+      .slice(0, 10);
+
+    if (records.length === 0) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="3" class="text-center">No records in this period</td>
+        </tr>
+      `;
+      return;
+    }
+
+    tbody.innerHTML = records.map(r => `
+      <tr>
+        <td>${r.month}</td>
+        <td>${r.year}</td>
+        <td class="font-semibold">${Utils.formatCurrency(r.revenue)}</td>
+      </tr>
+    `).join('');
+  }
+
+  /**
+   * Update recent Printer table (with filtering)
+   */
+  updateRecentPrinter() {
+    const tbody = document.getElementById('recent-printer');
+    if (!tbody) return;
+
+    // Get filtered records
+    const filteredPrinter = dataManager.filterMonthlyData(dataManager.data.printer);
+    const records = filteredPrinter
+      .filter(p => p.income > 0)
+      .sort((a, b) => {
+        if (a.year !== b.year) return b.year - a.year;
+        return Utils.getMonthNumber(b.month) - Utils.getMonthNumber(a.month);
+      })
+      .slice(0, 10);
+
+    if (records.length === 0) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="3" class="text-center">No records in this period</td>
+        </tr>
+      `;
+      return;
+    }
+
+    tbody.innerHTML = records.map(r => `
+      <tr>
+        <td>${r.month}</td>
+        <td>${r.year}</td>
+        <td class="font-semibold">${Utils.formatCurrency(r.income)}</td>
       </tr>
     `).join('');
   }
@@ -315,15 +392,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Get filter value
       const filter = btn.getAttribute('data-filter');
 
-      // Apply filter and refresh
+      console.log('Filter button clicked:', filter);
+
+      // Apply filter FIRST before any calculations
       dataManager.setFilter(filter);
+
+      console.log('DataManager filter set to:', dataManager.currentFilter);
 
       // Recalculate and update dashboard
       dashboard.kpis = dataManager.calculateKPIs();
       dashboard.updateKPIs();
       dashboard.updateRecentTransactions();
+      dashboard.updateRecentPisoWifi();
+      dashboard.updateRecentPrinter();
 
-      // Update charts
+      // Update charts - IMPORTANT: Destroy and recreate with new data
       if (typeof chartsManager !== 'undefined') {
         chartsManager.destroy();
         chartsManager.initialize();
@@ -334,6 +417,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (subtitle) {
         const filterText = {
           'month': 'This month',
+          'lastmonth': 'Last month',
           'quarter': 'Last 3 months',
           '6months': 'Last 6 months',
           'year': 'Last 12 months',
