@@ -11,6 +11,62 @@ class DataManager {
       printer: [],
       metadata: {}
     };
+    this.currentFilter = 'all'; // Default filter: all time
+  }
+
+  /**
+   * Set time filter
+   */
+  setFilter(filter) {
+    this.currentFilter = filter;
+  }
+
+  /**
+   * Get date range based on filter
+   */
+  getDateRange(filter) {
+    const now = new Date();
+    let startDate = null;
+
+    switch (filter) {
+      case 'month':
+        // This month
+        startDate = new Date(now.getFullYear(), now.getMonth(), 1);
+        break;
+      case 'quarter':
+        // Last 3 months
+        startDate = new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
+        break;
+      case '6months':
+        // Last 6 months
+        startDate = new Date(now.getFullYear(), now.getMonth() - 6, now.getDate());
+        break;
+      case 'year':
+        // Last 12 months
+        startDate = new Date(now.getFullYear(), now.getMonth() - 12, now.getDate());
+        break;
+      case 'all':
+      default:
+        // All time
+        return null;
+    }
+
+    return startDate;
+  }
+
+  /**
+   * Filter data by date range
+   */
+  filterByDateRange(data, dateField = 'date') {
+    const startDate = this.getDateRange(this.currentFilter);
+    if (!startDate) {
+      return data; // Return all data
+    }
+
+    return data.filter(item => {
+      const itemDate = new Date(item[dateField]);
+      return itemDate >= startDate;
+    });
   }
 
   /**
@@ -219,7 +275,8 @@ class DataManager {
    * Calculate KPIs from store sales data
    */
   calculateKPIs() {
-    const sales = this.data.storeSales;
+    // Apply time filter
+    const sales = this.filterByDateRange(this.data.storeSales, 'date');
 
     if (sales.length === 0) {
       return {
@@ -288,8 +345,11 @@ class DataManager {
         revenue: worstMonth.revenue === Infinity ? 0 : worstMonth.revenue
       },
       thisMonth: thisMonth,
+      storeSalesAmount: totalProfit,
       storeSalesPercentage: Utils.calculatePercentage(totalProfit, grandTotal),
+      pisoWifiAmount: pisoWifiTotal,
       pisoWifiPercentage: Utils.calculatePercentage(pisoWifiTotal, grandTotal),
+      printerAmount: printerTotal,
       printerPercentage: Utils.calculatePercentage(printerTotal, grandTotal)
     };
   }
@@ -298,13 +358,21 @@ class DataManager {
    * Get data for charts
    */
   getChartData() {
-    // Get last 12 months of data
-    const monthsData = this.getMonthlyData(12);
+    // Apply time filter to determine how many months to show
+    let monthsToShow = 12;
+    if (this.currentFilter === 'month') monthsToShow = 1;
+    else if (this.currentFilter === 'quarter') monthsToShow = 3;
+    else if (this.currentFilter === '6months') monthsToShow = 6;
+    else if (this.currentFilter === 'year') monthsToShow = 12;
+    else monthsToShow = 60; // Show up to 5 years for 'all'
 
-    // Get yearly summary
+    // Get monthly data
+    const monthsData = this.getMonthlyData(monthsToShow);
+
+    // Get yearly summary (filtered)
     const yearlyData = this.getYearlyData();
 
-    // Get revenue breakdown
+    // Get revenue breakdown (filtered)
     const breakdown = this.getRevenueBreakdown();
 
     return {
@@ -358,8 +426,13 @@ class DataManager {
   getYearlyData() {
     const years = {};
 
+    // Apply filter to all data sources
+    const filteredStoreSales = this.filterByDateRange(this.data.storeSales, 'date');
+    const filteredPisoWifi = this.data.pisoWifi; // Keep all for now
+    const filteredPrinter = this.data.printer; // Keep all for now
+
     // Aggregate store sales
-    this.data.storeSales.forEach(s => {
+    filteredStoreSales.forEach(s => {
       const year = new Date(s.date).getFullYear();
       if (!years[year]) {
         years[year] = { storeSales: 0, pisoWifi: 0, printer: 0 };
@@ -368,7 +441,7 @@ class DataManager {
     });
 
     // Aggregate piso wifi
-    this.data.pisoWifi.forEach(p => {
+    filteredPisoWifi.forEach(p => {
       if (!years[p.year]) {
         years[p.year] = { storeSales: 0, pisoWifi: 0, printer: 0 };
       }
@@ -376,7 +449,7 @@ class DataManager {
     });
 
     // Aggregate printer
-    this.data.printer.forEach(p => {
+    filteredPrinter.forEach(p => {
       if (!years[p.year]) {
         years[p.year] = { storeSales: 0, pisoWifi: 0, printer: 0 };
       }
@@ -396,7 +469,8 @@ class DataManager {
    * Get revenue breakdown for pie chart
    */
   getRevenueBreakdown() {
-    const storeSales = this.data.storeSales.reduce((sum, s) => sum + s.totalProfit, 0);
+    const filteredStoreSales = this.filterByDateRange(this.data.storeSales, 'date');
+    const storeSales = filteredStoreSales.reduce((sum, s) => sum + s.totalProfit, 0);
     const pisoWifi = this.data.pisoWifi.reduce((sum, p) => sum + p.revenue, 0);
     const printer = this.data.printer.reduce((sum, p) => sum + p.income, 0);
 

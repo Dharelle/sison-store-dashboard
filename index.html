@@ -22,6 +22,12 @@
           <li><a href="index.html" class="active">Dashboard</a></li>
           <li><a href="input.html">Add Data</a></li>
           <li><a href="setup.html">Setup</a></li>
+          <li>
+            <button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle Dark Mode">
+              <span class="icon-light">☀️</span>
+              <span class="icon-dark">🌙</span>
+            </button>
+          </li>
           <li id="sync-status" class="sync-status">
             <span class="sync-indicator"></span>
             Loading...
@@ -35,7 +41,17 @@
   <main>
     <!-- Dashboard Header -->
     <div class="dashboard-header">
-      <h1>Business Overview</h1>
+      <div>
+        <h1>Business Overview</h1>
+        <!-- Time Filter -->
+        <div class="time-filter">
+          <button class="filter-btn" data-filter="month">This Month</button>
+          <button class="filter-btn" data-filter="quarter">Quarter</button>
+          <button class="filter-btn" data-filter="6months">6 Months</button>
+          <button class="filter-btn" data-filter="year">1 Year</button>
+          <button class="filter-btn active" data-filter="all">All Time</button>
+        </div>
+      </div>
       <div class="dashboard-actions">
         <button id="refresh-btn" class="btn btn-secondary btn-sm">Refresh</button>
         <button id="export-btn" class="btn btn-secondary btn-sm">Export Data</button>
@@ -81,23 +97,38 @@
 
       <!-- Store Sales % -->
       <div class="kpi-card">
-        <div class="kpi-label">Store Sales</div>
-        <div class="kpi-value" id="store-sales-percent">0%</div>
-        <div class="kpi-subtitle">Of total revenue</div>
+        <div class="kpi-label">
+          Store Sales
+          <span class="help-icon" title="Revenue from store operations including Gcash, Sari-Sari Store, and Orders">?</span>
+        </div>
+        <div class="kpi-value" id="store-sales-amount">₱0.00</div>
+        <div class="kpi-subtitle">
+          <span id="store-sales-percent">0%</span> of total revenue
+        </div>
       </div>
 
       <!-- Piso WiFi % -->
       <div class="kpi-card">
-        <div class="kpi-label">Piso WiFi</div>
-        <div class="kpi-value" id="piso-wifi-percent">0%</div>
-        <div class="kpi-subtitle">Of total revenue</div>
+        <div class="kpi-label">
+          Piso WiFi
+          <span class="help-icon" title="Monthly revenue from Piso WiFi service">?</span>
+        </div>
+        <div class="kpi-value" id="piso-wifi-amount">₱0.00</div>
+        <div class="kpi-subtitle">
+          <span id="piso-wifi-percent">0%</span> of total revenue
+        </div>
       </div>
 
       <!-- Printer % -->
       <div class="kpi-card">
-        <div class="kpi-label">Printer</div>
-        <div class="kpi-value" id="printer-percent">0%</div>
-        <div class="kpi-subtitle">Of total revenue</div>
+        <div class="kpi-label">
+          Printer
+          <span class="help-icon" title="Monthly income from printer services">?</span>
+        </div>
+        <div class="kpi-value" id="printer-amount">₱0.00</div>
+        <div class="kpi-subtitle">
+          <span id="printer-percent">0%</span> of total revenue
+        </div>
       </div>
     </div>
 

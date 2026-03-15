@@ -136,17 +136,31 @@ class Dashboard {
       thisMonthEl.textContent = Utils.formatCurrency(this.kpis.thisMonth);
     }
 
-    // Revenue Percentages
+    // Store Sales Amount & Percentage
+    const storeSalesAmountEl = document.getElementById('store-sales-amount');
+    if (storeSalesAmountEl) {
+      storeSalesAmountEl.textContent = Utils.formatCurrency(this.kpis.storeSalesAmount);
+    }
     const storeSalesPercentEl = document.getElementById('store-sales-percent');
     if (storeSalesPercentEl) {
       storeSalesPercentEl.textContent = `${this.kpis.storeSalesPercentage.toFixed(1)}%`;
     }
 
+    // Piso WiFi Amount & Percentage
+    const pisoWifiAmountEl = document.getElementById('piso-wifi-amount');
+    if (pisoWifiAmountEl) {
+      pisoWifiAmountEl.textContent = Utils.formatCurrency(this.kpis.pisoWifiAmount);
+    }
     const pisoWifiPercentEl = document.getElementById('piso-wifi-percent');
     if (pisoWifiPercentEl) {
       pisoWifiPercentEl.textContent = `${this.kpis.pisoWifiPercentage.toFixed(1)}%`;
     }
 
+    // Printer Amount & Percentage
+    const printerAmountEl = document.getElementById('printer-amount');
+    if (printerAmountEl) {
+      printerAmountEl.textContent = Utils.formatCurrency(this.kpis.printerAmount);
+    }
     const printerPercentEl = document.getElementById('printer-percent');
     if (printerPercentEl) {
       printerPercentEl.textContent = `${this.kpis.printerPercentage.toFixed(1)}%`;
@@ -249,8 +263,30 @@ class Dashboard {
   }
 }
 
+// Dark Mode Toggle
+function initDarkMode() {
+  // Check saved preference
+  const darkMode = localStorage.getItem('darkMode') === 'true';
+  if (darkMode) {
+    document.body.classList.add('dark-mode');
+  }
+
+  // Set up toggle button
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
+  // Initialize dark mode first
+  initDarkMode();
+
   const dashboard = new Dashboard();
   await dashboard.initialize();
 
@@ -265,4 +301,46 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (exportBtn) {
     exportBtn.addEventListener('click', () => dashboard.exportData());
   }
+
+  // Set up time filter buttons
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      // Remove active class from all buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+
+      // Add active class to clicked button
+      btn.classList.add('active');
+
+      // Get filter value
+      const filter = btn.getAttribute('data-filter');
+
+      // Apply filter and refresh
+      dataManager.setFilter(filter);
+
+      // Recalculate and update dashboard
+      dashboard.kpis = dataManager.calculateKPIs();
+      dashboard.updateKPIs();
+      dashboard.updateRecentTransactions();
+
+      // Update charts
+      if (typeof chartsManager !== 'undefined') {
+        chartsManager.destroy();
+        chartsManager.initialize();
+      }
+
+      // Update subtitle text
+      const subtitle = document.querySelector('.kpi-card.highlight .kpi-subtitle');
+      if (subtitle) {
+        const filterText = {
+          'month': 'This month',
+          'quarter': 'Last 3 months',
+          '6months': 'Last 6 months',
+          'year': 'Last 12 months',
+          'all': 'All time'
+        };
+        subtitle.textContent = filterText[filter] || 'All time';
+      }
+    });
+  });
 });

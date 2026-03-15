@@ -6,7 +6,7 @@
 .dashboard-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: var(--spacing-xl);
 }
 
@@ -14,11 +14,42 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--gray-900);
+  margin-bottom: var(--spacing-md);
 }
 
 .dashboard-actions {
   display: flex;
   gap: var(--spacing-md);
+}
+
+/* Time Filter */
+.time-filter {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 2px solid var(--gray-300);
+  background-color: white;
+  color: var(--gray-700);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
 }
 
 /* KPI Grid */
@@ -30,12 +61,12 @@
 }
 
 .kpi-card {
-  background-color: white;
+  background-color: var(--bg-secondary);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
-  transition: all 0.2s;
+  border: 1px solid var(--border-color-main);
+  transition: all 0.3s;
 }
 
 .kpi-card:hover {
@@ -50,6 +81,29 @@
   margin-bottom: var(--spacing-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--gray-400);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: help;
+  transition: all 0.2s;
+}
+
+.help-icon:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 .kpi-value {
@@ -87,11 +141,12 @@
 }
 
 .chart-container {
-  background-color: white;
+  background-color: var(--bg-secondary);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-main);
+  transition: background-color 0.3s ease;
 }
 
 .chart-wrapper {
@@ -105,11 +160,12 @@
 }
 
 .table-container {
-  background-color: white;
+  background-color: var(--bg-secondary);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-main);
   overflow: hidden;
+  transition: background-color 0.3s ease;
 }
 
 .table-header {
