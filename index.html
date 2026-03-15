@@ -63,35 +63,50 @@
     <div class="kpi-grid">
       <!-- Total Revenue -->
       <div class="kpi-card highlight">
-        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-label">
+          Total Revenue
+          <span class="help-icon" title="Combined revenue from all sources: Store Sales + Piso WiFi + Printer. Changes based on selected time filter.">?</span>
+        </div>
         <div class="kpi-value" id="total-revenue">₱0.00</div>
         <div class="kpi-subtitle">All time</div>
       </div>
 
       <!-- Average Monthly -->
       <div class="kpi-card">
-        <div class="kpi-label">Average Monthly</div>
+        <div class="kpi-label">
+          Average Monthly
+          <span class="help-icon" title="Average revenue per month across the selected time period. Only counts months with actual revenue (excludes rest days and future placeholders).">?</span>
+        </div>
         <div class="kpi-value" id="avg-monthly">₱0.00</div>
         <div class="kpi-subtitle">Per month</div>
       </div>
 
       <!-- Best Month -->
       <div class="kpi-card">
-        <div class="kpi-label">Best Month</div>
+        <div class="kpi-label">
+          Best Month
+          <span class="help-icon" title="The month with highest Store Sales profit in the selected period. Useful for identifying peak performance periods.">?</span>
+        </div>
         <div class="kpi-value" id="best-month-amount">₱0.00</div>
         <div class="kpi-subtitle" id="best-month">N/A</div>
       </div>
 
       <!-- Worst Month -->
       <div class="kpi-card">
-        <div class="kpi-label">Worst Month</div>
+        <div class="kpi-label">
+          Worst Month
+          <span class="help-icon" title="The month with lowest Store Sales profit in the selected period. Helps identify slow periods.">?</span>
+        </div>
         <div class="kpi-value" id="worst-month-amount">₱0.00</div>
         <div class="kpi-subtitle" id="worst-month">N/A</div>
       </div>
 
       <!-- This Month -->
       <div class="kpi-card">
-        <div class="kpi-label" id="current-month-label">Current Month</div>
+        <div class="kpi-label" id="current-month-label">
+          Current Month
+          <span class="help-icon" title="Total revenue for the current month from all sources (Store Sales + Piso WiFi + Printer). Updates as you add new entries.">?</span>
+        </div>
         <div class="kpi-value" id="this-month">₱0.00</div>
         <div class="kpi-subtitle" id="current-month-subtitle">Month to date</div>
       </div>
@@ -138,6 +153,7 @@
       <div class="charts-grid">
         <!-- Store Sales Trend -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Shows Store Sales profit trend over time. Line chart for multiple months, bar chart for single month views.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="store-sales-trend-chart"></canvas>
           </div>
@@ -145,6 +161,7 @@
 
         <!-- Piso WiFi Trend -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Shows Piso WiFi monthly revenue trend. Helps identify WiFi usage patterns and seasonal variations.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="piso-wifi-trend-chart"></canvas>
           </div>
@@ -152,6 +169,7 @@
 
         <!-- Printer Trend -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Shows Printer services monthly income trend. Track printing business performance over time.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="printer-trend-chart"></canvas>
           </div>
@@ -159,6 +177,7 @@
 
         <!-- Store Components Breakdown -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Breaks down Store Sales into components: Gcash Total, Sari Sari Store, and Orders. See which segment performs best.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="store-components-chart"></canvas>
           </div>
@@ -166,6 +185,7 @@
 
         <!-- Monthly Performance -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Compares all three revenue streams side-by-side each month. Stacked bars show total monthly performance.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="monthly-performance-chart"></canvas>
           </div>
@@ -173,6 +193,7 @@
 
         <!-- Revenue Breakdown -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Pie chart showing percentage contribution of each revenue stream. Helps understand your business mix.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="revenue-breakdown-chart"></canvas>
           </div>
@@ -180,6 +201,7 @@
 
         <!-- Yearly Summary -->
         <div class="chart-container">
+          <span class="chart-info-icon" title="Yearly comparison of all revenue streams. Compare year-over-year growth across Store Sales, Piso WiFi, and Printer.">ℹ️</span>
           <div class="chart-wrapper">
             <canvas id="yearly-summary-chart"></canvas>
           </div>
@@ -257,12 +279,12 @@
   </main>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=5"></script>
-  <script src="js/utils.js?v=5"></script>
-  <script src="js/github-api.js?v=5"></script>
-  <script src="js/storage.js?v=5"></script>
-  <script src="js/data-manager.js?v=5"></script>
-  <script src="js/charts.js?v=5"></script>
-  <script src="js/dashboard.js?v=5"></script>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/utils.js?v=6"></script>
+  <script src="js/github-api.js?v=6"></script>
+  <script src="js/storage.js?v=6"></script>
+  <script src="js/data-manager.js?v=6"></script>
+  <script src="js/charts.js?v=6"></script>
+  <script src="js/dashboard.js?v=6"></script>
 </body>
 </html>
