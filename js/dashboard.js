@@ -138,6 +138,16 @@ class Dashboard {
       thisMonthEl.textContent = Utils.formatCurrency(this.kpis.thisMonth);
     }
 
+    // Update current month label with actual month name
+    const currentMonthLabel = document.getElementById('current-month-label');
+    const currentMonthSubtitle = document.getElementById('current-month-subtitle');
+    if (currentMonthLabel && currentMonthSubtitle) {
+      const now = new Date();
+      const monthName = Utils.getMonthName(now.getMonth() + 1);
+      currentMonthLabel.textContent = `${monthName} ${now.getFullYear()}`;
+      currentMonthSubtitle.textContent = 'Month to date';
+    }
+
     // Store Sales Amount & Percentage
     const storeSalesAmountEl = document.getElementById('store-sales-amount');
     if (storeSalesAmountEl) {
