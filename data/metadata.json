@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-16T13:05:52.998Z",
+  "lastUpdated": "2026-03-16T13:06:14.796Z",
   "counters": {
     "storeSales": 324,
     "pisoWifi": 14,
@@ -9,8 +9,8 @@
   "config": {
     "profitMargins": {
       "gcash": 0.02,
-      "sariSariStore": 0.15,
-      "orders": 0.2
+      "sariSariStore": 0.1,
+      "orders": 0.15
     }
   }
 }
