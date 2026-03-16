@@ -81,10 +81,10 @@ class StorageManager {
 
     // Sync to GitHub if configured
     if (githubAPI.isConfigured()) {
-      try {
-        const filePath = `${CONFIG.github.dataPath}/${fileName}`;
-        const sha = localStorage.getItem(`${cacheKey}_sha`);
+      const filePath = `${CONFIG.github.dataPath}/${fileName}`;
 
+      try {
+        const sha = localStorage.getItem(`${cacheKey}_sha`);
         const result = await githubAPI.updateFile(filePath, data, commitMessage, sha);
 
         // Update stored SHA
@@ -97,6 +97,36 @@ class StorageManager {
         return result;
       } catch (error) {
         console.error(`Failed to save ${fileName} to GitHub:`, error);
+
+        // Auto-retry on SHA conflict (409)
+        if (error.message.includes('409')) {
+          console.log('SHA conflict detected, retrying with fresh SHA...');
+
+          // Clear cached SHA and retry once
+          localStorage.removeItem(`${cacheKey}_sha`);
+
+          try {
+            // Fetch fresh SHA and retry
+            const result = await githubAPI.updateFile(filePath, data, commitMessage, null);
+
+            // Update stored SHA
+            localStorage.setItem(`${cacheKey}_sha`, result.content.sha);
+
+            // Update last sync time
+            localStorage.setItem(CONFIG.storage.lastSync, new Date().toISOString());
+
+            console.log(`Saved ${fileName} to GitHub (retry succeeded)`);
+            return result;
+          } catch (retryError) {
+            console.error(`Retry failed:`, retryError);
+            throw new Error('Data conflict detected and retry failed. Please refresh the page and try again.');
+          }
+        } else if (error.message.includes('401') || error.message.includes('403')) {
+          throw new Error('GitHub authentication failed. Please check your token in Setup.');
+        } else if (error.message.includes('404')) {
+          throw new Error('GitHub repository or file not found. Please check your setup.');
+        }
+
         throw error;
       }
     } else {

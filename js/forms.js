@@ -44,8 +44,27 @@ class FormsManager {
    * Setup Store Sales form
    */
   setupStoreSalesForm(form) {
-    // Auto-calculate profits when inputs change
-    const inputs = ['cashIn', 'cashOut', 'gcashTotal', 'sariSariStore', 'orders'];
+    // Update profit margin labels dynamically (will be called again after data loads)
+    this.updateProfitMarginLabels(form);
+
+    // Auto-sum Gcash Total from Cash In + Cash Out
+    const cashInInput = form.querySelector('[name="cashIn"]');
+    const cashOutInput = form.querySelector('[name="cashOut"]');
+    const gcashTotalInput = form.querySelector('[name="gcashTotal"]');
+
+    const updateGcashTotal = () => {
+      const cashIn = parseFloat(cashInInput.value) || 0;
+      const cashOut = parseFloat(cashOutInput.value) || 0;
+      gcashTotalInput.value = (cashIn + cashOut).toFixed(2);
+    };
+
+    if (cashInInput && cashOutInput && gcashTotalInput) {
+      cashInInput.addEventListener('input', updateGcashTotal);
+      cashOutInput.addEventListener('input', updateGcashTotal);
+    }
+
+    // Auto-calculate profits when inputs change (excluding gcashProfit which is manual)
+    const inputs = ['sariSariStore', 'orders', 'gcashProfit'];
     inputs.forEach(inputName => {
       const input = form.querySelector(`[name="${inputName}"]`);
       if (input) {
@@ -64,20 +83,41 @@ class FormsManager {
   }
 
   /**
+   * Update profit margin labels dynamically from CONFIG
+   */
+  updateProfitMarginLabels(form) {
+    const gcashLabel = form.querySelector('label[for="gcashProfit"]');
+    if (gcashLabel) {
+      gcashLabel.textContent = 'Gcash Profit (Manual)';
+    }
+
+    const sariSariLabel = form.querySelector('label[for="sariSariStoreProfit"]');
+    if (sariSariLabel) {
+      const percent = (CONFIG.profitMargins.sariSariStore * 100).toFixed(1);
+      sariSariLabel.textContent = `Sari Sari Store Profit (${percent}%)`;
+    }
+
+    const ordersLabel = form.querySelector('label[for="ordersProfit"]');
+    if (ordersLabel) {
+      const percent = (CONFIG.profitMargins.orders * 100).toFixed(1);
+      ordersLabel.textContent = `Orders Profit (${percent}%)`;
+    }
+  }
+
+  /**
    * Calculate profits for store sales form
+   * Note: gcashProfit is manually entered due to non-linear fee structure
    */
   calculateStoreSalesProfits(form) {
-    const gcashTotal = parseFloat(form.querySelector('[name="gcashTotal"]').value) || 0;
     const sariSariStore = parseFloat(form.querySelector('[name="sariSariStore"]').value) || 0;
     const orders = parseFloat(form.querySelector('[name="orders"]').value) || 0;
+    const gcashProfit = parseFloat(form.querySelector('[name="gcashProfit"]').value) || 0;
 
-    const gcashProfit = gcashTotal * CONFIG.profitMargins.gcash;
     const sariSariStoreProfit = sariSariStore * CONFIG.profitMargins.sariSariStore;
     const ordersProfit = orders * CONFIG.profitMargins.orders;
     const totalProfit = gcashProfit + sariSariStoreProfit + ordersProfit;
 
-    // Update readonly fields
-    form.querySelector('[name="gcashProfit"]').value = gcashProfit.toFixed(2);
+    // Update calculated fields
     form.querySelector('[name="sariSariStoreProfit"]').value = sariSariStoreProfit.toFixed(2);
     form.querySelector('[name="ordersProfit"]').value = ordersProfit.toFixed(2);
     form.querySelector('[name="totalProfit"]').value = totalProfit.toFixed(2);
@@ -103,6 +143,7 @@ class FormsManager {
         cashIn: formData.get('cashIn'),
         cashOut: formData.get('cashOut'),
         gcashTotal: formData.get('gcashTotal'),
+        gcashProfit: formData.get('gcashProfit'),
         sariSariStore: formData.get('sariSariStore'),
         orders: formData.get('orders')
       };
@@ -124,9 +165,14 @@ class FormsManager {
       form.querySelector('[name="date"]').value = Utils.formatDateForInput();
       this.calculateStoreSalesProfits(form);
 
+      // Force reload from GitHub to ensure we have latest data
+      await dataManager.initialize(true);
+
+      // Update profit margin labels with latest config
+      this.updateProfitMarginLabels(form);
+
       // Reload table if on input page
       if (typeof loadStoreSalesTable === 'function') {
-        await dataManager.initialize(true);
         loadStoreSalesTable();
       } else {
         // Redirect to dashboard after 1 second if not on input page
@@ -155,7 +201,7 @@ class FormsManager {
       errors.push('Date is required');
     }
 
-    const numericFields = ['cashIn', 'cashOut', 'gcashTotal', 'sariSariStore', 'orders'];
+    const numericFields = ['cashIn', 'cashOut', 'gcashTotal', 'gcashProfit', 'sariSariStore', 'orders'];
     numericFields.forEach(field => {
       const error = Utils.validateNumeric(data[field], field);
       if (error) {
@@ -341,8 +387,21 @@ class FormsManager {
   }
 }
 
+// Create global instance
+let formsManager;
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  const formsManager = new FormsManager();
+  formsManager = new FormsManager();
   formsManager.initialize();
 });
+
+// Global function to refresh profit margin labels after data loads
+function refreshProfitMarginLabels() {
+  if (formsManager) {
+    const form = document.getElementById('store-sales-form');
+    if (form) {
+      formsManager.updateProfitMarginLabels(form);
+    }
+  }
+}

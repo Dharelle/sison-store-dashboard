@@ -46,6 +46,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initialize data manager
   await dataManager.initialize();
 
+  // Refresh profit margin labels after data loads (to get correct percentages from metadata)
+  if (typeof refreshProfitMarginLabels === 'function') {
+    refreshProfitMarginLabels();
+  }
+
   // Load initial table (Store Sales)
   loadStoreSalesTable();
 });
@@ -73,7 +78,7 @@ async function loadStoreSalesTable() {
 
   // Add sortable column headers
   const headers = document.querySelectorAll('#store-sales-section table thead th');
-  const sortableColumns = ['date', 'cashIn', 'cashOut', 'gcashTotal', 'sariSariStore', 'orders', 'totalProfit'];
+  const sortableColumns = ['date', 'cashIn', 'cashOut', 'gcashTotal', 'gcashProfit', 'sariSariStore', 'orders', 'totalProfit'];
   headers.forEach((th, index) => {
     if (sortableColumns[index]) {
       th.style.cursor = 'pointer';
@@ -150,7 +155,7 @@ function displayStoreSalesTable() {
   const pageData = ssFilteredData.slice(start, end);
 
   if (pageData.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="8" class="text-center">No transactions found</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" class="text-center">No transactions found</td></tr>';
   } else {
     tbody.innerHTML = pageData.map(t => `
       <tr data-id="${t.id}">
@@ -158,6 +163,7 @@ function displayStoreSalesTable() {
         <td data-field="cashIn">${Utils.formatCurrency(t.cashIn)}</td>
         <td data-field="cashOut">${Utils.formatCurrency(t.cashOut)}</td>
         <td data-field="gcashTotal">${Utils.formatCurrency(t.gcashTotal)}</td>
+        <td data-field="gcashProfit">${Utils.formatCurrency(t.gcashProfit)}</td>
         <td data-field="sariSariStore">${Utils.formatCurrency(t.sariSariStore)}</td>
         <td data-field="orders">${Utils.formatCurrency(t.orders)}</td>
         <td class="font-semibold" data-field="totalProfit">${Utils.formatCurrency(t.totalProfit)}</td>
@@ -440,6 +446,7 @@ async function editStoreSale(id) {
     <td><input type="number" class="form-input" value="${record.cashIn}" data-field="cashIn" step="0.01" style="width: 100px;"></td>
     <td><input type="number" class="form-input" value="${record.cashOut}" data-field="cashOut" step="0.01" style="width: 100px;"></td>
     <td><input type="number" class="form-input" value="${record.gcashTotal}" data-field="gcashTotal" step="0.01" style="width: 100px;"></td>
+    <td><input type="number" class="form-input" value="${record.gcashProfit}" data-field="gcashProfit" step="0.01" style="width: 100px;"></td>
     <td><input type="number" class="form-input" value="${record.sariSariStore}" data-field="sariSariStore" step="0.01" style="width: 100px;"></td>
     <td><input type="number" class="form-input" value="${record.orders}" data-field="orders" step="0.01" style="width: 100px;"></td>
     <td class="font-semibold">${Utils.formatCurrency(record.totalProfit)}</td>
@@ -460,6 +467,7 @@ async function saveStoreSale(id) {
       cashIn: row.querySelector('[data-field="cashIn"]').value,
       cashOut: row.querySelector('[data-field="cashOut"]').value,
       gcashTotal: row.querySelector('[data-field="gcashTotal"]').value,
+      gcashProfit: row.querySelector('[data-field="gcashProfit"]').value,
       sariSariStore: row.querySelector('[data-field="sariSariStore"]').value,
       orders: row.querySelector('[data-field="orders"]').value
     };

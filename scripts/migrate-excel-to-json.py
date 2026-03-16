@@ -103,45 +103,32 @@ def migrate_store_sales():
         sari_sari = safe_float(row.get('Sari Sari Store', 0))
         orders = safe_float(row.get('Orders', 0))
 
-        # Get profit values from Excel columns (they might have manual values)
+        # Get profit values from Excel columns (PRESERVE EXACT VALUES FROM EXCEL)
+        # Gcash Profit: NEVER calculate, only use Excel value (non-linear fee structure)
         gcash_profit = safe_float(row.get('Gcash Profit', 0))
+
+        # Sari Sari and Orders: Use Excel values if present, otherwise calculate
         sari_profit = safe_float(row.get('Sari Sari Store Profit', 0))
         orders_profit = safe_float(row.get('Orders Profit', 0))
 
         # Try to get Total Profit from Excel
         total_profit_excel = safe_float(row.get('Total Profit', 0))
 
-        # If Total Profit is 0 or NaN, calculate from individual profits or revenue
-        if total_profit_excel == 0:
-            # If individual profits exist, use MAX to avoid double-counting
-            # (Excel sometimes duplicates values across columns)
-            if gcash_profit > 0 or sari_profit > 0 or orders_profit > 0:
-                # Use the maximum value to avoid counting duplicates
-                total_profit = max(gcash_profit, sari_profit, orders_profit)
+        # Calculate Sari Sari profit if missing (15%)
+        if sari_profit == 0 and sari_sari > 0:
+            sari_profit = sari_sari * 0.15
 
-                # But if they're all different, sum them
-                unique_values = set([gcash_profit, sari_profit, orders_profit]) - {0}
-                if len(unique_values) > 1:
-                    # Different values, sum them
-                    total_profit = gcash_profit + sari_profit + orders_profit
-                # Otherwise use the single unique value (max)
-            else:
-                # Calculate from revenue using standard margins
-                gcash_profit = gcash_total * 0.022
-                sari_profit = sari_sari * 0.10
-                orders_profit = orders * 0.10
-                total_profit = gcash_profit + sari_profit + orders_profit
-        else:
-            # Use Excel Total Profit
+        # Calculate Orders profit if missing (20%)
+        if orders_profit == 0 and orders > 0:
+            orders_profit = orders * 0.20
+
+        # Calculate Total Profit
+        if total_profit_excel > 0:
+            # Use Excel Total Profit if provided
             total_profit = total_profit_excel
-
-            # If individual profits are 0, calculate them
-            if gcash_profit == 0 and gcash_total > 0:
-                gcash_profit = gcash_total * 0.022
-            if sari_profit == 0 and sari_sari > 0:
-                sari_profit = sari_sari * 0.10
-            if orders_profit == 0 and orders > 0:
-                orders_profit = orders * 0.10
+        else:
+            # Sum individual profits
+            total_profit = gcash_profit + sari_profit + orders_profit
 
         # Skip if still no profit
         if total_profit <= 0:
@@ -271,8 +258,8 @@ def create_metadata(store_sales_count, piso_wifi_count, printer_count):
         "config": {
             "profitMargins": {
                 "gcash": 0.022,
-                "sariSariStore": 0.10,
-                "orders": 0.10
+                "sariSariStore": 0.15,
+                "orders": 0.20
             }
         }
     }

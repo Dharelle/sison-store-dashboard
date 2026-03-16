@@ -246,7 +246,7 @@ class Dashboard {
     if (transactions.length === 0) {
       tbody.innerHTML = `
         <tr>
-          <td colspan="5" class="text-center">No transactions in this period</td>
+          <td colspan="6" class="text-center">No transactions in this period</td>
         </tr>
       `;
       return;
@@ -256,6 +256,7 @@ class Dashboard {
       <tr>
         <td>${Utils.formatDate(t.date)}</td>
         <td>${Utils.formatCurrency(t.gcashTotal)}</td>
+        <td>${Utils.formatCurrency(t.gcashProfit)}</td>
         <td>${Utils.formatCurrency(t.sariSariStore)}</td>
         <td>${Utils.formatCurrency(t.orders)}</td>
         <td class="font-semibold">${Utils.formatCurrency(t.totalProfit)}</td>

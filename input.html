@@ -84,8 +84,9 @@
             </div>
 
             <div class="form-group">
-              <label for="gcashTotal" class="form-label required">Gcash Total</label>
-              <input type="number" id="gcashTotal" name="gcashTotal" class="form-input" step="0.01" min="0" required>
+              <label for="gcashTotal" class="form-label required">Gcash Total (Auto-calculated)</label>
+              <input type="number" id="gcashTotal" name="gcashTotal" class="form-input" step="0.01" min="0" required readonly>
+              <p class="form-help">Automatically calculated: Cash In + Cash Out</p>
             </div>
 
             <div class="form-group">
@@ -100,11 +101,12 @@
 
             <!-- Calculated Profits -->
             <div class="calculated-section">
-              <h3>Calculated Profits</h3>
+              <h3>Profits</h3>
 
-              <div class="calculated-field">
-                <label for="gcashProfit" class="form-label">Gcash Profit (2.2%)</label>
-                <input type="number" id="gcashProfit" name="gcashProfit" class="form-input" step="0.01" readonly>
+              <div class="form-group">
+                <label for="gcashProfit" class="form-label required">Gcash Profit (Manual)</label>
+                <input type="number" id="gcashProfit" name="gcashProfit" class="form-input" step="0.01" min="0" required>
+                <p class="form-help">Enter actual Gcash profit (non-linear fee structure: ₱100 transaction = ₱5 profit)</p>
               </div>
 
               <div class="calculated-field">
@@ -154,6 +156,7 @@
                     <th>Cash In</th>
                     <th>Cash Out</th>
                     <th>Gcash Total</th>
+                    <th>Gcash Profit</th>
                     <th>Sari Sari</th>
                     <th>Orders</th>
                     <th>Total Profit</th>
@@ -162,7 +165,7 @@
                 </thead>
                 <tbody id="ss-tbody">
                   <tr>
-                    <td colspan="8" class="text-center">Loading...</td>
+                    <td colspan="9" class="text-center">Loading...</td>
                   </tr>
                 </tbody>
               </table>

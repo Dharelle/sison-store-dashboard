@@ -45,12 +45,12 @@
         <h1>Business Overview</h1>
         <!-- Time Filter -->
         <div class="time-filter">
-          <button class="filter-btn" data-filter="month">This Month</button>
+          <button class="filter-btn active" data-filter="month">This Month</button>
           <button class="filter-btn" data-filter="lastmonth">Last Month</button>
           <button class="filter-btn" data-filter="quarter">Quarter</button>
           <button class="filter-btn" data-filter="6months">6 Months</button>
           <button class="filter-btn" data-filter="year">1 Year</button>
-          <button class="filter-btn active" data-filter="all">All Time</button>
+          <button class="filter-btn" data-filter="all">All Time</button>
         </div>
       </div>
       <div class="dashboard-actions">
@@ -68,7 +68,7 @@
           <span class="help-icon" title="Combined revenue from all sources: Store Sales + Piso WiFi + Printer. Changes based on selected time filter.">?</span>
         </div>
         <div class="kpi-value" id="total-revenue">₱0.00</div>
-        <div class="kpi-subtitle">All time</div>
+        <div class="kpi-subtitle">This month</div>
       </div>
 
       <!-- Average Monthly -->
@@ -111,75 +111,54 @@
         <div class="kpi-subtitle" id="current-month-subtitle">Month to date</div>
       </div>
 
-      <!-- Gcash Sales (Revenue) -->
+      <!-- Gcash (Combined Sales & Profit) -->
       <div class="kpi-card">
         <div class="kpi-label">
-          Gcash Sales
-          <span class="help-icon" title="Total revenue from Gcash transactions">?</span>
+          Gcash
+          <span class="help-icon" title="Gcash transactions revenue and profit">?</span>
         </div>
         <div class="kpi-value" id="gcash-revenue">₱0.00</div>
         <div class="kpi-subtitle">
           <span id="gcash-revenue-percent">0%</span> of store revenue
         </div>
-      </div>
-
-      <!-- Gcash Profit -->
-      <div class="kpi-card">
-        <div class="kpi-label">
-          Gcash Profit
-          <span class="help-icon" title="Profit from Gcash transactions (revenue × margin)">?</span>
-        </div>
-        <div class="kpi-value" id="gcash-profit">₱0.00</div>
-        <div class="kpi-subtitle">
-          <span id="gcash-profit-percent">0%</span> of store profit
+        <div class="kpi-secondary">
+          <span class="kpi-secondary-label">Profit:</span>
+          <span class="kpi-secondary-value" id="gcash-profit">₱0.00</span>
+          <span class="kpi-secondary-percent">(<span id="gcash-profit-percent">0%</span>)</span>
         </div>
       </div>
 
-      <!-- Sari Sari Store Sales (Revenue) -->
+      <!-- Sari Sari Store (Combined Sales & Profit) -->
       <div class="kpi-card">
         <div class="kpi-label">
-          Sari Sari Sales
-          <span class="help-icon" title="Total revenue from Sari-Sari Store sales">?</span>
+          Sari Sari Store
+          <span class="help-icon" title="Sari-Sari Store revenue and profit">?</span>
         </div>
         <div class="kpi-value" id="sari-sari-revenue">₱0.00</div>
         <div class="kpi-subtitle">
           <span id="sari-sari-revenue-percent">0%</span> of store revenue
         </div>
-      </div>
-
-      <!-- Sari Sari Store Profit -->
-      <div class="kpi-card">
-        <div class="kpi-label">
-          Sari Sari Profit
-          <span class="help-icon" title="Profit from Sari-Sari Store (revenue × margin)">?</span>
-        </div>
-        <div class="kpi-value" id="sari-sari-profit">₱0.00</div>
-        <div class="kpi-subtitle">
-          <span id="sari-sari-profit-percent">0%</span> of store profit
+        <div class="kpi-secondary">
+          <span class="kpi-secondary-label">Profit:</span>
+          <span class="kpi-secondary-value" id="sari-sari-profit">₱0.00</span>
+          <span class="kpi-secondary-percent">(<span id="sari-sari-profit-percent">0%</span>)</span>
         </div>
       </div>
 
-      <!-- Orders Sales (Revenue) -->
+      <!-- Orders (Combined Sales & Profit) -->
       <div class="kpi-card">
         <div class="kpi-label">
-          Orders Sales
-          <span class="help-icon" title="Total revenue from Orders">?</span>
+          Orders
+          <span class="help-icon" title="Orders revenue and profit">?</span>
         </div>
         <div class="kpi-value" id="orders-revenue">₱0.00</div>
         <div class="kpi-subtitle">
           <span id="orders-revenue-percent">0%</span> of store revenue
         </div>
-      </div>
-
-      <!-- Orders Profit -->
-      <div class="kpi-card">
-        <div class="kpi-label">
-          Orders Profit
-          <span class="help-icon" title="Profit from Orders (revenue × margin)">?</span>
-        </div>
-        <div class="kpi-value" id="orders-profit">₱0.00</div>
-        <div class="kpi-subtitle">
-          <span id="orders-profit-percent">0%</span> of store profit
+        <div class="kpi-secondary">
+          <span class="kpi-secondary-label">Profit:</span>
+          <span class="kpi-secondary-value" id="orders-profit">₱0.00</span>
+          <span class="kpi-secondary-percent">(<span id="orders-profit-percent">0%</span>)</span>
         </div>
       </div>
 
@@ -281,6 +260,7 @@
             <tr>
               <th>Date</th>
               <th>Gcash Total</th>
+              <th>Gcash Profit</th>
               <th>Sari Sari Store</th>
               <th>Orders</th>
               <th>Total Profit</th>
@@ -288,7 +268,7 @@
           </thead>
           <tbody id="recent-transactions">
             <tr>
-              <td colspan="5" class="text-center">Loading...</td>
+              <td colspan="6" class="text-center">Loading...</td>
             </tr>
           </tbody>
         </table>

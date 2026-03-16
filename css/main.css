@@ -275,7 +275,8 @@ body.dark-mode .dark-mode-btn .icon-dark {
   padding: var(--spacing-md) var(--spacing-lg);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-lg);
-  background-color: white;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   border-left: 4px solid var(--info-color);
   z-index: 1000;
   transform: translateX(400px);

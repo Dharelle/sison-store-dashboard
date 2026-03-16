@@ -118,6 +118,32 @@
   color: var(--gray-500);
 }
 
+.kpi-secondary {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-color-main);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.kpi-secondary-label {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.kpi-secondary-value {
+  color: var(--success-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.kpi-secondary-percent {
+  color: var(--gray-500);
+  font-size: 0.8125rem;
+}
+
 .kpi-card.highlight {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   color: white;

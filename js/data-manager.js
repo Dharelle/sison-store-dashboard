@@ -11,7 +11,7 @@ class DataManager {
       printer: [],
       metadata: {}
     };
-    this.currentFilter = 'all'; // Default filter: all time
+    this.currentFilter = 'month'; // Default filter: this month
   }
 
   /**
@@ -161,8 +161,8 @@ class DataManager {
    * Add store sales transaction
    */
   async addStoreSale(formData) {
-    // Calculate profits
-    const gcashProfit = formData.gcashTotal * CONFIG.profitMargins.gcash;
+    // Use manual gcashProfit (non-linear fee structure), calculate others
+    const gcashProfit = parseFloat(formData.gcashProfit) || 0;
     const sariSariStoreProfit = formData.sariSariStore * CONFIG.profitMargins.sariSariStore;
     const ordersProfit = formData.orders * CONFIG.profitMargins.orders;
     const totalProfit = gcashProfit + sariSariStoreProfit + ordersProfit;
@@ -189,32 +189,41 @@ class DataManager {
       throw new Error(`A transaction for ${record.date} already exists`);
     }
 
-    // Add to data
-    this.data.storeSales.push(record);
+    try {
+      // Add to data
+      this.data.storeSales.push(record);
 
-    // Sort by date (newest first)
-    this.data.storeSales.sort((a, b) => new Date(b.date) - new Date(a.date));
+      // Sort by date (newest first)
+      this.data.storeSales.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // Update counter
-    if (!this.data.metadata.counters) {
-      this.data.metadata.counters = {};
+      // Update counter
+      if (!this.data.metadata.counters) {
+        this.data.metadata.counters = {};
+      }
+      this.data.metadata.counters.storeSales = this.data.storeSales.length;
+
+      // Save to storage
+      const storeSalesData = {
+        version: '1.0',
+        lastUpdated: new Date().toISOString(),
+        records: this.data.storeSales
+      };
+
+      const commitMessage = GitHubAPI.createCommitMessage('store_sales', record);
+      await storage.saveData(CONFIG.dataFiles.storeSales, storeSalesData, commitMessage);
+
+      // Update metadata
+      await this.updateMetadata();
+
+      return record;
+    } catch (error) {
+      // Rollback: Remove the record from in-memory data if save failed
+      const index = this.data.storeSales.findIndex(s => s.id === record.id);
+      if (index !== -1) {
+        this.data.storeSales.splice(index, 1);
+      }
+      throw new Error(`Failed to save transaction: ${error.message}`);
     }
-    this.data.metadata.counters.storeSales = this.data.storeSales.length;
-
-    // Save to storage
-    const storeSalesData = {
-      version: '1.0',
-      lastUpdated: new Date().toISOString(),
-      records: this.data.storeSales
-    };
-
-    const commitMessage = GitHubAPI.createCommitMessage('store_sales', record);
-    await storage.saveData(CONFIG.dataFiles.storeSales, storeSalesData, commitMessage);
-
-    // Update metadata
-    await this.updateMetadata();
-
-    return record;
   }
 
   /**
@@ -710,8 +719,8 @@ class DataManager {
       throw new Error('Record not found');
     }
 
-    // Calculate profits
-    const gcashProfit = formData.gcashTotal * CONFIG.profitMargins.gcash;
+    // Use manual gcashProfit (non-linear fee structure), calculate others
+    const gcashProfit = parseFloat(formData.gcashProfit) || 0;
     const sariSariStoreProfit = formData.sariSariStore * CONFIG.profitMargins.sariSariStore;
     const ordersProfit = formData.orders * CONFIG.profitMargins.orders;
     const totalProfit = gcashProfit + sariSariStoreProfit + ordersProfit;
