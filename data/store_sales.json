@@ -1,7 +1,21 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-21T01:07:25.365Z",
+  "lastUpdated": "2026-05-21T01:08:27.189Z",
   "records": [
+    {
+      "id": "ss_1778716800000_388",
+      "date": "2026-05-14",
+      "cashIn": 1635,
+      "cashOut": 3955,
+      "gcashTotal": 5590,
+      "sariSariStore": 2267,
+      "orders": 0,
+      "gcashProfit": 124.99,
+      "sariSariStoreProfit": 340.05,
+      "ordersProfit": 0,
+      "totalProfit": 465.04,
+      "createdAt": "2026-05-21T01:08:27.189Z"
+    },
     {
       "id": "ss_1778630400000_215",
       "date": "2026-05-13",
