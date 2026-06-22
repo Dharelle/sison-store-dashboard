@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-22T22:41:27.565Z",
+  "lastUpdated": "2026-06-22T22:41:50.742Z",
   "counters": {
     "storeSales": 399,
     "pisoWifi": 17,
-    "printer": 13
+    "printer": 14
   },
   "config": {
     "profitMargins": {
