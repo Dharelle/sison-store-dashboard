@@ -1,7 +1,14 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-10-08T00:00:05.134Z",
+  "lastUpdated": "2026-11-02T22:58:50.988Z",
   "records": [
+    {
+      "id": "pw_1793660330988_562",
+      "month": "October",
+      "year": 2026,
+      "revenue": 2520,
+      "createdAt": "2026-11-02T22:58:50.988Z"
+    },
     {
       "id": "pw_1791417605133_440",
       "month": "September",
